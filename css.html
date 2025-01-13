@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--may websit fevi icob-->
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+
+
+     <!-- Basic Meta Tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="description" content="Learn coding, programming, and online courses. Get tutorials, resources, and professional programming help for web development, Python, Java, and more.">
+     <meta name="keywords" content="coding, programming, online courses, web development, learn Python, learn Java, tutorials, coding classes, programming tutorials, free online courses">
+     <meta name="author" content="Code with N.A.">
+     <meta name="robots" content="index, follow">
+     
+     <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+     <meta property="og:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta property="og:description" content="Get free online courses, coding tutorials, and programming resources. Learn web development, Python, Java, and more with Code with N.A.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://www.yourwebsite.com">
+     <meta property="og:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Twitter Meta Tags (For Twitter Sharing) -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta name="twitter:description" content="Free online coding tutorials, courses, and programming resources. Learn web development, Python, and more with Code with N.A.">
+     <meta name="twitter:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Additional Meta Tags -->
+     <meta name="theme-color" content="#000000">
+     <meta name="language" content="English">
+     <meta name="distribution" content="global">
+     <meta name="revisit-after" content="7 days">
+     <meta name="rating" content="General">
+     
+     <!-- Google Site Verification (If applicable) -->
+     <meta name="google-site-verification" content="your-google-verification-code">
+ 
+    <title>CSS Course: From Introduction to Advanced Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+            color: red;
+           
+        }
+       
+       
+        #side-nav {
+            display: none; /* Initially hide the side-nav */
+            background-color: black;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            padding-top: 50px;
+            z-index: 1000;
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+
+        /* Styling for the links in the side navigation */
+        #side-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            display: block;
+            font-size: 26px;
+            border-bottom: 1px solid #444; /* Add a border to each list item */
+            transition: background-color 0.3s ease; /* Smooth background transition */
+        }
+
+        /* Hover effect for list items */
+        #side-nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Styling for the toggle button */
+        #toggle-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px; /* Move button slightly lower */
+            left: 20px;
+            background: none;
+            border: none;
+            color: gold;
+            z-index: 1001; /* Ensure button is above the menu */
+        }
+
+        /* Button change when menu is open */
+        #toggle-btn.open {
+            color: red; /* Color change when menu is open */
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        h1, h2 {
+            color: red;
+        }
+        
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            font-size: 1.1rem;
+            overflow-x: auto;
+        }
+        .example {
+            padding: 10px;
+            background-color: #e0f7fa;
+            border-left: 4px solid #00796b;
+            margin-top: 10px;
+        }
+        .example p {
+            margin: 0;
+        }
+        .text-example h1 {
+            font-size: 2rem;
+            color: darkblue;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 1.5;
+        }
+        .box {
+            padding: 20px;
+            margin: 10px 0;
+            background-color: #f1f1f1;
+            border: 2px solid black;
+            text-align: center;
+            transition: transform 0.5s;
+        }
+        .box:hover {
+            transform: scale(1.2);
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .item {
+            padding: 20px;
+            background-color: lightblue;
+            margin: 10px;
+            text-align: center;
+            flex: 1;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .grid-item {
+            background-color: #b3e5fc;
+            padding: 20px;
+            text-align: center;
+        }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100px); }
+        }
+        .slide-box {
+            animation: slide 2s infinite;
+        }
+        @media screen and (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+            .container {
+                flex-direction: column;
+            }
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+      
+        <h1>CSS Course: Introduction to Advanced Concepts</h1>
+    </header>
+    
+
+    <button id="toggle-btn">☰</button>
+   
+    <!-- Navigation Bar with all 50 Topics -->
+    <nav id="side-nav">
+       
+        <a href="#introduction">1. Introduction</a>
+        <a href="#selectors">2. CSS Selectors</a>
+        <a href="#colors">3. Colors & Backgrounds</a>
+        <a href="#text-styling">4. Text Styling</a>
+        <a href="#box-model">5. Box Model</a>
+        <a href="#layout">6. CSS Layout</a>
+        <a href="#flexbox">7. Flexbox</a>
+        <a href="#grid">8. Grid Layout</a>
+        <a href="#responsive">9. Responsive Design</a>
+        <a href="#animations">10. Transitions & Animations</a>
+        <a href="#media-queries">11. Media Queries</a>
+        <a href="#typography">12. Typography</a>
+        <a href="#forms">13. CSS Forms</a>
+        <a href="#transforms">14. CSS Transforms</a>
+        <a href="#filters">15. CSS Filters</a>
+        <a href="#animations">16. CSS Writing Modes</a>
+        <a href="#shadows">17. CSS Shadows</a>
+        <a href="#grid">18. CSS Pseudo-elements</a>
+        <a href="#pseudo-classes">19. CSS Pseudo-classes</a>
+        <a href="#positioning">20. CSS Positioning</a>
+        <a href="#z-index">21. CSS Z-Index</a>
+        <a href="#visibility">22. CSS Visibility</a>
+        <a href="#float">23. CSS Float</a>
+        <a href="#Clearfix">24. Clearfix</a>
+        <a href="#columns">25. CSS Multi-Columns</a>
+        <a href="#variables">26. CSS Variables</a>
+        <a href="#calc">27. CSS Calc()</a>
+        <a href="#clipping">28. CSS Clipping (clip-path)</a>
+        <a href="#masking">29. CSS Masking</a>
+        <a href="#blending">30. CSS Blend Modes</a>
+        <a href="#object-fit">31. CSS Object Fit</a>
+        <a href="#object-position">32. CSS Object Position</a>
+        <a href="#flex-grow">33. CSS Flex Grow</a>
+        <a href="#flex-shrink">34. CSS Flex Shrink</a>
+        <a href="#order">35. CSS Order Property</a>
+        <a href="#grid-template">36. CSS Grid Template Areas</a>
+        <a href="#grid-auto-flow">37. CSS Grid Auto Flow</a>
+        <a href="#grid-auto">38. CSS Grid Gap</a>
+        <a href="#grid-align">39. CSS Grid Alignment</a>
+        <a href="#flexbox-alignment">40. Flexbox Alignment</a>
+        <a href="#flexbox-wrapping">41. Flexbox Wrapping</a>
+        <a href="#grid-vs-flexbox">42. Grid vs. Flexbox</a>
+        <a href="#animations-keyframes">43. CSS Animations (Keyframes)</a>
+        <a href="#grid-layout">44. CSS Grid Layout</a>
+        <a href="#flexbox-layout">45. CSS Flexbox Layout</a>
+        <a href="#css-animations">46. CSS Animations</a>
+        <a href="#css-transitions">47. CSS Transitions</a>
+        <a href="#grid-vs-flexbox">48. CSS Grid vs. Flexbox</a>
+        <a href="#logical-properties">49. CSS Logical Properties</a>
+        <a href="#cascade-specificity">50. CSS Cascade and Specificity</a>
+    </nav>
+    <script>
+        // JavaScript to toggle the side navigation menu
+        document.getElementById("toggle-btn").addEventListener("click", function() {
+            var nav = document.getElementById("side-nav");
+            var button = document.getElementById("toggle-btn");
+
+            // Toggle the display property of the navigation
+            if (nav.style.display === "block") {
+                nav.style.display = "none";
+                button.classList.remove("open"); // Change button back to normal
+            } else {
+                nav.style.display = "block";
+                button.classList.add("open"); // Change button style when menu is open
+            }
+        });
+    </script>
+
+
+    <!-- CSS Selectors -->
+    <section id="introduction">
+        <h2>1. Introduction to CSS</h2>
+        <p>CSS (Cascading Style Sheets) is used to style HTML elements. It controls the layout, colors, and fonts of a webpage.</p>
+        <h2>Select body </h2>
+        <pre>
+
+
+            body{
+            backgrund-color:lightblue;
+            }
+
+            h1 {
+                color: black;
+                text-aligen:center;
+            }
+
+            p {
+                font-family:verdana;
+                font-size:20px;
+            }
+
+                
+        
+           
+        </pre>
+    </section>
+
+    <section id="selectors">
+        <h2>2. CSS Selectors</h2>
+        <p></p>
+        <p></p>
+        <p></p>
+        <ul>
+            <li><strong>Element Selector:</strong> Targets elements directly (e.g., <code>p { color: blue; }</code>)</li>
+            <li><strong>Class Selector:</strong> Targets elements with a specific class (e.g., <code>.classname { background-color: yellow; }</code>)</li>
+            <li><strong>ID Selector:</strong> Targets elements with a unique ID (e.g., <code>#idname { font-size: 20px; }</code>)</li>
+        </ul>
+        <div class="example">
+            <p>This is a paragraph with blue text (using element selector).</p>
+            <p class="classname">This paragraph has a yellow background (using class selector).</p>
+            <p id="idname">This text is larger (using ID selector).</p>
+        </div>
+    </section>
+
+    <!-- Colors and Backgrounds -->
+    <section id="colors">
+        <h2>3. Colors and Backgrounds</h2>
+        <p>You can use color names, RGB, HEX values to define colors:</p>
+        <pre>
+            body {
+                background-color: #f4f4f4;
+                color: #333;
+            }
+        </pre>
+        <p>Background Image:</p>
+        <pre>
+            body {
+                background-image: url('background.jpg');
+                background-size: cover;
+            }
+        </pre>
+    </section>
+
+    <!-- Text Styling -->
+    <section id="text-styling">
+        <h2>4. Text Styling</h2>
+        <p>CSS allows you to modify the appearance of text:</p>
+        <pre>
+            h1 {
+                color: darkblue;
+                font-size: 36px;
+                text-align: center;
+                text-transform: uppercase;
+                line-height: 1.5;
+            }
+        </pre>
+        <div class="text-example">
+            <h1>This is a styled Heading</h1>
+        </div>
+    </section>
+
+    <!-- CSS Box Model -->
+    <section id="box-model">
+        <h2>5. CSS Box Model</h2>
+        <p>Each HTML element is wrapped in a rectangular box. You can control the padding, border, and margin of this box:</p>
+        <pre>
+            .box {
+                padding: 20px;
+                border: 2px solid black;
+                margin: 10px;
+            }
+        </pre>
+        <div class="box">This is an example of CSS Box Model</div>
+    </section>
+
+    <!-- CSS Layout -->
+    <section id="layout">
+        <h2>6. CSS Layout</h2>
+        <p>CSS layout properties control how elements are arranged on a webpage:</p>
+        <pre>
+            .block {
+                display: block;
+            }
+            .hidden {
+                display: none;
+            }
+        </pre>
+        <pre>
+            .relative {
+                position: relative;
+                top: 20px;
+                left: 10px;
+            }
+        </pre>
+        <div class="block">This is a block element.</div>
+        <div class="relative">This is a relatively positioned element.</div>
+    </section>
+
+    <!-- Flexbox Layout -->
+    <section id="flexbox">
+        <h2>7. Flexbox Layout</h2>
+        <p>Flexbox is used to create flexible and responsive layouts:</p>
+        <pre>
+            .container {
+                display: flex;
+                justify-content: space-between;
+            }
+            .item {
+                padding: 20px;
+                background-color: lightblue;
+            }
+        </pre>
+        <div class="container">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+    </section>
+
+    <!-- Grid Layout -->
+    <section id="grid">
+        <h2>8. Grid Layout</h2>
+        <p>CSS Grid allows for creating grid-based layouts:</p>
+        <pre>
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+            .grid-item {
+                background-color: #b3e5fc;
+                padding: 20px;
+            }
+        </pre>
+        <div class="grid-container">
+            <div class="grid-item">Grid Item 1</div>
+            <div class="grid-item">Grid Item 2</div>
+            <div class="grid-item">Grid Item 3</div>
+        </div>
+    </section>
+
+    <!-- Transitions and Animations -->
+    <section id="responsive">
+        <h2>9. Transitions and Animations</h2>
+        <p>CSS allows you to add animations and transitions to elements:</p>
+        <pre>
+            .box:hover {
+                transform: scale(1.2);
+                transition: transform 0.3s ease-in-out;
+            }
+        </pre>
+        <div class="box">Hover over me to see the animation</div>
+    </section>
+    <section id="pseudo-classes">
+        <h2>10. Pseudo-classes and Pseudo-elements</h2>
+        <p>Pseudo-classes apply styles to elements in special states, and pseudo-elements allow targeting parts of an element.</p>
+        <pre>
+            /* Pseudo-class example: */
+            a:hover {
+                color: red;
+            }
+    
+            /* Pseudo-element example: */
+            p::first-line {
+                font-weight: bold;
+            }
+        </pre>
+        <div class="example">
+            <p>Hover over the <a href="#">link</a> to see the effect.</p>
+            <p>This is a paragraph where the first line will be bold.</p>
+        </div>
+    </section>
+    <section id="media-queries">
+        <h2>11. CSS Variables (Custom Properties)</h2>
+        <p>CSS variables make your code more maintainable by allowing you to reuse values:</p>
+        <pre>
+            :root {
+                --main-color: #4CAF50;
+                --padding: 10px;
+            }
+    
+            body {
+                background-color: var(--main-color);
+                padding: var(--padding);
+            }
+        </pre>
+    </section>
+    <section id="typography">
+        <h2>12. Advanced Selectors</h2>
+        <p>Advanced CSS selectors allow more precision when targeting elements:</p>
+        <ul>
+            <li><strong>Child Selector:</strong> <code>parent > child</code></li>
+            <li><strong>Adjacent Sibling Selector:</strong> <code>element + sibling</code></li>
+            <li><strong>General Sibling Selector:</strong> <code>element ~ siblings</code></li>
+            <li><strong>Attribute Selector:</strong> <code>[attribute=value]</code></li>
+        </ul>
+        <pre>
+            /* Example: */
+            div > p {
+                color: red;
+            }
+    
+            input[type="text"] {
+                border: 1px solid blue;
+            }
+        </pre>
+    </section>
+    <section id="forms">
+        <h2>13. CSS Media Queries</h2>
+        <p>Media queries help you create responsive layouts that adapt to different screen sizes:</p>
+        <pre>
+            @media screen and (max-width: 768px) {
+                body {
+                    background-color: lightgray;
+                }
+            }
+    
+            @media screen and (min-width: 769px) and (max-width: 1024px) {
+                body {
+                    background-color: lightblue;
+                }
+            }
+        </pre>
+    </section>
+    <section id="transforms">
+        <h2>14. CSS Transforms</h2>
+        <p>CSS transforms let you manipulate the appearance of elements using rotate, scale, and translate:</p>
+        <pre>
+            .rotate {
+                transform: rotate(45deg);
+            }
+    
+            .translate {
+                transform: translate(50px, 100px);
+            }
+        </pre>
+        <div class="box rotate">Rotated Box</div>
+        <div class="box translate">Translated Box</div>
+    </section>
+    <section id="transitions">
+        <h2>15. CSS Transitions</h2>
+        <p>The <code>transition</code> property allows smooth transitions between styles over a specific duration.</p>
+        <pre>
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                transition: background-color 0.5s ease;
+            }
+    
+            .box:hover {
+                background-color: blue;
+            }
+        </pre>
+        <div class="box">Hover me!</div>
+    </section>
+    
+    <section id="animations">
+        <h2>16. CSS Animations</h2>
+        <p>The <code>@keyframes</code> rule allows you to create animations by gradually changing styles over time.</p>
+        <pre>
+            @keyframes example {
+                from {background-color: red;}
+                to {background-color: yellow;}
+            }
+    
+            .animate {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation: example 3s infinite;
+            }
+        </pre>
+        <div class="animate">Animating Box</div>
+    </section>
+    <section id="shadows">
+        <h2>17. CSS Flexbox</h2>
+        <p>Flexbox layout allows for responsive design by adjusting the distribution of space within a container.</p>
+        <pre>
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 200px;
+            }
+    
+            .item {
+                background-color: lightblue;
+                padding: 10px;
+                margin: 5px;
+            }
+        </pre>
+        <div class="container">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+    </section>
+    <section id="grid">
+        <h2>18. CSS Grid</h2>
+        <p>The CSS Grid layout provides a flexible way to organize content into rows and columns.</p>
+        <pre>
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 10px;
+            }
+    
+            .grid-item {
+                background-color: lightgreen;
+                padding: 20px;
+                text-align: center;
+            }
+        </pre>
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+    </section>
+    <section id="responsive-design">
+        <h2>19. Responsive Design (Media Queries)</h2>
+        <p>Media queries allow you to apply different styles depending on the screen size or device.</p>
+        <pre>
+            @media only screen and (max-width: 600px) {
+                .responsive-box {
+                    background-color: lightblue;
+                }
+            }
+    
+            @media only screen and (min-width: 600px) {
+                .responsive-box {
+                    background-color: lightcoral;
+                }
+            }
+        </pre>
+        <div class="responsive-box">Resize the screen!</div>
+    </section>
+    <section id="z-index">
+        <h2>20. CSS Z-Index and Stacking Context</h2>
+        <p>The <code>z-index</code> property determines the stacking order of elements along the z-axis.</p>
+        <pre>
+            .z-box1 {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                z-index: 2;
+            }
+    
+            .z-box2 {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                z-index: 1;
+            }
+        </pre>
+        <div class="z-box1" style="top: 0; left: 0;">Box 1</div>
+        <div class="z-box2" style="top: 50px; left: 50px;">Box 2</div>
+    </section>
+    <section id="z-index">
+        <h2>21. CSS Shapes</h2>
+        <p>The <code>shape-outside</code> property allows content to wrap around custom shapes.</p>
+        <pre>
+            .shape {
+                float: left;
+                width: 200px;
+                height: 200px;
+                shape-outside: circle(50%);
+                clip-path: circle(50%);
+                background: lightcoral;
+            }
+        </pre>
+        <div class="shape"></div>
+        <p>This text will wrap around the circular shape. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+    <section id="visibility">
+        <h2>22. CSS Filters</h2>
+        <p>Filters allow you to apply visual effects to elements, such as blur, brightness, and contrast.</p>
+        <pre>
+            .filter-box {
+                width: 200px;
+                height: 200px;
+                background-image: url('image.jpg');
+                filter: blur(5px) brightness(0.8);
+            }
+        </pre>
+        <div class="filter-box"></div>
+    </section>
+         
+    <section id="float">
+        <h2>23. CSS Variables (Custom Properties)</h2>
+        <p>CSS variables allow you to define reusable values for properties.</p>
+        <pre>
+            :root {
+                --main-bg-color: lightblue;
+                --main-text-color: navy;
+            }
+    
+            .variable-box {
+                background-color: var(--main-bg-color);
+                color: var(--main-text-color);
+                padding: 20px;
+            }
+        </pre>
+        <div class="variable-box">This box uses CSS variables for background and text color.</div>
+    </section>
+    <section id="Clearfix">
+        <h2>24. CSS Positioning</h2>
+        <p>CSS provides different positioning methods: static, relative, absolute, fixed, and sticky.</p>
+        <pre>
+            .relative-box {
+                position: relative;
+                top: 20px;
+                left: 20px;
+                background-color: lightcoral;
+                width: 100px;
+                height: 100px;
+            }
+    
+            .absolute-box {
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                background-color: lightgreen;
+                width: 100px;
+                height: 100px;
+            }
+        </pre>
+        <div class="relative-box">Relative</div>
+        <div class="absolute-box">Absolute</div>
+    </section>
+    <section id="column">
+        <h2>25. CSS Pseudo-classes and Pseudo-elements</h2>
+        <p>Pseudo-classes like <code>:hover</code> and pseudo-elements like <code>::before</code> allow you to style elements based on their state or position.</p>
+        <pre>
+            .hover-box:hover {
+                background-color: lightgreen;
+            }
+    
+            .before-box::before {
+                content: "Before: ";
+                color: red;
+            }
+        </pre>
+        <div class="hover-box">Hover over me</div>
+        <div class="before-box">This box has a pseudo-element</div>
+    </section>
+            
+    <section id="Variables">
+        <h2>26. CSS Blend Modes</h2>
+        <p>Blend modes determine how an element's content blends with the content behind it.</p>
+        <pre>
+            .blend-box {
+                background-image: url('image.jpg');
+                background-color: red;
+                background-blend-mode: multiply;
+                width: 300px;
+                height: 200px;
+            }
+        </pre>
+        <div class="blend-box"></div>
+    </section>
+    <section id="calc">
+        <h2>27. CSS Object-fit and Object-position</h2>
+        <p>The <code>object-fit</code> property controls how the content of a replaced element (such as an image or video) is resized to fit its container.</p>
+        <pre>
+            .fit-box img {
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
+            }
+        </pre>
+        <div class="fit-box">
+            <img src="image.jpg" alt="Example image">
+        </div>
+    </section>
+    <section id="clipping">
+        <h2>28. CSS Clipping and Masking</h2>
+        <p>The <code>clip-path</code> and <code>mask</code> properties allow you to hide parts of an element in creative ways.</p>
+        <pre>
+            .clip-box {
+                width: 200px;
+                height: 200px;
+                background-color: lightblue;
+                clip-path: circle(50%);
+            }
+        </pre>
+        <div class="clip-box"></div>
+    </section>
+    <section id="masking">
+        <h2>29. CSS Writing Modes</h2>
+        <p>Writing modes change the direction in which text is laid out. This is useful for vertical text or languages that are read top-to-bottom.</p>
+        <pre>
+            .vertical-text {
+                writing-mode: vertical-rl;
+                text-orientation: upright;
+                background-color: lightyellow;
+                padding: 10px;
+            }
+        </pre>
+        <div class="vertical-text">This is vertical text!</div>
+    </section>
+    <section id="blending">
+        <h2>30. CSS Counters</h2>
+        <p>CSS counters allow you to create custom numbering for lists and other elements using <code>counter-reset</code> and <code>counter-increment</code>.</p>
+        <pre>
+            ol {
+                counter-reset: my-counter;
+            }
+    
+            li {
+                counter-increment: my-counter;
+            }
+    
+            li::before {
+                content: counter(my-counter) ". ";
+                font-weight: bold;
+            }
+        </pre>
+        <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ol>
+    </section>
+    <section id="object-fit">
+        <h2>31. CSS Media Queries (Responsive Design)</h2>
+        <p>Media queries allow you to apply different styles for different screen sizes, making your website responsive.</p>
+        <pre>
+            .box {
+                width: 100%;
+                background-color: lightblue;
+            }
+    
+            @media (min-width: 600px) {
+                .box {
+                    width: 50%;
+                }
+            }
+        </pre>
+        <div class="box">Resize the window to see the effect</div>
+    </section>
+    <section id="object-position">
+        <h2>32. CSS Grid Layout</h2>
+        <p>CSS Grid allows you to create complex grid layouts for your web pages.</p>
+        <pre>
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 10px;
+            }
+    
+            .grid-item {
+                background-color: lightcoral;
+                padding: 20px;
+                text-align: center;
+            }
+        </pre>
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+        </div>
+    </section>
+    <section id="flex-grow">
+        <h2>33. CSS Subgrid</h2>
+        <p>The <code>subgrid</code> value allows nested grid items to inherit the parent's grid lines, making it easier to create consistent layouts.</p>
+        <pre>
+            .grid-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+    
+            .nested-grid {
+                display: grid;
+                grid-template-columns: subgrid;
+            }
+    
+            .nested-item {
+                background-color: lightgreen;
+                padding: 10px;
+                text-align: center;
+            }
+        </pre>
+        <div class="grid-container">
+            <div class="nested-grid">
+                <div class="nested-item">Nested 1</div>
+                <div class="nested-item">Nested 2</div>
+            </div>
+        </div>
+    </section>
+    <section id="flex-shrition">
+        <h2>34. CSS Transitions</h2>
+        <p>Transitions allow you to smoothly animate changes to CSS properties over time.</p>
+        <pre>
+            .transition-box {
+                width: 100px;
+                height: 100px;
+                background-color: lightblue;
+                transition: background-color 0.5s ease;
+            }
+    
+            .transition-box:hover {
+                background-color: lightcoral;
+            }
+        </pre>
+        <div class="transition-box">Hover me</div>
+    </section>
+    <section id="order">
+        <h2>35. CSS Animations</h2>
+        <p>CSS animations allow you to create complex animations using keyframes that describe the stages of the animation.</p>
+        <pre>
+            @keyframes slide {
+                from {
+                    transform: translateX(0);
+                }
+                to {
+                    transform: translateX(100px);
+                }
+            }
+    
+            .animate-box {
+                width: 100px;
+                height: 100px;
+                background-color: lightgreen;
+                animation: slide 2s infinite alternate;
+            }
+        </pre>
+        <div class="animate-box"></div>
+    </section>
+    <section id="grid-template">
+        <h2>36. CSS Flexbox</h2>
+        <p>Flexbox is a layout module that allows items to align and distribute space within a container efficiently, even when their size is dynamic or unknown.</p>
+        <pre>
+            .flex-container {
+                display: flex;
+                justify-content: space-around;
+            }
+    
+            .flex-item {
+                background-color: lightblue;
+                padding: 10px;
+                width: 100px;
+                text-align: center;
+            }
+        </pre>
+        <div class="flex-container">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+    </section>
+    <section id="grid-auto-flow">
+        <h2>37. CSS Scroll Snap</h2>
+        <p>CSS Scroll Snap allows you to control the snapping behavior during scrolling, creating more precise scroll points.</p>
+        <pre>
+            .snap-container {
+                scroll-snap-type: y mandatory;
+                height: 300px;
+                overflow-y: scroll;
+            }
+    
+            .snap-item {
+                height: 300px;
+                scroll-snap-align: start;
+                background-color: lightblue;
+                padding: 20px;
+                margin-bottom: 10px;
+            }
+        </pre>
+        <div class="snap-container">
+            <div class="snap-item">Item 1</div>
+            <div class="snap-item">Item 2</div>
+            <div class="snap-item">Item 3</div>
+        </div>
+    </section>
+    <section id="grid-auto">
+        <h2>38. CSS Multi-Column Layout</h2>
+        <p>The multi-column layout allows you to split content into multiple columns, similar to how content is presented in newspapers or magazines.</p>
+        <pre>
+            .multi-column {
+                column-count: 3;
+                column-gap: 20px;
+            }
+        </pre>
+        <div class="multi-column">
+            <p>This is some text that will be split into multiple columns. The layout automatically adjusts the content based on the number of columns.</p>
+        </div>
+    </section>
+    <section id="grid-align">
+        <h2>39. CSS Object Fit and Object Position</h2>
+        <p>Object Fit allows you to control how images or media are resized to fit their containers, while Object Position allows you to position the media inside its container.</p>
+        <pre>
+            .fit-container {
+                width: 300px;
+                height: 200px;
+                background-color: lightgray;
+            }
+    
+            .fit-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        </pre>
+        <div class="fit-container">
+            <img src="image.jpg" class="fit-image" alt="Object Fit Example">
+        </div>
+    </section>
+    <section id="flxbox-alignment">
+        <h2>40. CSS Shapes</h2>
+        <p>CSS Shapes allow you to wrap text around custom shapes rather than just rectangular boxes.</p>
+        <pre>
+            .shape-container {
+                float: left;
+                shape-outside: circle(50%);
+                width: 200px;
+                height: 200px;
+                background-color: lightblue;
+                border-radius: 50%;
+            }
+        </pre>
+        <div class="shape-container"></div>
+        <p>This text will wrap around the circular shape, creating a more dynamic and visually interesting layout.</p>
+    </section>
+    <section id="flexbox-wrapping">
+        <h2>41. CSS Custom Properties (Variables)</h2>
+        <p>CSS Custom Properties allow you to define reusable variables in your stylesheets, making it easier to maintain consistent design values.</p>
+        <pre>
+            :root {
+                --primary-color: lightblue;
+                --secondary-color: lightcoral;
+            }
+    
+            .variable-box {
+                background-color: var(--primary-color);
+                color: var(--secondary-color);
+                padding: 20px;
+            }
+        </pre>
+        <div class="variable-box">This box uses CSS variables!</div>
+    </section>
+    <section id="grid-vs-flexbox">
+        <h2>42. CSS Box Alignment</h2>
+        <p>Box Alignment in CSS allows you to align elements both horizontally and vertically within flex and grid layouts.</p>
+        <pre>
+            .alignment-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 200px;
+                background-color: lightgray;
+            }
+    
+            .alignment-item {
+                padding: 20px;
+                background-color: lightblue;
+            }
+        </pre>
+        <div class="alignment-container">
+            <div class="alignment-item">Centered Item</div>
+        </div>
+    </section>
+    <section id="animation-keyframes">
+        <h2>43. CSS Pseudo-Classes and Pseudo-Elements</h2>
+        <p>Pseudo-classes and pseudo-elements allow you to style elements based on their state or insert content before or after an element.</p>
+        <pre>
+            a:hover {
+                color: red;
+            }
+    
+            p::before {
+                content: "Note: ";
+                font-weight: bold;
+            }
+        </pre>
+        <p>Hover over the <a href="#">link</a> to see the pseudo-class in action.</p>
+        <p>This paragraph demonstrates the ::before pseudo-element.</p>
+    </section>
+    <section id="grid-layout">
+        <h2>44. CSS Grid Layout</h2>
+        <p>The CSS Grid Layout module allows you to create complex web layouts by using a two-dimensional grid system, offering flexibility in aligning content in rows and columns.</p>
+        <pre>
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+    
+            .grid-item {
+                background-color: lightcoral;
+                padding: 20px;
+                text-align: center;
+            }
+        </pre>
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+        </div>
+    </section>
+    <section id="flexbox-layout">
+        <h2>45. CSS Flexbox Layout</h2>
+        <p>Flexbox is a one-dimensional layout method for laying out items in rows or columns. It simplifies the process of aligning and distributing space among items in a container.</p>
+        <pre>
+            .flex-container {
+                display: flex;
+                justify-content: space-between;
+            }
+    
+            .flex-item {
+                background-color: lightgreen;
+                padding: 20px;
+                text-align: center;
+            }
+        </pre>
+        <div class="flex-container">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+    </section>
+    <section id="css-animations">
+        <h2>46. CSS Animations</h2>
+        <p>CSS Animations allow you to animate the transitions between various CSS properties, creating smooth, interactive experiences.</p>
+        <pre>
+            .animate-box {
+                width: 100px;
+                height: 100px;
+                background-color: lightcoral;
+                animation: move 2s infinite;
+            }
+    
+            @keyframes move {
+                0% { transform: translateX(0); }
+                50% { transform: translateX(100px); }
+                100% { transform: translateX(0); }
+            }
+        </pre>
+        <div class="animate-box"></div>
+    </section>
+    <section id="css-transitions">
+        <h2>47. CSS Transitions</h2>
+        <p>CSS Transitions make it easy to change the property values of an element smoothly over a specific duration.</p>
+        <pre>
+            .transition-box {
+                width: 100px;
+                height: 100px;
+                background-color: lightblue;
+                transition: background-color 1s ease;
+            }
+    
+            .transition-box:hover {
+                background-color: lightgreen;
+            }
+        </pre>
+        <div class="transition-box"></div>
+    </section>
+    <section id="grid-vs-flexbox">
+        <h2>48. CSS Grid vs. Flexbox</h2>
+        <p>CSS Grid and Flexbox are both powerful layout systems, but they serve different purposes. Grid is best for 2D layouts, while Flexbox is for 1D layouts.</p>
+        <pre>
+            /* Flexbox */
+            .flex-container {
+                display: flex;
+                justify-content: space-around;
+            }
+    
+            /* Grid */
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        </pre>
+        <div class="flex-container">
+            <div>Flexbox Item 1</div>
+            <div>Flexbox Item 2</div>
+            <div>Flexbox Item 3</div>
+        </div>
+        <div class="grid-container">
+            <div>Grid Item 1</div>
+            <div>Grid Item 2</div>
+            <div>Grid Item 3</div>
+        </div>
+    </section>
+    <section id="logical-properties">
+        <h2>49. CSS Logical Properties and Values</h2>
+        <p>CSS Logical Properties allow you to control layout and design in a language-independent way, useful for supporting right-to-left (RTL) or left-to-right (LTR) languages.</p>
+        <pre>
+            .logical-box {
+                inline-size: 200px;
+                block-size: 100px;
+                margin-inline: auto;
+                padding-block: 20px;
+                background-color: lightpink;
+            }
+        </pre>
+        <div class="logical-box">Logical Properties Box</div>
+    </section>
+    <section id="cascade-specificity">
+        <h2>50. CSS Cascade and Specificity</h2>
+        <p>The cascade and specificity in CSS determine how conflicting styles are resolved and which styles are applied to an element based on their importance.</p>
+        <pre>
+            /* Specificity */
+            p {
+                color: blue; /* Low specificity */
+            }
+    
+            .specific-class {
+                color: red; /* Higher specificity */
+            }
+    
+            #specific-id {
+                color: green; /* Highest specificity */
+            }
+        </pre>
+        <p id="specific-id" class="specific-class">This text will be green due to CSS specificity.</p>
+    </section>
+  
+<footer>
+    <div style="background-color:black; color:white; padding:30px 0; text-align:center;">
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <!-- About Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>About Us</h3>
+                <p>We provide high-quality programming tutorials, exercises, and quizzes to help learners master programming concepts and build real-world applications.</p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>Quick Links</h3>
+                <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                    <li><a href="h.html" style="color:white; text-decoration:none;">HTML</a></li>
+                    <li><a href="css.html" style="color:white; text-decoration:none;">CSS</a></li>
+                    <li><a href="sk.html" style="color:white; text-decoration:none;">JavaScript</a></li>
+                    <li><a href="react.html" style="color:white; text-decoration:none;">React</a></li>
+                    <li><a href="php.html" style="color:white; text-decoration:none;">PHP</a></li>
+                    <li><a href="mysqli.html" style="color:white; text-decoration:none;">mysql</a></li>
+                    <li><a href="mongodb.html" style="color:white; text-decoration:none;">mongodb</a></li>
+                    <li><a href="python.html" style="color:white; text-decoration:none;">Python</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>Contact Us</h3>
+                <p>Phone: <a href="tel:+9303546247" class="clickable">9303546247</a></p>
+                <p>Email: <a href="mailto:niteshamule74@gmail.com" class="clickable">niteshamule74@gmail.com</a></p>
+            </div>
+
+            <!-- Social Media Links Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>Follow Us</h3>
+                <a href="https://youtube.com/@codewith.n.a.74?si=I_4_BBk6uMl1bER3" style="color:white; text-decoration:none; margin-right:10px;">YouTube</a>
+                <a href="https://www.instagram.com/code_with_n.a/profilecard/?igsh=MTQzMzQ1N3RyejFweg==" style="color:white; text-decoration:none; margin-right:10px;">Instagram</a>
+                <a href="https://t.me/CodwithNA" style="color:white; text-decoration:none; margin-right:10px;">Telegram</a>
+                <a href="https://github.com/Code-with-N-A" style="color:white; text-decoration:none;">Github</a>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div style="margin-top: 20px; border-top: 1px solid #555; padding-top: 10px;">
+            <p>&copy; 2024 Code with N.A. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+                                                                         
+</body>
+</html>

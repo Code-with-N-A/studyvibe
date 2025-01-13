@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--may websit fevi icob-->
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+
+     <!-- Basic Meta Tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="description" content="Learn coding, programming, and online courses. Get tutorials, resources, and professional programming help for web development, Python, Java, and more.">
+     <meta name="keywords" content="coding, programming, online courses, web development, learn Python, learn Java, tutorials, coding classes, programming tutorials, free online courses">
+     <meta name="author" content="Code with N.A.">
+     <meta name="robots" content="index, follow">
+     
+     <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+     <meta property="og:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta property="og:description" content="Get free online courses, coding tutorials, and programming resources. Learn web development, Python, Java, and more with Code with N.A.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://www.yourwebsite.com">
+     <meta property="og:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Twitter Meta Tags (For Twitter Sharing) -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta name="twitter:description" content="Free online coding tutorials, courses, and programming resources. Learn web development, Python, and more with Code with N.A.">
+     <meta name="twitter:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Additional Meta Tags -->
+     <meta name="theme-color" content="#000000">
+     <meta name="language" content="English">
+     <meta name="distribution" content="global">
+     <meta name="revisit-after" content="7 days">
+     <meta name="rating" content="General">
+     
+     <!-- Google Site Verification (If applicable) -->
+     <meta name="google-site-verification" content="your-google-verification-code">
+ 
+    <title>HTML Full Advanced Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .content {
+            padding: 20px;
+            background-color: white;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        .example {
+            background-color: #e7f4f7;
+            padding: 10px;
+            border-left: 5px solid #0077b6;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML Full Advanced Course</h1>
+    <p>A comprehensive guide to HTML, from beginner to expert level</p>
+</header>
+
+<nav>
+    <a href="#section1">Introduction</a>
+    <a href="#section2">HTML Structure</a>
+    <a href="#section3">HTML Tags</a>
+    <a href="#section4">Forms and Input</a>
+    <a href="#section5">HTML Attributes</a>
+    <a href="#section6">Multimedia Elements</a>
+    <a href="#section7">HTML5 APIs</a>
+    <a href="#section8">Accessibility</a>
+    <a href="#section9">SEO Optimization</a>
+    <a href="#section10">HTML5 Semantic Elements</a>
+    <a href="#section11">Web Storage</a>
+    <a href="#section12">Responsive Design</a>
+    <a href="#section13">CSS Grid and Flexbox</a>
+    <a href="#section14">JavaScript Integration</a>
+    <a href="#section15">Progressive Web Apps</a>
+    <a href="#section16">WebSockets</a>
+    <a href="#section17">HTML5 Drag-and-Drop</a>
+    <a href="#section18">Best Practices</a>
+    <a href="#section19">Conclusion</a>
+</nav>
+
+<div class="content" id="section1">
+    <h2>1. Introduction to HTML</h2>
+    <p>HTML (Hypertext Markup Language) ek markup language hai jo webpages banane ke liye istemal hota hai. HTML web browser ko batata hai ki content kaise dikhna chahiye. HTML ek simple aur powerful language hai jise har web developer ko seekhna chahiye.</p>
+</div>
+
+<div class="content" id="section2">
+    <h2>2. HTML Structure</h2>
+    <p>Har HTML document ka ek basic structure hota hai. Is structure mein <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, aur <code>&lt;body&gt;</code> tags hote hain.</p>
+    <pre>
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;title&gt;Page Title&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1&gt;My First Heading&lt;/h1&gt;
+                &lt;p&gt;My first paragraph.&lt;/p&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+</div>
+
+<div class="content" id="section3">
+    <h2>3. HTML Tags</h2>
+    <p>HTML mein kaafi tarah ke tags hote hain jo content ko define karte hain. Kuch common tags yeh hain:</p>
+    <ul>
+        <li><code>&lt;h1&gt; - &lt;h6&gt;</code>: Heading tags</li>
+        <li><code>&lt;p&gt;</code>: Paragraph</li>
+        <li><code>&lt;a&gt;</code>: Anchor (links)</li>
+        <li><code>&lt;img&gt;</code>: Image</li>
+        <li><code>&lt;ul&gt;</code>: Unordered list</li>
+        <li><code>&lt;ol&gt;</code>: Ordered list</li>
+    </ul>
+    <div class="example">
+        <h3>Example:</h3>
+        <pre>
+            &lt;h1&gt;This is a heading&lt;/h1&gt;
+            &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+        </pre>
+    </div>
+</div>
+
+<div class="content" id="section4">
+    <h2>4. HTML Forms and Input</h2>
+    <p>HTML forms ka use user se data input lene ke liye kiya jata hai. Forms mein different types of inputs hote hain, jaise text fields, radio buttons, checkboxes, etc.</p>
+    <pre>
+        &lt;form action="submit_form.php"&gt;
+            &lt;label for="name"&gt;Name:&lt;/label&gt;
+            &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;
+
+            &lt;label for="email"&gt;Email:&lt;/label&gt;
+            &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+
+            &lt;input type="submit" value="Submit"&gt;
+        &lt;/form&gt;
+    </pre>
+    <p>Yeh form ek simple contact form hai jo name aur email lene ke liye use hota hai.</p>
+</div>
+
+<div class="content" id="section5">
+    <h2>5. HTML Attributes</h2>
+    <p>HTML tags mein attributes hote hain jo tag ke functionality ko modify karte hain. Kuch common attributes yeh hain:</p>
+    <ul>
+        <li><code>href</code>: Link ke address ko specify karta hai</li>
+        <li><code>src</code>: Image ka source (file path) specify karta hai</li>
+        <li><code>alt</code>: Image description provide karta hai (accessibility ke liye)</li>
+        <li><code>class</code>: CSS styling ke liye classes specify karta hai</li>
+        <li><code>id</code>: Unique identification dene ke liye</li>
+    </ul>
+    <div class="example">
+        <h3>Example:</h3>
+        <pre>
+            &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+            &lt;img src="image.jpg" alt="Description"&gt;
+        </pre>
+    </div>
+</div>
+
+<div class="content" id="section6">
+    <h2>6. Multimedia Elements in HTML5</h2>
+    <p>HTML5 ne multimedia elements ka support diya hai jaise <code>&lt;audio&gt;</code> aur <code>&lt;video&gt;</code>, jo ki media files ko directly webpages par display karte hain.</p>
+    <pre>
+        &lt;audio controls&gt;
+            &lt;source src="audio.mp3" type="audio/mp3"&gt;
+        &lt;/audio&gt;
+
+        &lt;video width="320" height="240" controls&gt;
+            &lt;source src="movie.mp4" type="video/mp4"&gt;
+        &lt;/video&gt;
+    </pre>
+</div>
+
+<div class="content" id="section7">
+    <h2>7. HTML5 APIs</h2>
+    <p>HTML5 mein kayi APIs (Application Programming Interfaces) aaye hain jo webpages ko interact aur dynamic banane mein madad karte hain. Jaise ki Geolocation API, Web Storage API, Web Workers, Canvas API, etc.</p>
+    <div class="example">
+        <h3>Example (Geolocation API):</h3>
+        <pre>
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    alert("Latitude: " + position.coords.latitude + "\nLongitude: " + position.coords.longitude);
+                });
+            } else {
+                alert("Geolocation not supported");
+            }
+        </pre>
+    </div>
+</div>
+
+<div class="content" id="section8">
+    <h2>8. Accessibility in HTML</h2>
+    <p>Web Accessibility ka matlab hai ki aapki website sabhi users, including disabled users ke liye accessible ho. Iske liye, HTML tags aur attributes ka proper use karna zaroori hai. Kuch tips:</p>
+    <ul>
+        <li>Use <code>alt</code> attributes for images</li>
+        <li>Use <code>aria-label</code> for defining roles</li>
+        <li>Proper heading structure (H1, H2, etc.) for screen readers</li>
+    </ul>
+</div>
+
+<div class="content" id="section9">
+    <h2>9. SEO Optimization for HTML</h2>
+    <p>SEO (Search Engine Optimization) se websites ko search engines ke liye optimize kiya jata hai. Isme proper tag use, meta tags, heading structure, aur content ko optimize karna shamil hai.</p>
+    <ul>
+        <li>Use relevant keywords in <code>&lt;title&gt;</code> and <code>&lt;meta&gt;</code> tags.</li>
+        <li>Use semantic tags like <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;header&gt;</code>.</li>
+        <li>Optimize images with <code>alt</code> tags.</li>
+    </ul>
+</div>
+
+<div class="content" id="section10">
+    <h2>10. HTML5 Semantic Elements</h2>
+    <p>HTML5 ne semantic elements introduce kiye hain, jo content ko zyada meaning dete hain. Jaise:</p>
+    <ul>
+        <li><code>&lt;header&gt;</code>: Page ke header ke liye</li>
+        <li><code>&lt;footer&gt;</code>: Page ke footer ke liye</li>
+        <li><code>&lt;article&gt;</code>: Independent content ke liye</li>
+        <li><code>&lt;section&gt;</code>: Content sections ke liye</li>
+    </ul>
+</div>
+
+<div class="content" id="section11">
+    <h2>11. Web Storage</h2>
+    <p>Web Storage API ko use karke hum browser mein data store kar sakte hain. Yeh localStorage aur sessionStorage ko support karta hai.</p>
+    <div class="example">
+        <h3>Example (LocalStorage):</h3>
+        <pre>
+            localStorage.setItem("username", "JohnDoe");
+            var user = localStorage.getItem("username");
+            alert(user);
+        </pre>
+    </div>
+</div>
+
+<div class="content" id="section12">
+    <h2>12. Responsive Design</h2>
+    <p>Responsive web design ka matlab hai ki website har device par achhe se dikhe, chahe wo mobile ho ya desktop. Yeh CSS media queries ka use karke achieve kiya jata hai.</p>
+    <pre>
+        @media screen and (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+    </pre>
+</div>
+
+<div class="content" id="section13">
+    <h2>13. CSS Grid and Flexbox</h2>
+    <p>CSS Grid aur Flexbox dono hi layout systems hain jo webpages ko responsive aur flexible banane mein madad karte hain. Grid use karne se rows aur columns ka structure banaya jata hai, jabki Flexbox se elements ko easily align aur distribute kiya jata hai.</p>
+    <div class="example">
+        <h3>Example (Flexbox):</h3>
+        <pre>
+            .container {
+                display: flex;
+                justify-content: space-between;
+            }
+            .item {
+                width: 30%;
+            }
+        </pre>
+    </div>
+</div>
+
+<div class="content" id="section14">
+    <h2>14. JavaScript Integration</h2>
+    <p>JavaScript ko HTML mein integrate karke hum webpages ko dynamic aur interactive bana sakte hain. JavaScript ka use forms, animations, events, aur user interactions ko handle karne ke liye hota hai.</p>
+    <pre>
+        &lt;script&gt;
+            alert("Hello, World!");
+        &lt;/script&gt;
+    </pre>
+</div>
+
+<div class="content" id="section15">
+    <h2>15. Progressive Web Apps (PWA)</h2>
+    <p>PWA ek type ki web application hai jo offline kaam kar sakti hai aur mobile apps jaise experience deti hai. Iske liye, Service Workers aur Web App Manifest ka use kiya jata hai.</p>
+</div>
+
+<div class="content" id="section16">
+    <h2>16. WebSockets</h2>
+    <p>WebSockets ka use real-time communication ke liye hota hai, jaise chat applications ya live notifications mein. WebSocket ek persistent connection establish karta hai.</p>
+    <pre>
+        var socket = new WebSocket("ws://example.com/socket");
+        socket.onmessage = function(event) {
+            alert(event.data);
+        };
+    </pre>
+</div>
+
+<div class="content" id="section17">
+    <h2>17. HTML5 Drag-and-Drop</h2>
+    <p>HTML5 mein drag-and-drop functionality ka support hai, jisme user elements ko ek location se doosri location par move kar sakte hain.</p>
+    <pre>
+        &lt;div draggable="true" ondragstart="drag(event)" id="drag1"&gt;Drag me&lt;/div&gt;
+    </pre>
+</div>
+
+<div class="content" id="section18">
+    <h2>18. Best Practices for HTML</h2>
+    <p>HTML code likhne ke kuch best practices hain jo readability aur maintainability ko improve karte hain:</p>
+    <ul>
+        <li>Code ko properly indent karna</li>
+        <li>Semantic tags ka use karna</li>
+        <li>CSS aur JavaScript ko external files mein rakhna</li>
+        <li>Comments ka use karna</li>
+    </ul>
+</div>
+
+<div class="content" id="section19">
+    <h2>19. Conclusion</h2>
+    <p>HTML ek essential web development skill hai. Is course mein humne basic se leke advanced topics cover kiye hain jaise forms, multimedia, APIs, accessibility, aur SEO. Ab aap HTML ka istemal karke professional webpages bana sakte hain.</p>
+</div>
+
+
+<footer>
+    <div style="background-color:black; color:white; padding:30px 0; text-align:center;">
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <!-- About Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>About Us</h3>
+                <p>We provide high-quality programming tutorials, exercises, and quizzes to help learners master programming concepts and build real-world applications.</p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>Quick Links</h3>
+                <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                    <li><a href="h.html" style="color:white; text-decoration:none;">HTML</a></li>
+                    <li><a href="css.html" style="color:white; text-decoration:none;">CSS</a></li>
+                    <li><a href="sk.html" style="color:white; text-decoration:none;">JavaScript</a></li>
+                    <li><a href="react.html" style="color:white; text-decoration:none;">React</a></li>
+                    <li><a href="php.html" style="color:white; text-decoration:none;">PHP</a></li>
+                    <li><a href="mysqli.html" style="color:white; text-decoration:none;">mysql</a></li>
+                    <li><a href="mongodb.html" style="color:white; text-decoration:none;">mongodb</a></li>
+                    <li><a href="python.html" style="color:white; text-decoration:none;">Python</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>Contact Us</h3>
+                <p>Phone: <a href="tel:+9303546247" class="clickable">9303546247</a></p>
+                <p>Email: <a href="mailto:niteshamule74@gmail.com" class="clickable">niteshamule74@gmail.com</a></p>
+            </div>
+
+            <!-- Social Media Links Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>Follow Us</h3>
+                <a href="https://youtube.com/@codewith.n.a.74?si=I_4_BBk6uMl1bER3" style="color:white; text-decoration:none; margin-right:10px;">YouTube</a>
+                <a href="https://www.instagram.com/code_with_n.a/profilecard/?igsh=MTQzMzQ1N3RyejFweg==" style="color:white; text-decoration:none; margin-right:10px;">Instagram</a>
+                <a href="https://t.me/CodwithNA" style="color:white; text-decoration:none; margin-right:10px;">Telegram</a>
+                <a href="https://github.com/Code-with-N-A" style="color:white; text-decoration:none;">Github</a>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div style="margin-top: 20px; border-top: 1px solid #555; padding-top: 10px;">
+            <p>&copy; 2024 Code with N.A. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+ 
+ 
+</body>
+</html>

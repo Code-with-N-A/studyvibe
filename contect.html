@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | CodeWith_N.A</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--may websit fevi icob-->
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+
+
+     <!-- Basic Meta Tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="description" content="Learn coding, programming, and online courses. Get tutorials, resources, and professional programming help for web development, Python, Java, and more.">
+     <meta name="keywords" content="coding, programming, online courses, web development, learn Python, learn Java, tutorials, coding classes, programming tutorials, free online courses">
+     <meta name="author" content="Code with N.A.">
+     <meta name="robots" content="index, follow">
+     
+     <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+     <meta property="og:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta property="og:description" content="Get free online courses, coding tutorials, and programming resources. Learn web development, Python, Java, and more with Code with N.A.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://www.yourwebsite.com">
+     <meta property="og:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Twitter Meta Tags (For Twitter Sharing) -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta name="twitter:description" content="Free online coding tutorials, courses, and programming resources. Learn web development, Python, and more with Code with N.A.">
+     <meta name="twitter:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Additional Meta Tags -->
+     <meta name="theme-color" content="#000000">
+     <meta name="language" content="English">
+     <meta name="distribution" content="global">
+     <meta name="revisit-after" content="7 days">
+     <meta name="rating" content="General">
+     
+     <!-- Google Site Verification (If applicable) -->
+     <meta name="google-site-verification" content="your-google-verification-code">
+ 
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .contact-form-container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 600px;
+            width: 80%;
+            animation: fadeIn 1s ease-out;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+
+        .input-field:focus {
+            border: 2px solid #0072ff;
+        }
+
+        .input-field::placeholder {
+            color: #aaa;
+        }
+
+        .form-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #0072ff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .input-container i {
+            color: #0072ff;
+            font-size: 24px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .contact-form-container {
+                width: 90%;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-form-container">
+        <h2>Contact Us</h2>
+        <form action="https://formsubmit.co/codewithna73@gmail.com" method="POST">
+            <!-- Name Field -->
+            <div class="input-container">
+                <i class="fas fa-user icon"></i>
+                <input type="text" name="name" class="input-field" placeholder="Your Name" required>
+            </div>
+            
+            <!-- Email Field -->
+            <div class="input-container">
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" name="email" class="input-field" placeholder="Your Email" required>
+            </div>
+
+            <!-- Phone Field -->
+            <div class="input-container">
+                <i class="fas fa-phone icon"></i>
+                <input type="tel" name="phone" class="input-field" placeholder="Your Phone" required>
+            </div>
+
+            <!-- Message Field -->
+            <div class="input-container">
+                <i class="fas fa-comment icon"></i>
+                <textarea name="message" class="input-field" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+
+            <!-- Hidden field to identify form -->
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you">
+            <input type="hidden" name="_subject" value="New Contact Form Submission">
+
+            <!-- Submit Button -->
+            <button type="submit" class="form-btn">Send Message</button>
+        </form>
+    </div>
+
+</body>
+</html>

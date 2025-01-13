@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--may websit fevi icob-->
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+
+     <!-- Basic Meta Tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="description" content="Learn coding, programming, and online courses. Get tutorials, resources, and professional programming help for web development, Python, Java, and more.">
+     <meta name="keywords" content="coding, programming, online courses, web development, learn Python, learn Java, tutorials, coding classes, programming tutorials, free online courses">
+     <meta name="author" content="Code with N.A.">
+     <meta name="robots" content="index, follow">
+     
+     <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+     <meta property="og:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta property="og:description" content="Get free online courses, coding tutorials, and programming resources. Learn web development, Python, Java, and more with Code with N.A.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://www.yourwebsite.com">
+     <meta property="og:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Twitter Meta Tags (For Twitter Sharing) -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta name="twitter:description" content="Free online coding tutorials, courses, and programming resources. Learn web development, Python, and more with Code with N.A.">
+     <meta name="twitter:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Additional Meta Tags -->
+     <meta name="theme-color" content="#000000">
+     <meta name="language" content="English">
+     <meta name="distribution" content="global">
+     <meta name="revisit-after" content="7 days">
+     <meta name="rating" content="General">
+     
+     <!-- Google Site Verification (If applicable) -->
+     <meta name="google-site-verification" content="your-google-verification-code">
+ 
+    <title>mysql Course </title>
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Section Styles */
+section {
+    padding: 30px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+}
+
+/* Headings */
+h2 {
+    color: #282c34;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Code Block Styles */
+pre {
+    background-color: #2e3b4e;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 16px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Code Tag Styles */
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: #f9a826;
+}
+
+/* Hover Effect on Code Example */
+pre:hover {
+    background-color: #333a48;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #282c34;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f9a826;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    pre {
+        padding: 10px;
+    }
+}
+
+        /* Styling for the side navigation */
+        #side-nav {
+            display: none; /* Initially hide the side-nav */
+            background-color: #333;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            padding-top: 50px;
+            z-index: 1000;
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+
+        /* Styling for the links in the side navigation */
+        #side-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            display: block;
+            font-size: 16px;
+            border-bottom: 1px solid #444; /* Add a border to each list item */
+            transition: background-color 0.3s ease; /* Smooth background transition */
+        }
+
+        /* Hover effect for list items */
+        #side-nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Styling for the toggle button */
+        #toggle-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px; /* Move button slightly lower */
+            left: 20px;
+            background: none;
+            border: none;
+            color: #333;
+            z-index: 1001; /* Ensure button is above the menu */
+        }
+
+        /* Button change when menu is open */
+        #toggle-btn.open {
+            color: red; /* Color change when menu is open */
+        }
+    </style>
+</head>
+<body>
+     <!-- Toggle Button -->
+     <button id="toggle-btn">☰</button>
+
+     <nav id="side-nav">
+        <a href="#mysql-home">1. MySQL HOME</a>
+        <a href="#mysql-intro">2. MySQL Intro</a>
+        <a href="#mysql-rdbms">3. MySQL RDBMS</a>
+        <a href="#mysql-sql">4. MySQL SQL</a>
+        <a href="#mysql-select">5. MySQL SELECT</a>
+        <a href="#mysql-where">6. MySQL WHERE</a>
+        <a href="#mysql-and-or-not">7. MySQL AND, OR, NOT</a>
+        <a href="#mysql-order-by">8. MySQL ORDER BY</a>
+        <a href="#mysql-insert">9. MySQL INSERT INTO</a>
+        <a href="#mysql-null-values">10. MySQL NULL Values</a>
+        <a href="#mysql-update">11. MySQL UPDATE</a>
+        <a href="#mysql-delete">12. MySQL DELETE</a>
+        <a href="#mysql-limit">13. MySQL LIMIT</a>
+        <a href="#mysql-min-max">14. MySQL MIN and MAX</a>
+        <a href="#mysql-count-avg-sum">15. MySQL COUNT, AVG, SUM</a>
+        <a href="#mysql-like">16. MySQL LIKE</a>
+        <a href="#mysql-wildcards">17. MySQL Wildcards</a>
+        <a href="#mysql-in">18. MySQL IN</a>
+        <a href="#mysql-between">19. MySQL BETWEEN</a>
+        <a href="#mysql-aliases">20. MySQL Aliases</a>
+        <a href="#mysql-joins">21. MySQL Joins</a>
+        <a href="#mysql-inner-join">22. MySQL INNER JOIN</a>
+        <a href="#mysql-left-join">23. MySQL LEFT JOIN</a>
+        <a href="#mysql-right-join">24. MySQL RIGHT JOIN</a>
+        <a href="#mysql-cross-join">25. MySQL CROSS JOIN</a>
+        <a href="#mysql-self-join">26. MySQL Self Join</a>
+        <a href="#mysql-union">27. MySQL UNION</a>
+        <a href="#mysql-group-by">28. MySQL GROUP BY</a>
+        <a href="#mysql-having">29. MySQL HAVING</a>
+        <a href="#mysql-exists">30. MySQL EXISTS</a>
+        <a href="#mysql-any-all">31. MySQL ANY, ALL</a>
+        <a href="#mysql-insert-select">32. MySQL INSERT SELECT</a>
+        <a href="#mysql-case">33. MySQL CASE</a>
+        <a href="#mysql-null-functions">34. MySQL Null Functions</a>
+        <a href="#mysql-comments">35. MySQL Comments</a>
+        <a href="#mysql-operators">36. MySQL Operators</a>
+        <a href="#mysql-database">37. MySQL Database</a>
+        <a href="#mysql-create-db">38. MySQL Create DB</a>
+        <a href="#mysql-drop-db">39. MySQL Drop DB</a>
+        <a href="#mysql-create-table">40. MySQL Create Table</a>
+        <a href="#mysql-drop-table">41. MySQL Drop Table</a>
+        <a href="#mysql-alter-table">42. MySQL Alter Table</a>
+        <a href="#mysql-constraints">43. MySQL Constraints</a>
+        <a href="#mysql-not-null">44. MySQL Not Null</a>
+        <a href="#mysql-unique">45. MySQL Unique</a>
+        <a href="#mysql-primary-key">46. MySQL Primary Key</a>
+        <a href="#mysql-foreign-key">47. MySQL Foreign Key</a>
+        <a href="#mysql-check">48. MySQL Check</a>
+        <a href="#mysql-default">49. MySQL Default</a>
+        <a href="#mysql-create-index">50. MySQL Create Index</a>
+        <a href="#mysql-auto-increment">51. MySQL Auto Increment</a>
+        <a href="#mysql-dates">52. MySQL Dates</a>
+        <a href="#mysql-views">53. MySQL Views</a>
+        <a href="#mysql-references">54. MySQL References</a>
+        <a href="#mysql-data-types">55. MySQL Data Types</a>
+        <a href="#mysql-functions">56. MySQL Functions</a>
+    </nav>
+    
+
+
+
+
+     <script>
+        // JavaScript to toggle the side navigation menu
+        document.getElementById("toggle-btn").addEventListener("click", function() {
+            var nav = document.getElementById("side-nav");
+            var button = document.getElementById("toggle-btn");
+
+            // Toggle the display property of the navigation
+            if (nav.style.display === "block") {
+                nav.style.display = "none";
+                button.classList.remove("open"); // Change button back to normal
+            } else {
+                nav.style.display = "block";
+                button.classList.add("open"); // Change button style when menu is open
+            }
+        });
+    </script>
+<header>
+   
+        
+      <h1> MySQL full Course</h1>
+</header>
+<section id="mysql-home">
+    <h2>MySQL HOME</h2>
+    <p>Welcome to the MySQL Tutorial! MySQL is an open-source relational database management system (RDBMS) that uses SQL (Structured Query Language) to manage data in a database.</p>
+</section>
+
+<section id="mysql-intro">
+    <h2>MySQL Intro</h2>
+    <p>MySQL is a powerful and widely used RDBMS, which stands for Relational Database Management System. It is commonly used in web applications to store data in a structured manner.</p>
+</section>
+
+<section id="mysql-rdbms">
+    <h2>MySQL RDBMS</h2>
+    <p>MySQL follows the principles of an RDBMS, which stores data in tables that are related to each other. These tables are connected using keys, and data can be manipulated using SQL queries.</p>
+    <p>Here's an example of creating a simple table in MySQL:</p>
+    <pre><code>
+-- Example of creating a table in MySQL
+CREATE TABLE customers (
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    age INT,
+    city VARCHAR(50)
+);
+    </code></pre>
+    <p>This table contains columns for customer information. The <code>customer_id</code> column is the primary key, and it auto-increments with each new record added to the table.</p>
+</section>
+
+<section id="mysql-sql">
+    <h2>1. MySQL SQL</h2>
+    <p>MySQL SQL is the language used to interact with MySQL databases. Below is an example of selecting data from a table:</p>
+    <pre><code>
+-- Example of a MySQL SELECT query
+SELECT * FROM customers;
+    </code></pre>
+</section>
+
+<section id="mysql-select">
+    <h2>2. MySQL SELECT</h2>
+    <p>The SELECT statement is used to retrieve data from a database. Here's an example of using SELECT to retrieve specific columns:</p>
+    <pre><code>
+-- Example of a MySQL SELECT query with specific columns
+SELECT first_name, last_name FROM customers;
+    </code></pre>
+</section>
+
+<section id="mysql-where">
+    <h2>3. MySQL WHERE</h2>
+    <p>The WHERE clause is used to filter records that meet a certain condition. Here's an example:</p>
+    <pre><code>
+-- Example of a MySQL query with WHERE condition
+SELECT * FROM customers WHERE age > 30;
+    </code></pre>
+</section>
+
+<section id="mysql-and-or-not">
+    <h2>4. MySQL AND, OR, NOT</h2>
+    <p>AND, OR, and NOT are logical operators that combine multiple conditions. Here's an example:</p>
+    <pre><code>
+-- Example of MySQL query with AND, OR, NOT operators
+SELECT * FROM customers WHERE age > 30 AND city = 'New York';
+    </code></pre>
+</section>
+
+<section id="mysql-order-by">
+    <h2>5. MySQL ORDER BY</h2>
+    <p>The ORDER BY clause is used to sort the results of a query. Here's an example:</p>
+    <pre><code>
+-- Example of a MySQL query with ORDER BY
+SELECT * FROM customers ORDER BY last_name DESC;
+    </code></pre>
+</section>
+
+<section id="mysql-insert-into">
+    <h2>6. MySQL INSERT INTO</h2>
+    <p>The INSERT INTO statement is used to add new records to a table. Here's an example:</p>
+    <pre><code>
+-- Example of a MySQL INSERT INTO query
+INSERT INTO customers (first_name, last_name, age, city)
+VALUES ('John', 'Doe', 25, 'Los Angeles');
+    </code></pre>
+</section>
+
+<section id="mysql-null-values">
+    <h2>7. MySQL NULL Values</h2>
+    <p>NULL values represent missing or undefined data. Here's an example of using NULL in a query:</p>
+    <pre><code>
+-- Example of a MySQL query checking for NULL values
+SELECT * FROM customers WHERE phone_number IS NULL;
+    </code></pre>
+</section>
+
+<section id="mysql-update">
+    <h2>8. MySQL UPDATE</h2>
+    <p>The UPDATE statement is used to modify existing records in a table. Here's an example:</p>
+    <pre><code>
+-- Example of a MySQL UPDATE query
+UPDATE customers SET age = 26 WHERE first_name = 'John' AND last_name = 'Doe';
+    </code></pre>
+</section>
+
+<section id="mysql-delete">
+    <h2>9. MySQL DELETE</h2>
+    <p>The DELETE statement is used to remove records from a table. Here's an example:</p>
+    <pre><code>
+-- Example of a MySQL DELETE query
+DELETE FROM customers WHERE age < 20;
+    </code></pre>
+</section>
+
+<section id="mysql-limit">
+    <h2>10. MySQL LIMIT</h2>
+    <p>The LIMIT clause is used to restrict the number of rows returned in a query. Here's an example:</p>
+    <pre><code>
+-- Example of a MySQL query with LIMIT
+SELECT * FROM customers LIMIT 5;
+    </code></pre>
+</section>
+
+<section id="mysql-min-max">
+    <h2>11. MySQL MIN and MAX</h2>
+    <p>The MIN and MAX functions are used to get the smallest and largest values in a column. Here's an example:</p>
+    <pre><code>
+-- Example of using MIN and MAX functions
+SELECT MIN(age) AS youngest, MAX(age) AS oldest FROM customers;
+    </code></pre>
+</section>
+
+<section id="mysql-count-avg-sum">
+    <h2>12. MySQL COUNT, AVG, SUM</h2>
+    <p>COUNT, AVG, and SUM are aggregate functions used to calculate the total count, average, and sum of a column. Here's an example:</p>
+    <pre><code>
+-- Example of using COUNT, AVG, and SUM functions
+SELECT COUNT(*) AS total_customers, AVG(age) AS average_age, SUM(age) AS total_age FROM customers;
+    </code></pre>
+</section>
+
+<section id="mysql-like">
+    <h2>13. MySQL LIKE</h2>
+    <p>The LIKE operator is used to search for a pattern in a column. Here's an example:</p>
+    <pre><code>
+-- Example of using LIKE with wildcards
+SELECT * FROM customers WHERE last_name LIKE 'S%';
+    </code></pre>
+</section>
+<section id="mysql-wildcards">
+    <h2>MySQL Wildcards</h2>
+    <p>In MySQL, wildcards are used with the <code>LIKE</code> operator to search for a specified pattern in a column.</p>
+    <p>Common wildcards used in SQL are:</p>
+    <ul>
+        <li><strong>%</strong> - Represents zero or more characters.</li>
+        <li><strong>_</strong> - Represents exactly one character.</li>
+    </ul>
+    <p>Example:</p>
+    <pre><code>
+SELECT * FROM customers
+WHERE first_name LIKE 'J%';
+    </code></pre>
+</section>
+
+<section id="mysql-in">
+    <h2>MySQL IN</h2>
+    <p>The <code>IN</code> operator is used to specify multiple possible values for a column in a <code>WHERE</code> clause.</p>
+    <pre><code>
+SELECT * FROM customers
+WHERE city IN ('New York', 'Los Angeles', 'Chicago');
+    </code></pre>
+</section>
+
+<section id="mysql-between">
+    <h2>MySQL BETWEEN</h2>
+    <p>The <code>BETWEEN</code> operator is used to filter the result set within a certain range.</p>
+    <pre><code>
+SELECT * FROM customers
+WHERE age BETWEEN 20 AND 30;
+    </code></pre>
+</section>
+
+<section id="mysql-aliases">
+    <h2>MySQL Aliases</h2>
+    <p>MySQL aliases are used to give a table or a column a temporary name.</p>
+    <pre><code>
+SELECT first_name AS "First Name", last_name AS "Last Name"
+FROM customers;
+    </code></pre>
+</section>
+
+<section id="mysql-joins">
+    <h2>MySQL Joins</h2>
+    <p>MySQL <code>JOIN</code> operations allow you to retrieve data from two or more tables based on a related column.</p>
+</section>
+
+<section id="mysql-inner-join">
+    <h2>MySQL INNER JOIN</h2>
+    <p>The <code>INNER JOIN</code> keyword selects records that have matching values in both tables.</p>
+    <pre><code>
+SELECT orders.order_id, customers.first_name
+FROM orders
+INNER JOIN customers ON orders.customer_id = customers.customer_id;
+    </code></pre>
+</section>
+
+<section id="mysql-left-join">
+    <h2>MySQL LEFT JOIN</h2>
+    <p>The <code>LEFT JOIN</code> keyword returns all records from the left table (table1), and the matched records from the right table (table2). If no match, NULL values are returned for columns from the right table.</p>
+    <pre><code>
+SELECT customers.first_name, orders.order_id
+FROM customers
+LEFT JOIN orders ON customers.customer_id = orders.customer_id;
+    </code></pre>
+</section>
+
+<section id="mysql-right-join">
+    <h2>MySQL RIGHT JOIN</h2>
+    <p>The <code>RIGHT JOIN</code> keyword returns all records from the right table (table2), and the matched records from the left table (table1). If no match, NULL values are returned for columns from the left table.</p>
+    <pre><code>
+SELECT customers.first_name, orders.order_id
+FROM customers
+RIGHT JOIN orders ON customers.customer_id = orders.customer_id;
+    </code></pre>
+</section>
+
+<section id="mysql-cross-join">
+    <h2>MySQL CROSS JOIN</h2>
+    <p>The <code>CROSS JOIN</code> keyword returns the Cartesian product of the two tables, i.e., it returns all possible combinations of rows from the tables.</p>
+    <pre><code>
+SELECT customers.first_name, orders.order_id
+FROM customers
+CROSS JOIN orders;
+    </code></pre>
+</section>
+
+<section id="mysql-self-join">
+    <h2>MySQL Self Join</h2>
+    <p>A <code>SELF JOIN</code> is a regular join but the table is joined with itself.</p>
+    <pre><code>
+SELECT a.first_name AS "Employee", b.first_name AS "Manager"
+FROM employees a, employees b
+WHERE a.manager_id = b.employee_id;
+    </code></pre>
+</section>
+
+<section id="mysql-union">
+    <h2>MySQL UNION</h2>
+    <p>The <code>UNION</code> operator is used to combine the results of two or more <code>SELECT</code> statements.</p>
+    <pre><code>
+SELECT city FROM customers
+UNION
+SELECT city FROM suppliers;
+    </code></pre>
+</section>
+
+<section id="mysql-group-by">
+    <h2>MySQL GROUP BY</h2>
+    <p>The <code>GROUP BY</code> statement groups rows that have the same values into summary rows, like "total" or "average".</p>
+    <pre><code>
+SELECT city, COUNT(*)
+FROM customers
+GROUP BY city;
+    </code></pre>
+</section>
+
+<section id="mysql-having">
+    <h2>MySQL HAVING</h2>
+    <p>The <code>HAVING</code> clause was added to SQL because the <code>WHERE</code> keyword could not be used with aggregate functions.</p>
+    <pre><code>
+SELECT city, COUNT(*)
+FROM customers
+GROUP BY city
+HAVING COUNT(*) > 5;
+    </code></pre>
+</section>
+
+<section id="mysql-exists">
+    <h2>MySQL EXISTS</h2>
+    <p>The <code>EXISTS</code> operator is used to check if a subquery returns any results. It returns TRUE if the subquery returns one or more records.</p>
+    <pre><code>
+SELECT customer_id, first_name
+FROM customers
+WHERE EXISTS (SELECT * FROM orders WHERE customers.customer_id = orders.customer_id);
+    </code></pre>
+</section>
+<section id="mysql-any-all">
+    <h2>MySQL ANY, ALL</h2>
+    <p>The <code>ANY</code> and <code>ALL</code> operators are used with subqueries in SQL to compare a value to a set of results returned by the subquery.</p>
+    <p><strong>ANY</strong> compares a value to any value in a list or subquery, and <strong>ALL</strong> compares a value to all values in a list or subquery.</p>
+    <pre><code>
+SELECT * FROM products
+WHERE price > ANY (SELECT price FROM products WHERE category = 'Electronics');
+    </code></pre>
+</section>
+
+<section id="mysql-insert-select">
+    <h2>MySQL INSERT SELECT</h2>
+    <p>The <code>INSERT SELECT</code> statement is used to insert the result of a <code>SELECT</code> query into a table.</p>
+    <pre><code>
+INSERT INTO new_table (column1, column2)
+SELECT column1, column2 FROM old_table
+WHERE condition;
+    </code></pre>
+</section>
+
+<section id="mysql-case">
+    <h2>MySQL CASE</h2>
+    <p>The <code>CASE</code> statement goes through conditions and returns a value when the first condition is met. It is similar to an <code>IF</code> statement.</p>
+    <pre><code>
+SELECT first_name, last_name,
+       CASE
+           WHEN age < 20 THEN 'Young'
+           WHEN age BETWEEN 20 AND 30 THEN 'Adult'
+           ELSE 'Senior'
+       END AS age_group
+FROM customers;
+    </code></pre>
+</section>
+
+<section id="mysql-null-functions">
+    <h2>MySQL Null Functions</h2>
+    <p>MySQL provides functions to handle <code>NULL</code> values in the database. These functions include <code>ISNULL()</code>, <code>IFNULL()</code>, <code>COALESCE()</code>, and more.</p>
+    <pre><code>
+SELECT IFNULL(phone, 'Not Available') AS phone_number
+FROM customers;
+    </code></pre>
+</section>
+
+<section id="mysql-comments">
+    <h2>MySQL Comments</h2>
+    <p>Comments in MySQL are used to provide explanations or notes within SQL code. There are two types of comments in MySQL:</p>
+    <ul>
+        <li><strong>Single-line comment</strong> starts with <code>--</code> or <code>#</code></li>
+        <li><strong>Multi-line comment</strong> is enclosed by <code>/* comment */</code></li>
+    </ul>
+    <pre><code>
+-- This is a single-line comment
+SELECT * FROM customers;
+
+# Another single-line comment
+SELECT * FROM orders;
+
+/*
+This is a multi-line comment
+spanning multiple lines
+*/
+SELECT * FROM products;
+    </code></pre>
+</section>
+
+<section id="mysql-operators">
+    <h2>MySQL Operators</h2>
+    <p>Operators in MySQL are used to perform operations on database fields and values. They are categorized as:</p>
+    <ul>
+        <li><strong>Arithmetic Operators</strong> (+, -, *, /, %)</li>
+        <li><strong>Comparison Operators</strong> (=, !=, <, >, <=, >=)</li>
+        <li><strong>Logical Operators</strong> (AND, OR, NOT)</li>
+        <li><strong>Bitwise Operators</strong> (&, |, ^, ~, <<, >>)</li>
+        <li><strong>String Operators</strong> (CONCAT, LIKE, etc.)</li>
+    </ul>
+    <p>Example:</p>
+    <pre><code>
+SELECT first_name, last_name
+FROM customers
+WHERE age >= 18 AND city = 'New York';
+    </code></pre>
+</section>
+<section id="mysql-database">
+    <h2>MySQL Database</h2>
+    <p>MySQL databases store all the data in tables. You can create, manage, and delete databases as required.</p>
+    <pre><code>
+-- Create a new database
+CREATE DATABASE my_database;
+
+-- Use the database
+USE my_database;
+
+-- Show existing databases
+SHOW DATABASES;
+    </code></pre>
+</section>
+
+<section id="mysql-create-db">
+    <h2>MySQL Create Database</h2>
+    <p>The <code>CREATE DATABASE</code> statement is used to create a new database in MySQL.</p>
+    <pre><code>
+CREATE DATABASE new_database;
+    </code></pre>
+</section>
+
+<section id="mysql-drop-db">
+    <h2>MySQL Drop Database</h2>
+    <p>The <code>DROP DATABASE</code> statement is used to delete an existing database in MySQL.</p>
+    <pre><code>
+DROP DATABASE old_database;
+    </code></pre>
+</section>
+
+<section id="mysql-create-table">
+    <h2>MySQL Create Table</h2>
+    <p>The <code>CREATE TABLE</code> statement is used to create a new table in a MySQL database.</p>
+    <pre><code>
+CREATE TABLE users (
+    id INT AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    PRIMARY KEY (id)
+);
+    </code></pre>
+</section>
+
+<section id="mysql-drop-table">
+    <h2>MySQL Drop Table</h2>
+    <p>The <code>DROP TABLE</code> statement is used to delete an existing table and its data in MySQL.</p>
+    <pre><code>
+DROP TABLE users;
+    </code></pre>
+</section>
+
+<section id="mysql-alter-table">
+    <h2>MySQL Alter Table</h2>
+    <p>The <code>ALTER TABLE</code> statement is used to modify an existing table, such as adding, deleting, or modifying columns.</p>
+    <pre><code>
+-- Add a new column
+ALTER TABLE users ADD COLUMN age INT;
+
+-- Modify a column
+ALTER TABLE users MODIFY COLUMN age TINYINT;
+
+-- Drop a column
+ALTER TABLE users DROP COLUMN age;
+    </code></pre>
+</section>
+
+<section id="mysql-constraints">
+    <h2>MySQL Constraints</h2>
+    <p>Constraints in MySQL are used to define rules for the data in a table. Some common constraints include:</p>
+    <ul>
+        <li><strong>NOT NULL</strong> - Ensures a column cannot have a NULL value</li>
+        <li><strong>UNIQUE</strong> - Ensures all values in a column are unique</li>
+        <li><strong>PRIMARY KEY</strong> - Uniquely identifies each record in a table</li>
+        <li><strong>FOREIGN KEY</strong> - Establishes a relationship between two tables</li>
+        <li><strong>CHECK</strong> - Ensures the value in a column satisfies a condition</li>
+        <li><strong>DEFAULT</strong> - Provides a default value for a column when no value is specified</li>
+    </ul>
+</section>
+
+<section id="mysql-not-null">
+    <h2>MySQL Not Null</h2>
+    <p>The <code>NOT NULL</code> constraint ensures that a column cannot contain NULL values.</p>
+    <pre><code>
+CREATE TABLE users (
+    id INT AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    PRIMARY KEY (id)
+);
+    </code></pre>
+</section>
+
+<section id="mysql-unique">
+    <h2>MySQL Unique</h2>
+    <p>The <code>UNIQUE</code> constraint ensures that all values in a column are distinct.</p>
+    <pre><code>
+CREATE TABLE users (
+    id INT AUTO_INCREMENT,
+    username VARCHAR(100) UNIQUE,
+    PRIMARY KEY (id)
+);
+    </code></pre>
+</section>
+
+<section id="mysql-primary-key">
+    <h2>MySQL Primary Key</h2>
+    <p>The <code>PRIMARY KEY</code> constraint uniquely identifies each record in a table. It ensures that no two rows can have the same primary key value.</p>
+    <pre><code>
+CREATE TABLE users (
+    id INT AUTO_INCREMENT,
+    name VARCHAR(100),
+    PRIMARY KEY (id)
+);
+    </code></pre>
+</section>
+
+<section id="mysql-foreign-key">
+    <h2>MySQL Foreign Key</h2>
+    <p>The <code>FOREIGN KEY</code> constraint is used to link two tables together, ensuring data integrity between them.</p>
+    <pre><code>
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT,
+    user_id INT,
+    PRIMARY KEY (order_id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+    </code></pre>
+</section>
+
+<section id="mysql-check">
+    <h2>MySQL Check</h2>
+    <p>The <code>CHECK</code> constraint ensures that the value in a column satisfies a specific condition.</p>
+    <pre><code>
+CREATE TABLE users (
+    id INT AUTO_INCREMENT,
+    age INT,
+    PRIMARY KEY (id),
+    CHECK (age >= 18)
+);
+    </code></pre>
+</section>
+
+<section id="mysql-default">
+    <h2>MySQL Default</h2>
+    <p>The <code>DEFAULT</code> constraint provides a default value for a column when no value is specified during record insertion.</p>
+    <pre><code>
+CREATE TABLE users (
+    id INT AUTO_INCREMENT,
+    name VARCHAR(100),
+    status VARCHAR(50) DEFAULT 'active',
+    PRIMARY KEY (id)
+);
+    </code></pre>
+</section>
+
+<section id="mysql-create-index">
+    <h2>MySQL Create Index</h2>
+    <p>The <code>CREATE INDEX</code> statement is used to create an index on a table to improve query performance.</p>
+    <pre><code>
+CREATE INDEX idx_name ON users (name);
+    </code></pre>
+</section>
+
+<section id="mysql-auto-increment">
+    <h2>MySQL Auto Increment</h2>
+    <p>The <code>AUTO_INCREMENT</code> attribute is used to automatically generate unique values for a column, often used with the primary key.</p>
+    <pre><code>
+CREATE TABLE users (
+    id INT AUTO_INCREMENT,
+    name VARCHAR(100),
+    PRIMARY KEY (id)
+);
+    </code></pre>
+</section>
+
+<section id="mysql-dates">
+    <h2>MySQL Dates</h2>
+    <p>MySQL provides various date and time types, including <code>DATE</code>, <code>DATETIME</code>, <code>TIME</code>, <code>YEAR</code>, and more for handling date-related operations.</p>
+    <pre><code>
+CREATE TABLE events (
+    id INT AUTO_INCREMENT,
+    event_name VARCHAR(100),
+    event_date DATE,
+    PRIMARY KEY (id)
+);
+    </code></pre>
+</section>
+
+<section id="mysql-views">
+    <h2>MySQL Views</h2>
+    <p>A <code>VIEW</code> is a virtual table based on the result of a <code>SELECT</code> query. It can simplify complex queries by abstracting them.</p>
+    <pre><code>
+CREATE VIEW active_users AS
+SELECT id, name
+FROM users
+WHERE status = 'active';
+
+-- To query the view
+SELECT * FROM active_users;
+    </code></pre>
+</section>
+<section id="mysql-references">
+    <h2>MySQL References</h2>
+    <p>MySQL uses references to define foreign key relationships between tables. This ensures that data integrity is maintained across tables. A foreign key is a column that links to the primary key of another table.</p>
+    <pre><code>
+-- Creating a table with a foreign key reference
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT,
+    user_id INT,
+    PRIMARY KEY (order_id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+    </code></pre>
+</section>
+
+<section id="mysql-data-types">
+    <h2>MySQL Data Types</h2>
+    <p>MySQL provides a wide variety of data types for storing different kinds of information. These data types can be broadly classified into the following categories:</p>
+    <ul>
+        <li><strong>Numeric Types:</strong> <code>INT</code>, <code>DECIMAL</code>, <code>FLOAT</code>, <code>DOUBLE</code>, etc.</li>
+        <li><strong>String Types:</strong> <code>VARCHAR</code>, <code>CHAR</code>, <code>TEXT</code>, etc.</li>
+        <li><strong>Date and Time Types:</strong> <code>DATE</code>, <code>DATETIME</code>, <code>TIME</code>, etc.</li>
+        <li><strong>Other Types:</strong> <code>ENUM</code>, <code>SET</code>, <code>BLOB</code>, etc.</li>
+    </ul>
+    <p>Here is an example of creating a table with different data types:</p>
+    <pre><code>
+CREATE TABLE users (
+    id INT AUTO_INCREMENT,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    dob DATE,
+    registration_date DATETIME,
+    status ENUM('active', 'inactive') DEFAULT 'active',
+    PRIMARY KEY (id)
+);
+    </code></pre>
+</section>
+
+<section id="mysql-functions">
+    <h2>MySQL Functions</h2>
+    <p>MySQL offers a wide range of built-in functions that you can use to manipulate data and perform calculations. These include string functions, date functions, numeric functions, and more.</p>
+    <p>Here are a few examples of commonly used MySQL functions:</p>
+    <ul>
+        <li><strong>String Functions:</strong> <code>CONCAT()</code>, <code>SUBSTRING()</code>, <code>LOWER()</code>, <code>UPPER()</code>, etc.</li>
+        <li><strong>Date Functions:</strong> <code>CURDATE()</code>, <code>NOW()</code>, <code>DATE_ADD()</code>, <code>DATEDIFF()</code>, etc.</li>
+        <li><strong>Numeric Functions:</strong> <code>ROUND()</code>, <code>FLOOR()</code>, <code>CEIL()</code>, <code>ABS()</code>, etc.</li>
+        <li><strong>Aggregate Functions:</strong> <code>COUNT()</code>, <code>SUM()</code>, <code>AVG()</code>, <code>MAX()</code>, <code>MIN()</code>, etc.</li>
+    </ul>
+    <p>Example of using a function in a query:</p>
+    <pre><code>
+-- Concatenate first and last name
+SELECT CONCAT(first_name, ' ', last_name) AS full_name FROM users;
+
+-- Find the current date
+SELECT CURDATE();
+
+-- Find the total number of users
+SELECT COUNT(*) FROM users;
+    </code></pre>
+</section>
+
+  
+
+<footer>
+    <div style="background-color:black; color:white; padding:30px 0; text-align:center;">
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <!-- About Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>About Us</h3>
+                <p>We provide high-quality programming tutorials, exercises, and quizzes to help learners master programming concepts and build real-world applications.</p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>Quick Links</h3>
+                <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                    <li><a href="h.html" style="color:white; text-decoration:none;">HTML</a></li>
+                    <li><a href="css.html" style="color:white; text-decoration:none;">CSS</a></li>
+                    <li><a href="sk.html" style="color:white; text-decoration:none;">JavaScript</a></li>
+                    <li><a href="react.html" style="color:white; text-decoration:none;">React</a></li>
+                    <li><a href="php.html" style="color:white; text-decoration:none;">PHP</a></li>
+                    <li><a href="mysqli.html" style="color:white; text-decoration:none;">mysql</a></li>
+                    <li><a href="mongodb.html" style="color:white; text-decoration:none;">mongodb</a></li>
+                    <li><a href="python.html" style="color:white; text-decoration:none;">Python</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>Contact Us</h3>
+                <p>Phone: <a href="tel:+9303546247" class="clickable">9303546247</a></p>
+                <p>Email: <a href="mailto:niteshamule74@gmail.com" class="clickable">niteshamule74@gmail.com</a></p>
+            </div>
+
+            <!-- Social Media Links Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>Follow Us</h3>
+                <a href="https://youtube.com/@codewith.n.a.74?si=I_4_BBk6uMl1bER3" style="color:white; text-decoration:none; margin-right:10px;">YouTube</a>
+                <a href="https://www.instagram.com/code_with_n.a/profilecard/?igsh=MTQzMzQ1N3RyejFweg==" style="color:white; text-decoration:none; margin-right:10px;">Instagram</a>
+                <a href="https://t.me/CodwithNA" style="color:white; text-decoration:none; margin-right:10px;">Telegram</a>
+                <a href="https://github.com/Code-with-N-A" style="color:white; text-decoration:none;">Github</a>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div style="margin-top: 20px; border-top: 1px solid #555; padding-top: 10px;">
+            <p>&copy; 2024 Code with N.A. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+ 
+</body>
+</html>

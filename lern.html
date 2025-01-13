@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--may websit fevi icob-->
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+
+    <title>Learn Full Stack Development</title>
+    
+    <!-- Include Prism.js CSS for syntax highlighting -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.css" rel="stylesheet"/>
+     <!-- Basic Meta Tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="description" content="Learn coding, programming, and online courses. Get tutorials, resources, and professional programming help for web development, Python, Java, and more.">
+     <meta name="keywords" content="coding, programming, online courses, web development, learn Python, learn Java, tutorials, coding classes, programming tutorials, free online courses">
+     <meta name="author" content="Code with N.A.">
+     <meta name="robots" content="index, follow">
+     
+     <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+     <meta property="og:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta property="og:description" content="Get free online courses, coding tutorials, and programming resources. Learn web development, Python, Java, and more with Code with N.A.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://www.yourwebsite.com">
+     <meta property="og:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Twitter Meta Tags (For Twitter Sharing) -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta name="twitter:description" content="Free online coding tutorials, courses, and programming resources. Learn web development, Python, and more with Code with N.A.">
+     <meta name="twitter:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Additional Meta Tags -->
+     <meta name="theme-color" content="#000000">
+     <meta name="language" content="English">
+     <meta name="distribution" content="global">
+     <meta name="revisit-after" content="7 days">
+     <meta name="rating" content="General">
+     
+     <!-- Google Site Verification (If applicable) -->
+     <meta name="google-site-verification" content="your-google-verification-code">
+ 
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+     
+
+
+
+
+        body {
+            font-family: 'Arial', sans-serif;
+    background-color: #021020; /* Darker background */
+    color: #bdc3c7; /* Slightly lighter text color for better readability */
+}
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #c0392b, #8e44ad); /* Dark Red and Purple gradient */
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+            border-radius: 15px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-section h1 {
+            font-size: 3.8em;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.6em;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        /* Code Box Section */
+        .code-box {
+            background-color: #000000; /* Darker background for code boxes */
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .code-box h2 {
+            color: #e74c3c; /* Red text for headings */
+            margin-bottom: 15px;
+        }
+
+        /* Button Styles */
+        .left-button {
+            display: block;
+            width: 200px;
+            margin: 30px 0 0 0;
+            padding: 15px;
+            background-color: #c0392b; /* Dark Red button */
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .left-button:hover {
+            background-color: #e74c3c; /* Slightly brighter red on hover */
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            background-color: #000001;
+            color: rgb(255, 255, 255);
+            margin-top: 60px;
+            border-radius: 10px;
+        }
+
+        .footer p {
+            font-size: 1.2em;
+        }
+
+        /* Syntax Highlighting */
+        pre {
+            background-color: #585858;
+    color: #499332; /* Darker text color for regular code blocks */
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    overflow-x: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /* Copy Button */
+        .copy-btn {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #c0392b; /* Dark Red color */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background-color: #e74c3c; /* Hover effect for copy button */
+        }
+
+        .copy-btn:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        /* Specific Code Block Styling */
+        .code-box pre {
+            background-color: #1e2a35; /* Darker background for code blocks */
+            color: #ecf0f1; /* Lighter text for code blocks */
+        }
+
+        /* Styled Heading Cards */
+        .heading-card {
+            background: linear-gradient(135deg, #f39c12, #e74c3c); /* Yellow to Red gradient */
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .heading-card h2 {
+            color: white;
+            font-size: 2.2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .heading-card p {
+            color: #ecf0f1;
+            font-size: 1.3em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.8em;
+            }
+
+            .hero-section p {
+                font-size: 1.4em;
+            }
+
+            .heading-card h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1>Learn Full Stack Development</h1>
+            <p>Master the skills needed to build both the frontend and backend of web applications.</p>
+        </section>
+
+        <!-- Heading Card Section -->
+        <div class="heading-card">
+            <h2>Introduction to Full Stack Development</h2>
+            <p>Full Stack Development covers both frontend and backend technologies, allowing you to build complete applications.</p>
+        </div>
+
+        <!-- HTML Code Example -->
+        <div class="code-box">
+            <h2>HTML Example</h2>
+            <p><strong>Explanation:</strong> The following is a basic HTML structure. It includes the essential elements like `doctype`, `html`, `head`, and `body`.</p>
+            <pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Basic HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to Full Stack Development&lt;/h1&gt;
+    &lt;p&gt;This is a simple HTML page&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        </div>
+
+        <!-- CSS Code Example -->
+        <div class="code-box">
+            <h2>CSS Example</h2>
+            <p><strong>Explanation:</strong> This CSS code applies some simple styling to an HTML page. It includes styles for the body, headers, and paragraphs.</p>
+            <pre><code class="language-css">
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #2980b9;
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.2em;
+    color: #34495e;
+}
+            </code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        </div>
+
+        <!-- JavaScript Code Example -->
+        <div class="code-box">
+            <h2>JavaScript Example</h2>
+            <p><strong>Explanation:</strong> This is a simple JavaScript code that displays an alert message when the button is clicked.</p>
+            <pre><code class="language-javascript">
+function greetUser() {
+    alert("Hello, welcome to Full Stack Development!");
+}
+            </code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        </div>
+         <!-- Node.js Code Example -->
+         <div class="code-box">
+            <h2>Node.js Example</h2>
+            <p><strong>Explanation:</strong> This example demonstrates how to connect to a MongoDB database and insert a document.</p>
+            <pre><code class="language-javascript">
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Hello, Full Stack Development!');
+});
+
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
+            </code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        </div>
+         <!-- MongoDB Code Example -->
+         <div class="code-box">
+            <h2>MongoDB Example</h2>
+            <p><strong>Explanation:</strong> This example demonstrates how to connect to a MongoDB database and insert a document.</p>
+            <pre><code class="language-javascript">
+const { MongoClient } = require('mongodb');
+
+async function run() {
+    const client = new MongoClient('mongodb://localhost:27017');
+    await client.connect();
+    const db = client.db('myDatabase');
+    const collection = db.collection('myCollection');
+    
+    const result = await collection.insertOne({ name: 'John Doe', age: 30 });
+    console.log('Document inserted:', result);
+    
+    await client.close();
+}
+
+run();
+            </code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        </div>
+          <!-- Python Code Example -->
+          <div class="code-box">
+            <h2>Python Example</h2>
+            <p><strong>Explanation:</strong> This is a basic Python script that displays a greeting message in the console.</p>
+            <pre><code class="language-python">
+def greet_user():
+    print("Hello, welcome to Full Stack Development with Python!")
+
+greet_user()
+            </code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        </div>
+
+
+        <!-- Footer Section -->
+        
+    </div>
+
+    <!-- Include Prism.js script for syntax highlighting -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.js"></script>
+
+    <script>
+        // Copy code function
+        function copyCode(button) {
+            const code = button.previousElementSibling.querySelector('code');
+            const text = code.textContent;
+            
+            // Create a temporary textarea to copy text
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = text;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+            
+            // Disable button and change text after copy
+            button.textContent = 'Code Copied!';
+            button.disabled = true;
+
+            // Re-enable the button after 2 seconds
+            setTimeout(() => {
+                button.textContent = 'Copy Code';
+                button.disabled = false;
+            }, 2000);
+        }
+    </script>
+   
+        <!-- Link to Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+        <!-- Font Awesome Icons for Social Links -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+        <style>
+            /* General Styles */
+            body {
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #1f1f1f; /* Dark background for a modern look */
+                color: #fff; /* White text color for contrast */
+            }
+    
+            /* Header Section */
+            header {
+                background-color: #282828; /* Darker background for header */
+                color: #fff;
+                text-align: center;
+                padding: 30px 0;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            }
+    
+            header h1 {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+    
+            header p {
+                font-size: 1.2rem;
+                color: #ccc;
+            }
+    
+            /* Main Content Section */
+            main {
+                padding: 50px 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+                text-align: center;
+            }
+    
+            .intro {
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+                color: #f4f4f4;
+            }
+    
+            .details {
+                font-size: 1.1rem;
+                line-height: 1.8;
+                margin-bottom: 30px;
+            }
+    
+            .social-links {
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+            }
+    
+            .social-links a {
+                margin: 0 15px;
+                color: #f4f4f4;
+                font-size: 2rem;
+                transition: color 0.3s ease;
+            }
+    
+            .social-links a:hover {
+                color: #18bc9c;
+            }
+    
+            /* Contact Button */
+            .button {
+                padding: 12px 30px;
+                background-color: #18bc9c;
+                color: white;
+                border: none;
+                border-radius: 30px;
+                font-size: 1.2rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+            }
+    
+            .button:hover {
+                background-color: #16a085;
+                transform: scale(1.05);
+            }
+    
+            /* Footer Section */
+            footer {
+                background-color: #222;
+                color: #ccc;
+                padding: 30px;
+                text-align: center;
+                font-size: 1.1rem;
+                letter-spacing: 1px;
+                margin-top: 50px;
+                position: relative;
+                opacity: 0;
+                animation: fadeIn 2s forwards, slideUp 1s ease-out 1s;
+            }
+    
+            footer p {
+                margin: 10px 0;
+            }
+    
+            /* Animation for footer */
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                }
+            }
+    
+            @keyframes slideUp {
+                from {
+                    transform: translateY(20px);
+                }
+                to {
+                    transform: translateY(0);
+                }
+            }
+    
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .social-links {
+                    flex-direction: column;
+                    align-items: center;
+                }
+    
+                .social-links a {
+                    margin: 10px 0;
+                }
+    
+                .button {
+                    width: 100%;
+                }
+            }
+        </style>
+   
+    
+        <!-- Header Section -->
+       
+        <!-- Main Content Section -->
+        <main>
+            <div class="intro">
+                <p>Welcome to my personal website! I'm Nitesh, a passionate Web Developer from MP, India.</p>
+            </div>
+    
+            <div class="details">
+                <p><strong>About Me:</strong> I specialize in developing dynamic, responsive websites. I offer programming language courses to help you master web development and programming concepts.</p>
+                <p><strong>Location:</strong> MP, Blaghat, Katangi - 481449</p>
+                <p><strong>Email:</strong> <a href="mailto:niteshamule74@gmail.com" style="color: #18bc9c;">niteshamule74@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+919303546247" style="color: #18bc9c;">+91 9303546247</a></p>
+            </div>
+    
+            <div class="social-links">
+                <a href="https://youtube.com/@codewith.n.a.74?si=I_4_BBk6uMl1bER3" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/code_with_n.a/profilecard/?igsh=MTQzMzQ1N3RyejFweg==" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/Code-with-N-A" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://t.me/CodwithNA" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </div>
+    
+            <div class="contact-details">
+                <h3>Contact Me</h3>
+                <p>For any inquiries or to join my programming courses, feel free to contact me via email or phone.</p>
+                <button class="button" onclick="window.location.href='mailto:niteshamule74@gmail.com'">Get in Touch</button>
+            </div>
+        </main>
+    
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 Nitesh. All Rights Reserved.</p>
+        </footer>
+    
+        <!-- JavaScript Animations -->
+        <script>
+            // JavaScript for Animations
+            document.addEventListener("DOMContentLoaded", function() {
+                const footer = document.querySelector('footer');
+                footer.classList.add('fade-in');
+            });
+        </script>
+    
+    </body>
+    </html>
+    
+</body>
+</html>

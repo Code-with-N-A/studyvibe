@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--may websit fevi icob-->
+  <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+
+   <!-- Basic Meta Tags -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="description" content="Learn coding, programming, and online courses. Get tutorials, resources, and professional programming help for web development, Python, Java, and more.">
+   <meta name="keywords" content="coding, programming, online courses, web development, learn Python, learn Java, tutorials, coding classes, programming tutorials, free online courses">
+   <meta name="author" content="Code with N.A.">
+   <meta name="robots" content="index, follow">
+   
+   <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+   <meta property="og:title" content="Learn Coding and Programming | Code with N.A.">
+   <meta property="og:description" content="Get free online courses, coding tutorials, and programming resources. Learn web development, Python, Java, and more with Code with N.A.">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://www.yourwebsite.com">
+   <meta property="og:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+
+   <!-- Twitter Meta Tags (For Twitter Sharing) -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="Learn Coding and Programming | Code with N.A.">
+   <meta name="twitter:description" content="Free online coding tutorials, courses, and programming resources. Learn web development, Python, and more with Code with N.A.">
+   <meta name="twitter:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+
+   <!-- Additional Meta Tags -->
+   <meta name="theme-color" content="#000000">
+   <meta name="language" content="English">
+   <meta name="distribution" content="global">
+   <meta name="revisit-after" content="7 days">
+   <meta name="rating" content="General">
+   
+   <!-- Google Site Verification (If applicable) -->
+   <meta name="google-site-verification" content="your-google-verification-code">
+ 
+    <title>React Course</title>
+</head>
+<style>
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 10;
+}
+
+/* Section Styles */
+section {
+    padding: 30px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+}
+
+/* Headings */
+h2 {
+    color: #282c34;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Code Block Styles */
+pre {
+    background-color: #2e3b4e;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 16px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Code Tag Styles */
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: #f9a826;
+}
+
+/* Hover Effect on Code Example */
+pre:hover {
+    background-color: #333a48;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #282c34;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f9a826;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    pre {
+        padding: 10px;
+    }
+}
+
+        /* Styling for the side navigation */
+        #side-nav {
+            display: none; /* Initially hide the side-nav */
+            background-color: #333;
+            width: 250px;
+            position: fixed;
+            top: 0px;
+            left: 0;
+            height: 100%;
+            padding-top: 50px;
+            z-index: 1000;
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+
+        /* Styling for the links in the side navigation */
+        #side-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            display: block;
+            font-size: 16px;
+            border-bottom: 1px solid #444; /* Add a border to each list item */
+            transition: background-color 0.3s ease; /* Smooth background transition */
+        }
+
+        /* Hover effect for list items */
+        #side-nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Styling for the toggle button */
+        #toggle-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            top: 70px; /* Move button slightly lower */
+            left: 1px;
+            background: none;
+            border: none;
+            color: yellow;
+            z-index: 1001; /* Ensure button is above the menu */
+        }
+
+        /* Button change when menu is open */
+        #toggle-btn.open {
+            color: red; /* Color change when menu is open */
+        }
+</style>
+<body>
+      <!-- Toggle Button -->
+      <button id="toggle-btn">☰</button>
+
+      <nav id="side-nav">
+        <a href="#react-home">1. React Home</a>
+        <a href="#react-intro">2. React Intro</a>
+        <a href="#react-get-started">3. React Get Started</a>
+        <a href="#react-upgrade">4. React Upgrade</a>
+        <a href="#react-es6">5. React ES6</a>
+        <a href="#es6-classes">6. ES6 Classes</a>
+        <a href="#es6-arrow-functions">7. ES6 Arrow Functions</a>
+        <a href="#es6-variables">8. ES6 Variables</a>
+        <a href="#es6-array-methods">9. ES6 Array Methods</a>
+        <a href="#es6-destructuring">10. ES6 Destructuring</a>
+        <a href="#es6-spread-operator">11. ES6 Spread Operator</a>
+        <a href="#es6-modules">12. ES6 Modules</a>
+        <a href="#es6-ternary-operator">13. ES6 Ternary Operator</a>
+        <a href="#react-render-html">14. React Render HTML</a>
+        <a href="#react-jsx">15. React JSX</a>
+        <a href="#react-components">16. React Components</a>
+        <a href="#react-class">17. React Class</a>
+        <a href="#react-props">18. React Props</a>
+        <a href="#react-events">19. React Events</a>
+        <a href="#react-conditionals">20. React Conditionals</a>
+        <a href="#react-lists">21. React Lists</a>
+        <a href="#react-forms">22. React Forms</a>
+        <a href="#react-router">23. React Router</a>
+        <a href="#react-memo">24. React Memo</a>
+        <a href="#react-css-styling">25. React CSS Styling</a>
+        <a href="#react-sass-styling">26. React Sass Styling</a>
+        <a href="#react-hooks">27. React Hooks</a>
+        <a href="#what-is-a-hook">28. What is a Hook?</a>
+        <a href="#use-state">29. useState</a>
+        <a href="#use-effect">30. useEffect</a>
+        <a href="#use-context">31. useContext</a>
+        <a href="#use-ref">32. useRef</a>
+        <a href="#use-reducer">33. useReducer</a>
+        <a href="#use-callback">34. useCallback</a>
+        <a href="#use-memo">35. useMemo</a>
+        <a href="#custom-hooks">36. Custom Hooks</a>
+        <a href="#react-exercises">37. React Exercises</a>
+        <a href="#react-compiler">38. React Compiler</a>
+        <a href="#react-quiz">39. React Quiz</a>
+        <a href="#react-server">40. React Server</a>
+        <a href="#react-interview-prep">41. React Interview Prep</a>
+        <a href="#react-certificate">42. React Certificate</a>
+        <a href="#react-context-api">43. React Context API</a>
+        <a href="#react-error-boundaries">44. React Error Boundaries</a>
+        <a href="#react-suspense">45. React Suspense</a>
+        <a href="#react-lazy">46. React.lazy() for Code Splitting</a>
+        <a href="#react-concurrent-mode">47. React Concurrent Mode</a>
+        <a href="#react-testing-library">48. React Testing Library</a>
+        <a href="#react-proptypes">49. React PropTypes</a>
+        <a href="#react-ssr">50. Server-Side Rendering (SSR) with React</a>
+        <a href="#react-ssg">51. Static Site Generation (SSG) with React</a>
+        <a href="#react-native">52. React Native</a>
+        <a href="#react-context-performance">53. React Context for Performance Optimization</a>
+        <a href="#react-redux">54. React-Redux Integration</a>
+        <a href="#react-custom-hooks">55. React Custom Hooks</a>
+        <a href="#react-hocs">56. React Higher Order Components (HOCs)</a>
+
+    </nav>
+    
+ 
+ 
+ 
+ 
+      <script>
+         // JavaScript to toggle the side navigation menu
+         document.getElementById("toggle-btn").addEventListener("click", function() {
+             var nav = document.getElementById("side-nav");
+             var button = document.getElementById("toggle-btn");
+ 
+             // Toggle the display property of the navigation
+             if (nav.style.display === "block") {
+                 nav.style.display = "none";
+                 button.classList.remove("open"); // Change button back to normal
+             } else {
+                 nav.style.display = "block";
+                 button.classList.add("open"); // Change button style when menu is open
+             }
+         });
+     </script>
+ <header>
+    
+     <h1>Complete React Course</h1>
+ </header>
+
+ <section id="react-home">
+    <h2>React Home</h2>
+    <p>Welcome to React! React is a JavaScript library for building user interfaces. It lets you build single-page applications with a component-based architecture.</p>
+</section>
+
+<section id="react-intro">
+    <h2>React Intro</h2>
+    <p>React is a powerful tool for building modern web applications. It allows you to break down your UI into components that can be reused and maintained efficiently.</p>
+</section>
+
+<section id="react-get-started">
+    <h2>React Get Started</h2>
+    <p>To get started with React, first install Node.js and create a new React app using the command <code>npx create-react-app my-app</code>.</p>
+    <pre><code>
+# Install React
+npx create-react-app my-app
+cd my-app
+npm start
+    </code></pre>
+</section>
+
+<section id="react-upgrade">
+    <h2>React Upgrade</h2>
+    <p>Upgrading React to the latest version is important for taking advantage of new features and performance improvements. Run <code>npm update react react-dom</code> to upgrade your React app.</p>
+</section>
+
+<section id="react-es6">
+    <h2>React ES6</h2>
+    <p>React uses ES6 features like arrow functions, classes, and destructuring to make the code cleaner and more readable. Here is an example:</p>
+    <pre><code>
+class MyComponent extends React.Component {
+  render() {
+    const { name } = this.props;
+    return <h1>Hello, {name}</h1>;
+  }
+}
+    </code></pre>
+</section>
+<section id="react-es6">
+    <h2>React ES6</h2>
+    <p>ES6 (ECMAScript 2015) introduced several new features to JavaScript that make working with React easier and more efficient. Below are some of the key ES6 features used in React development.</p>
+</section>
+
+<section id="es6-classes">
+    <h2>ES6 Classes</h2>
+    <p>ES6 introduced classes, which are a syntactical sugar over JavaScript's prototype-based inheritance. Classes are used to create React components in a more readable and structured way.</p>
+    <pre><code>
+    class MyComponent extends React.Component {
+      render() {
+        return <h1>Hello, World!</h1>;
+      }
+    }
+    </code></pre>
+</section>
+
+<section id="es6-arrow-functions">
+    <h2>ES6 Arrow Functions</h2>
+    <p>Arrow functions provide a more concise syntax for writing functions. They also handle the `this` keyword differently, which is useful in React components for event handling and callbacks.</p>
+    <pre><code>
+    // Regular function
+    const sayHello = function() {
+      console.log("Hello");
+    };
+
+    // Arrow function
+    const sayHelloArrow = () => {
+      console.log("Hello");
+    };
+    </code></pre>
+</section>
+
+<section id="es6-variables">
+    <h2>ES6 Variables</h2>
+    <p>ES6 introduced two new ways to declare variables: `let` and `const`. `let` allows block-scoped variables, while `const` is used for constants that should not be reassigned.</p>
+    <pre><code>
+    let name = "John"; // can be reassigned
+    const age = 30; // cannot be reassigned
+
+    name = "Doe"; // valid
+    // age = 31; // Error: Assignment to constant variable
+    </code></pre>
+</section>
+
+<section id="es6-array-methods">
+    <h2>ES6 Array Methods</h2>
+    <p>ES6 introduced several new array methods that make manipulating arrays more convenient, such as `map()`, `filter()`, and `reduce()`.</p>
+    <pre><code>
+    const numbers = [1, 2, 3, 4];
+    
+    // map example
+    const doubled = numbers.map(num => num * 2);
+    
+    // filter example
+    const evenNumbers = numbers.filter(num => num % 2 === 0);
+    
+    // reduce example
+    const sum = numbers.reduce((acc, num) => acc + num, 0);
+    </code></pre>
+</section>
+
+<section id="es6-destructuring">
+    <h2>ES6 Destructuring</h2>
+    <p>Destructuring allows you to extract values from arrays or objects and assign them to variables in a concise way.</p>
+    <pre><code>
+    // Array Destructuring
+    const arr = [1, 2, 3];
+    const [a, b] = arr; // a = 1, b = 2
+    
+    // Object Destructuring
+    const person = { name: "John", age: 30 };
+    const { name, age } = person; // name = "John", age = 30
+    </code></pre>
+</section>
+
+<section id="es6-spread-operator">
+    <h2>ES6 Spread Operator</h2>
+    <p>The spread operator (`...`) allows you to expand arrays or objects into individual elements. It is useful for merging arrays or cloning objects.</p>
+    <pre><code>
+    // Array Spread
+    const numbers1 = [1, 2, 3];
+    const numbers2 = [...numbers1, 4, 5]; // [1, 2, 3, 4, 5]
+
+    // Object Spread
+    const person = { name: "John", age: 30 };
+    const updatedPerson = { ...person, age: 31 }; // { name: "John", age: 31 }
+    </code></pre>
+</section>
+
+<section id="es6-modules">
+    <h2>ES6 Modules</h2>
+    <p>ES6 introduced a module system for importing and exporting code between files. You can use `import` and `export` to break your code into smaller, reusable pieces.</p>
+    <pre><code>
+    // Exporting from a file (math.js)
+    export const add = (a, b) => a + b;
+    
+    // Importing in another file
+    import { add } from './math';
+    console.log(add(1, 2)); // 3
+    </code></pre>
+</section>
+
+<section id="es6-ternary-operator">
+    <h2>ES6 Ternary Operator</h2>
+    <p>The ternary operator is a shorthand way of writing an `if-else` statement. It is often used in React for conditional rendering.</p>
+    <pre><code>
+    const age = 18;
+    const isAdult = age >= 18 ? "Adult" : "Minor";
+    console.log(isAdult); // "Adult"
+    </code></pre>
+</section>
+
+
+<section id="react-render-html">
+    <h2>React Render HTML</h2>
+    <p>React allows you to render HTML using JSX syntax, which looks like HTML but is actually JavaScript. Below is an example of rendering HTML in React:</p>
+    <pre><code>
+const element = <h1>Hello, World!</h1>;
+ReactDOM.render(element, document.getElementById('root'));
+    </code></pre>
+</section>
+
+<section id="react-jsx">
+    <h2>React JSX</h2>
+    <p>JSX is a syntax extension for JavaScript. It looks like HTML but works within JavaScript. Here's an example of JSX:</p>
+    <pre><code>
+const element = <h1>Hello, JSX!</h1>;
+ReactDOM.render(element, document.getElementById('root'));
+    </code></pre>
+</section>
+
+<section id="react-components">
+    <h2>React Components</h2>
+    <p>Components are the building blocks of React applications. A component can be a function or a class that returns JSX to render UI elements.</p>
+    <pre><code>
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+    </code></pre>
+</section>
+
+<section id="react-class">
+    <h2>React Class</h2>
+    <p>In React, a class component allows you to use features like state and lifecycle methods. Below is an example of a class component:</p>
+    <pre><code>
+class Welcome extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: 'John' };
+  }
+
+  render() {
+    return <h1>Hello, {this.state.name}</h1>;
+  }
+}
+    </code></pre>
+</section>
+<section id="react-props">
+    <h2>React Props</h2>
+    <p>Props (short for properties) are used to pass data from one component to another in React. Props are read-only and cannot be modified by the child component.</p>
+    <pre><code>
+function Greeting(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+    </code></pre>
+</section>
+
+<section id="react-events">
+    <h2>React Events</h2>
+    <p>React handles events using camelCase syntax. You can listen for events like clicks, key presses, etc., and trigger functions in response.</p>
+    <pre><code>
+function handleClick() {
+  alert('Button clicked!');
+}
+
+function App() {
+  return <button onClick={handleClick}>Click me</button>;
+}
+    </code></pre>
+</section>
+
+<section id="react-conditionals">
+    <h2>React Conditionals</h2>
+    <p>You can use JavaScript conditional statements inside JSX to render content based on certain conditions.</p>
+    <pre><code>
+function Greeting(props) {
+  if (props.isLoggedIn) {
+    return <h1>Welcome back!</h1>;
+  } else {
+    return <h1>Please sign in.</h1>;
+  }
+}
+    </code></pre>
+</section>
+
+<section id="react-lists">
+    <h2>React Lists</h2>
+    <p>React allows you to render lists dynamically using the <code>map()</code> method. It’s common to use lists for rendering multiple elements.</p>
+    <pre><code>
+function List(props) {
+  const items = props.items;
+  return (
+    <ul>
+      {items.map(item => <li key={item.id}>{item.name}</li>)}
+    </ul>
+  );
+}
+    </code></pre>
+</section>
+
+<section id="react-forms">
+    <h2>React Forms</h2>
+    <p>Forms in React are handled using controlled components, where the form data is managed by the state of the component.</p>
+    <pre><code>
+function Form() {
+  const [value, setValue] = React.useState('');
+  
+  function handleChange(event) {
+    setValue(event.target.value);
+  }
+
+  function handleSubmit(event) {
+    alert('Form submitted with: ' + value);
+    event.preventDefault();
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" value={value} onChange={handleChange} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+    </code></pre>
+</section>
+
+<section id="react-router">
+    <h2>React Router</h2>
+    <p>React Router is used to handle routing in React applications. It enables you to navigate between different components or pages in your app.</p>
+    <pre><code>
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+      </Switch>
+    </Router>
+  );
+}
+    </code></pre>
+</section>
+
+<section id="react-memo">
+    <h2>React Memo</h2>
+    <p>React Memo is a higher-order component that prevents unnecessary re-rendering of components by memorizing the result of a render.</p>
+    <pre><code>
+const MyComponent = React.memo(function MyComponent(props) {
+  return <h1>{props.name}</h1>;
+});
+    </code></pre>
+</section>
+
+<section id="react-css-styling">
+    <h2>React CSS Styling</h2>
+    <p>In React, you can apply CSS styles either by importing a separate CSS file or by using inline styles directly within the JSX.</p>
+    <pre><code>
+import './App.css';
+
+function App() {
+  return <h1 className="header">Hello, React!</h1>;
+}
+    </code></pre>
+</section>
+
+<section id="react-sass-styling">
+    <h2>React Sass Styling</h2>
+    <p>React supports Sass for more advanced and maintainable styling. You can import Sass files into your React components.</p>
+    <pre><code>
+import './App.scss';
+
+function App() {
+  return <h1 className="header">Hello, React with Sass!</h1>;
+}
+    </code></pre>
+</section>
+
+<section id="react-hooks">
+    <h2>React Hooks</h2>
+    <p>React hooks are functions that let you "hook into" React state and lifecycle features from function components. They allow you to use state, effects, context, refs, reducers, and more without needing to write a class component.</p>
+</section>
+
+<section id="what-is-a-hook">
+    <h2>What is a Hook?</h2>
+    <p>A hook is a special function in React that allows you to use state and other React features without writing a class component. Hooks are introduced in React 16.8 to allow function components to manage state, side effects, context, refs, etc.</p>
+    <pre><code>
+function Counter() {
+  const [count, setCount] = useState(0);
+  return <h1>{count}</h1>;
+}
+    </code></pre>
+</section>
+
+<section id="useState">
+    <h2>useState</h2>
+    <p>The <code>useState</code> hook allows you to add state to function components. It returns an array with two elements: the current state value and a function to update it.</p>
+    <pre><code>
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button onClick={(name) => setCount(count + 1)}>Increase</button>
+    </div>
+  );
+}
+    </code></pre>
+</section>
+
+<section id="useEffect">
+    <h2>useEffect</h2>
+    <p>The <code>useEffect</code> hook allows you to perform side effects in your function components. It runs after the render and can be used for things like data fetching, subscriptions, and manually changing the DOM.</p>
+    <pre><code>
+import React, { useEffect, useState } from 'react';
+
+function Timer() {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => setSeconds(s => s + 1), 1000);
+    return () => clearInterval(timer); // Cleanup
+  }, []); // Empty dependency array means it runs once when component mounts
+
+  return <h1>{seconds} seconds</h1>;
+}
+    </code></pre>
+</section>
+
+<section id="useContext">
+    <h2>useContext</h2>
+    <p>The <code>useContext</code> hook allows you to access values from a context directly in a function component without needing to wrap it in a <code>Consumer</code> component.</p>
+    <pre><code>
+import React, { useContext } from 'react';
+
+const ThemeContext = React.createContext('light');
+
+function ThemedComponent() {
+  const theme = useContext(ThemeContext);
+  return <div className={`theme-${theme}`}>This is a {theme} themed component</div>;
+}
+    </code></pre>
+</section>
+
+<section id="useRef">
+    <h2>useRef</h2>
+    <p>The <code>useRef</code> hook is used to persist values between renders. It can also be used to reference DOM elements.</p>
+    <pre><code>
+import React, { useRef } from 'react';
+
+function FocusInput() {
+  const inputRef = useRef(null);
+
+  const focus = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    <div>
+      <input ref={inputRef} type="text" />
+      <button onClick={focus}>Focus the input</button>
+    </div>
+  );
+}
+    </code></pre>
+</section>
+
+<section id="useReducer">
+    <h2>useReducer</h2>
+    <p>The <code>useReducer</code> hook is an alternative to <code>useState</code> that is preferable when the state logic is complex or involves multiple sub-values.</p>
+    <pre><code>
+import React, { useReducer } from 'react';
+
+function counterReducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(counterReducer, { count: 0 });
+
+  return (
+    <div>
+      <h1>{state.count}</h1>
+      <button onClick={(name) => dispatch({ type: 'increment' })}>Increment</button>
+      <button onClick={(name) => dispatch({ type: 'decrement' })}>Decrement</button>
+    </div>
+  );
+}
+    </code></pre>
+</section>
+
+<section id="useCallback">
+    <h2>useCallback</h2>
+    <p>The <code>useCallback</code> hook returns a memoized version of a callback function. This is useful when passing a callback to a component that relies on reference equality to prevent unnecessary renders.</p>
+    <pre><code>
+import React, { useState, useCallback } from 'react';
+
+function ParentComponent() {
+  const [count, setCount] = useState(0);
+
+  const memoizedCallback = useCallback(() => {
+    console.log('Memoized function');
+  }, [count]);
+
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button onClick={memoizedCallback}>Log Memoized Function</button>
+      <button onClick={(name) => setCount(count + 1)}>Increase Count</button>
+    </div>
+  );
+}
+    </code></pre>
+</section>
+
+<section id="useMemo">
+    <h2>useMemo</h2>
+    <p>The <code>useMemo</code> hook returns a memoized value. It’s useful for expensive calculations that need to be recomputed only when necessary.</p>
+    <pre><code>
+import React, { useMemo, useState } from 'react';
+
+function ExpensiveCalculation({ num }) {
+  const result = useMemo(() => {
+    return num * 2; // expensive calculation
+  }, [num]);
+
+  return <h1>Result: {result}</h1>;
+}
+
+function App() {
+  const [num, setNum] = useState(1);
+
+  return (
+    <div>
+      <ExpensiveCalculation num={num} />
+      <button onClick={(name) => setNum(num + 1)}>Increase</button>
+    </div>
+  );
+}
+    </code></pre>
+</section>
+
+<section id="custom-hooks">
+    <h2>Custom Hooks</h2>
+    <p>Custom hooks are JavaScript functions that can call other hooks to encapsulate logic and reuse it across different components.</p>
+    <pre><code>
+import { useState } from 'react';
+
+function useCounter(initialValue = 0) {
+  const [count, setCount] = useState(initialValue);
+  
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count - 1);
+  
+  return { count, increment, decrement };
+}
+
+function Counter() {
+  const { count, increment, decrement } = useCounter(10);
+  
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+    </div>
+  );
+}
+    </code></pre>
+</section>
+<section id="react-exercises">
+    <h2>React Exercises</h2>
+    <p>React exercises are a great way to practice and enhance your understanding of React concepts. Below are some exercises that cover a wide range of React topics like components, state, hooks, and routing.</p>
+    <pre><code>
+    // Example Exercise 1: Creating a simple counter
+    import React, { useState } from 'react';
+
+    function Counter() {
+      const [count, setCount] = useState(0);
+      
+      return (
+        <div>
+          <h1>{count}</h1>
+          <button onClick={(name) => setCount(count + 1)}>Increase</button>
+        </div>
+      );
+    }
+    </code></pre>
+</section>
+
+<section id="react-compiler">
+    <h2>React Compiler</h2>
+    <p>The React compiler refers to the tool that transforms JSX code into JavaScript that browsers can understand. React typically uses Babel for this transformation.</p>
+    <pre><code>
+    // JSX code that gets compiled into JavaScript
+    const element = <h1>Hello, world!</h1>;
+    ReactDOM.render(element, document.getElementById('root'));
+    </code></pre>
+    <p>Ensure that Babel is set up in your project for JSX to be properly compiled and run in the browser.</p>
+</section>
+
+<section id="react-quiz">
+    <h2>React Quiz</h2>
+    <p>Test your knowledge of React with this interactive quiz. Answer the following questions:</p>
+    <ul>
+        <li>What is JSX in React?</li>
+        <li>What is the purpose of the `useEffect` hook?</li>
+        <li>What is the difference between a class component and a function component?</li>
+        <li>Explain the concept of state in React.</li>
+    </ul>
+    <p>Answer these questions to assess your understanding of React basics, and move on to more advanced concepts like hooks and state management.</p>
+</section>
+
+<section id="react-server">
+    <h2>React Server</h2>
+    <p>Setting up a React development server is essential for running and testing your React applications locally. You can use the Create React App tool to set up the development environment quickly.</p>
+    <pre><code>
+    // Install Create React App globally
+    npm install -g create-react-app
+
+    // Create a new React app
+    create-react-app my-app
+
+    // Navigate into your app's directory and start the server
+    cd my-app
+    npm start
+    </code></pre>
+    <p>Once the server is running, you can view your app in the browser at <code>http://localhost:3000</code>.</p>
+</section>
+
+<section id="react-interview-prep">
+    <h2>React Interview Prep</h2>
+    <p>Prepare for React job interviews by reviewing common questions and concepts:</p>
+    <ul>
+        <li>What is React, and how does it work?</li>
+        <li>Explain the virtual DOM in React.</li>
+        <li>What are the differences between controlled and uncontrolled components?</li>
+        <li>Explain the use of hooks in React. Provide examples of `useState`, `useEffect`, and `useContext`.</li>
+        <li>What is the significance of keys in lists in React?</li>
+    </ul>
+    <p>Reviewing these concepts will help you be ready for technical interviews involving React.</p>
+</section>
+
+<section id="react-certificate">
+    <h2>React Certificate</h2>
+    <p>After completing the React tutorials and exercises, you can earn a React certificate. This certificate can be used to showcase your skills in React development.</p>
+    <p>There are several platforms offering React certification, such as:</p>
+    <ul>
+        <li>FreeCodeCamp</li>
+        <li>Udemy</li>
+        <li>Coursera</li>
+        <li>edX</li>
+    </ul>
+    <p>Make sure to complete the required courses, pass quizzes, and build projects to earn your certificate.</p>
+</section>
+
+<section id="react-context-api">
+    <h2>React Context API</h2>
+    <p>The Context API allows you to share values like state, functions, etc., across the entire component tree without needing to explicitly pass props at each level.</p>
+    <pre><code>
+import React, { createContext, useContext } from 'react';
+
+const MyContext = createContext();
+
+const ParentComponent = () => {
+  return (
+    <MyContext.Provider value="Hello, World!">
+      <ChildComponent />
+    </MyContext.Provider>
+  );
+};
+
+const ChildComponent = () => {
+  const value = useContext(MyContext);
+  return <h1>{value}</h1>;
+};
+
+export default ParentComponent;
+    </code></pre>
+</section>
+
+<section id="react-error-boundaries">
+    <h2>React Error Boundaries</h2>
+    <p>Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI.</p>
+    <pre><code>
+import React, { Component } from 'react';
+
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, info) {
+    console.error(error, info);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h1>Something went wrong!</h1>;
+    }
+
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;
+    </code></pre>
+</section>
+
+<section id="react-suspense">
+    <h2>React Suspense</h2>
+    <p>React Suspense is a feature that lets you wait for some code to load asynchronously before rendering a component.</p>
+    <pre><code>
+import React, { Suspense, lazy } from 'react';
+
+const LazyComponent = lazy(() => import('./LazyComponent'));
+
+const App = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LazyComponent />
+    </Suspense>
+  );
+};
+
+export default App;
+    </code></pre>
+</section>
+
+<section id="react-lazy">
+    <h2>React.lazy() for Code Splitting</h2>
+    <p>React.lazy() allows you to dynamically import a component and only load it when needed, which improves the performance of your app by splitting the code.</p>
+    <pre><code>
+import React, { lazy, Suspense } from 'react';
+
+const OtherComponent = lazy(() => import('./OtherComponent'));
+
+const App = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <OtherComponent />
+    </Suspense>
+  );
+};
+
+export default App;
+    </code></pre>
+</section>
+
+<section id="react-concurrent-mode">
+    <h2>React Concurrent Mode</h2>
+    <p>Concurrent Mode is an experimental feature that helps React apps stay responsive and gracefully adjust to the user’s device capabilities and network speed.</p>
+    <pre><code>
+import React, { Suspense, lazy } from 'react';
+import { createRoot } from 'react-dom';
+
+const LazyComponent = lazy(() => import('./LazyComponent'));
+
+const App = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <LazyComponent />
+  </Suspense>
+);
+
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
+    </code></pre>
+</section>
+
+<section id="react-testing-library">
+    <h2>React Testing Library</h2>
+    <p>React Testing Library is a set of utilities that helps you test your React components with a focus on the behavior and rendering, rather than the implementation details.</p>
+    <pre><code>
+import { render, screen } from '@testing-library/react';
+import App from './App';
+
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+    </code></pre>
+</section>
+
+<section id="react-proptypes">
+    <h2>React PropTypes</h2>
+    <p>PropTypes is a tool for type-checking props in React. It ensures that the components receive props of the correct data type.</p>
+    <pre><code>
+import PropTypes from 'prop-types';
+
+const MyComponent = ({ name, age }) => {
+  return <h1>{name} is {age} years old.</h1>;
+};
+
+MyComponent.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
+};
+
+export default MyComponent;
+    </code></pre>
+</section>
+
+<section id="react-ssr">
+    <h2>Server-Side Rendering (SSR) with React</h2>
+    <p>Server-side rendering is a technique used in React to render components on the server before sending the HTML to the browser, which helps with SEO and performance.</p>
+    <pre><code>
+import React from 'react';
+import ReactDOMServer from 'react-dom/server';
+import App from './App';
+
+const html = ReactDOMServer.renderToString(<App />);
+console.log(html);
+    </code></pre>
+</section>
+
+<section id="react-ssg">
+    <h2>Static Site Generation (SSG) with React</h2>
+    <p>SSG allows you to generate static HTML pages at build time, making them faster to load and easier to serve to users.</p>
+    <pre><code>
+import React from 'react';
+
+const Page = ({ data }) => <div>{data}</div>;
+
+export async function getStaticProps() {
+  const data = 'Static Content';
+  return { props: { data } };
+}
+
+export default Page;
+    </code></pre>
+</section>
+
+<section id="react-native">
+    <h2>React Native</h2>
+    <p>React Native allows you to build mobile apps using JavaScript and React, but with native components and APIs for iOS and Android.</p>
+    <pre><code>
+import React from 'react';
+import { View, Text } from 'react-native';
+
+const App = () => {
+  return (
+    <View>
+      <Text>Hello, React Native!</Text>
+    </View>
+  );
+};
+
+export default App;
+    </code></pre>
+</section>
+
+<section id="react-context-performance">
+    <h2>React Context for Performance Optimization</h2>
+    <p>Optimizing the use of React Context API to prevent unnecessary re-renders, especially in large applications.</p>
+    <pre><code>
+import React, { createContext, useState, useContext } from 'react';
+
+const MyContext = createContext();
+
+const Parent = () => {
+  const [value, setValue] = useState(0);
+  return (
+    <MyContext.Provider value={{ value, setValue }}>
+      <Child />
+    </MyContext.Provider>
+  );
+};
+
+const Child = () => {
+  const { value, setValue } = useContext(MyContext);
+  return (
+    <div>
+      <h1>{value}</h1>
+      <button onClick={(name) => setValue(value + 1)}>Increment</button>
+    </div>
+  );
+};
+
+export default Parent;
+    </code></pre>
+</section>
+
+<section id="react-redux">
+    <h2>React-Redux Integration</h2>
+    <p>Redux is a state management library that can be used with React to manage the global state of an app, especially for larger applications.</p>
+    <pre><code>
+import React from 'react';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+const initialState = { count: 0 };
+
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return { count: state.count + 1 };
+    default:
+      return state;
+  }
+};
+
+const store = createStore(reducer);
+
+const App = () => {
+  return (
+    <Provider store={store}>
+      <h1>React-Redux Example</h1>
+    </Provider>
+  );
+};
+
+export default App;
+    </code></pre>
+</section>
+
+<section id="react-custom-hooks">
+    <h2>React Custom Hooks</h2>
+    <p>Custom hooks allow you to reuse stateful logic across components in a clean way.</p>
+    <pre><code>
+import { useState, useEffect } from 'react';
+
+const useWindowWidth = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return width;
+};
+
+export default useWindowWidth;
+    </code></pre>
+</section>
+
+<section id="react-hocs">
+    <h2>React Higher Order Components (HOCs)</h2>
+    <p>A Higher-Order Component (HOC) is a function that takes a component and returns a new component with additional props.</p>
+    <pre><code>
+import React from 'react';
+
+const withBorder = (WrappedComponent) => {
+  return (props) => (
+    
+      <WrappedComponent {...props} />
+    </div>
+  );
+};
+
+const Button = () => <button>Click me</button>;
+
+export default withBorder(Button);
+    </code></pre>
+</section>
+
+
+<footer>
+  <div style="background-color:black; color:white; padding:30px 0; text-align:center;">
+      <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+          <!-- About Section -->
+          <div style="flex: 1; min-width: 200px; padding: 10px;">
+              <h3>About Us</h3>
+              <p>We provide high-quality programming tutorials, exercises, and quizzes to help learners master programming concepts and build real-world applications.</p>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div style="flex: 1; min-width: 200px; padding: 10px;">
+              <h3>Quick Links</h3>
+              <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                  <li><a href="h.html" style="color:white; text-decoration:none;">HTML</a></li>
+                  <li><a href="css.html" style="color:white; text-decoration:none;">CSS</a></li>
+                  <li><a href="sk.html" style="color:white; text-decoration:none;">JavaScript</a></li>
+                  <li><a href="react.html" style="color:white; text-decoration:none;">React</a></li>
+                  <li><a href="php.html" style="color:white; text-decoration:none;">PHP</a></li>
+                  <li><a href="mysqli.html" style="color:white; text-decoration:none;">mysql</a></li>
+                  <li><a href="mongodb.html" style="color:white; text-decoration:none;">mongodb</a></li>
+                  <li><a href="python.html" style="color:white; text-decoration:none;">Python</a></li>
+              </ul>
+          </div>
+
+          <!-- Contact Section -->
+          <div style="flex: 1; min-width: 200px; padding: 10px;">
+              <h3>Contact Us</h3>
+              <p>Phone: <a href="tel:+9303546247" class="clickable">9303546247</a></p>
+              <p>Email: <a href="mailto:niteshamule74@gmail.com" class="clickable">niteshamule74@gmail.com</a></p>
+          </div>
+
+          <!-- Social Media Links Section -->
+          <div style="flex: 1; min-width: 200px; padding: 10px;">
+              <h3>Follow Us</h3>
+              <a href="https://youtube.com/@codewith.n.a.74?si=I_4_BBk6uMl1bER3" style="color:white; text-decoration:none; margin-right:10px;">YouTube</a>
+              <a href="https://www.instagram.com/code_with_n.a/profilecard/?igsh=MTQzMzQ1N3RyejFweg==" style="color:white; text-decoration:none; margin-right:10px;">Instagram</a>
+              <a href="https://t.me/CodwithNA" style="color:white; text-decoration:none; margin-right:10px;">Telegram</a>
+              <a href="https://github.com/Code-with-N-A" style="color:white; text-decoration:none;">Github</a>
+          </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div style="margin-top: 20px; border-top: 1px solid #555; padding-top: 10px;">
+          <p>&copy; 2024 Code with N.A. All rights reserved.</p>
+      </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

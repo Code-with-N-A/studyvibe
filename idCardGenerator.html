@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--may websit fevi icob-->
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+
+     <!-- Basic Meta Tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="description" content="Learn coding, programming, and online courses. Get tutorials, resources, and professional programming help for web development, Python, Java, and more.">
+     <meta name="keywords" content="coding, programming, online courses, web development, learn Python, learn Java, tutorials, coding classes, programming tutorials, free online courses">
+     <meta name="author" content="Code with N.A.">
+     <meta name="robots" content="index, follow">
+     
+     <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+     <meta property="og:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta property="og:description" content="Get free online courses, coding tutorials, and programming resources. Learn web development, Python, Java, and more with Code with N.A.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://www.yourwebsite.com">
+     <meta property="og:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Twitter Meta Tags (For Twitter Sharing) -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta name="twitter:description" content="Free online coding tutorials, courses, and programming resources. Learn web development, Python, and more with Code with N.A.">
+     <meta name="twitter:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Additional Meta Tags -->
+     <meta name="theme-color" content="#000000">
+     <meta name="language" content="English">
+     <meta name="distribution" content="global">
+     <meta name="revisit-after" content="7 days">
+     <meta name="rating" content="General">
+     
+     <!-- Google Site Verification (If applicable) -->
+     <meta name="google-site-verification" content="your-google-verification-code">
+ 
+    <title>ID Card Generator</title>
+    <style>
+        .id-card {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            margin: 10px;
+            border: 1px solid #000;
+            display: none; /* Hide initially */
+        }
+
+        .id-card img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .text-overlay {
+            position: absolute;
+            bottom: 80px;
+            left: 50px;
+            color: black;
+            font-size: 12px;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .user-img-overlay {
+            position: absolute;
+            top: 117px;
+            left: 90px;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #000;
+            overflow: hidden;
+            border: 7px solid rgb(36, 152, 197);
+            border-radius: 8px;
+        }
+
+        .user-img-overlay img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-inputs {
+            margin-bottom: 20px;
+        }
+        .text-inputs{
+            margin: 60px;
+            padding: 20px;
+            box-shadow:  0 8px 20px;
+            border-radius: 8px;
+            text-align: center;
+           
+        }
+        input{
+            padding: 5px;
+            margin: 5px;
+            border-radius: 7px;
+            motion: auto;
+            font-weight: bolder;
+        
+            
+        }
+        button{
+          box-shadow: 0 8px 20px rgb(0, 0, 0.4);
+          background-color: rgb(0, 0, 0.4);
+          color: whitesmoke;
+          font-size: 15px;
+          border-radius: 12px;
+          font-weight: bolder;
+          cursor: pointer;
+        }
+       button:hover{
+        color: aqua;
+       }
+       .instructions {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.instructions h2 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.instructions ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.instructions ul li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.instructions ul li::marker {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .instructions {
+    padding: 15px;
+  }
+
+  .instructions h2 {
+    font-size: 20px;
+  }
+
+  .instructions ul li {
+    font-size: 16px;
+  }
+}
+h4{
+    text-align: center;
+    color: red;
+}
+
+    </style>
+</head>
+<body>
+    <h4>Please read the informartion given on this page carefully and complete the registration form.</h4>
+   
+      
+    <div class="text-inputs">
+        <label for="username">Name: </label>
+        <input type="text" id="username" placeholder="Enter your name" required>
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" id="email" placeholder="Enter email" required>
+        <br>
+        <label for="phone">Phone: </label>
+        <input type="text" id="phone" placeholder="Enter phone number" required>
+        <br>
+        <label for="userImg">Upload Your Image: </label>
+        <input type="file" id="userImg" accept="image/*" required>
+        <br><br>
+        <button onclick="generatePDF()">Generate ID Cards</button>
+        <button id="downloadBtn" style="display:none;" onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <div class="id-card" id="idCard1">
+        <img src="img/1.png" alt="ID Card 1">
+        <div class="user-img-overlay" id="userImageContainer"></div>
+        <div class="text-overlay" id="textOverlay1"></div>
+    </div>
+
+    <div class="id-card" id="idCard2">
+        <img src="img/2.png" alt="ID Card 2">
+        <div class="text-overlay" id="textOverlay2"></div> <!-- Add text-overlay for the second card -->
+    </div>
+    <div class="instructions">
+        <h2>Important Instructions for New Users</h2>
+        <ul>
+          <li>When you visit the portal for the first time, you will be required to fill in your details to generate an ID card.</li>
+          <li>Once your ID card is generated, download and save it for future use.</li>
+          <li>For future logins, use your ID card, ID number, and username to log in.</li>
+          <li>Once registered, your ID number, username, and email cannot be changed.</li>
+          <li>You can log in using your ID and username only on the device where the ID was created.</li>
+          <li>If you wish to log in from a different device, you will need to generate a new ID card.</li>
+          <li>Once you are registered, you will not be allowed to register again.</li>
+        </ul>
+      </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        let generatedPDF;  // Variable to store the generated PDF
+
+        // Check if user is already logged in from local storage
+        window.onload = function() {
+            const storedUsername = localStorage.getItem("username");
+            const storedUserID = localStorage.getItem("userID");
+
+            if (storedUsername && storedUserID) {
+                // Redirect to login page if already stored
+                window.location.href = "login.html";
+            }
+        }
+
+        function generateRandomID() {
+            return Math.floor(10000000 + Math.random() * 90000000);  // Generate 8 digit random number
+        }
+
+        function generatePDF() {
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const userImgInput = document.getElementById("userImg");
+            const userImg = userImgInput.files[0];
+
+            if (!username || !email || !phone || !userImg) {
+                alert("Please fill all fields and upload an image.");
+                return;
+            }
+
+            const textOverlay1 = document.getElementById("textOverlay1");
+            const textOverlay2 = document.getElementById("textOverlay2");
+            const randomID = generateRandomID();  // Generate 8 digit ID
+
+            // Store user details in localStorage
+            localStorage.setItem("username", username);
+            localStorage.setItem("userID", randomID);
+
+            // Get current date
+            const currentDate = new Date().toLocaleDateString();  // Format the date as needed
+
+            // Update text overlay on the first card
+            textOverlay1.innerHTML = `Name: ${username}<br>Email: ${email}<br>Phone: ${phone}<br>ID: ${randomID}`;
+            
+            // Update text overlay on the second card (ID and date only)
+            textOverlay2.innerHTML = `ID: ${randomID}<br>Date: ${currentDate}`;
+
+            // Handle user image overlay for the first card only
+            if (userImg) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const userImageSrc = e.target.result;
+
+                    const userImageContainer = document.getElementById("userImageContainer");
+                    userImageContainer.innerHTML = `<img src="${userImageSrc}" alt="User Image">`;
+
+                    // Show ID cards after all data is available
+                    document.getElementById("idCard1").style.display = "block";
+                    document.getElementById("idCard2").style.display = "block";
+
+                    generatePDFCanvas(username, email, phone, randomID, userImageSrc, currentDate);  // Pass user info, image, and date
+                };
+                reader.readAsDataURL(userImg);
+            }
+        }
+
+        function generatePDFCanvas(username, email, phone, randomID, userImageSrc = '', currentDate) {
+            const idCard1 = document.getElementById("idCard1");
+            const idCard2 = document.getElementById("idCard2");
+
+            const options = {
+                scale: 3  // Increase this value to improve the quality of the generated canvas
+            };
+
+            // Convert the ID cards to canvas
+            html2canvas(idCard1, options).then(function(canvas1) {
+                html2canvas(idCard2, options).then(function(canvas2) {
+                    const { jsPDF } = window.jspdf;  // Access jsPDF from the window object
+                    const doc = new jsPDF({
+                        unit: "mm",
+                        format: [300, 400]  // Set page size to match the ID card dimensions
+                    });
+
+                    // Add the first card image to PDF (on the first page)
+                    const imgData1 = canvas1.toDataURL("image/png");
+                    doc.addImage(imgData1, "PNG", 0, 0, 300, 400);
+
+                    // Add the second card on the second page
+                    doc.addPage();  // Create a new page for the second card
+                    const imgData2 = canvas2.toDataURL("image/png");
+                    doc.addImage(imgData2, "PNG", 0, 0, 300, 400);
+
+                    generatedPDF = doc;  // Save the PDF for downloading
+                    document.getElementById("downloadBtn").style.display = "inline";  // Show download button
+                });
+            });
+        }
+
+        function downloadPDF() {
+            if (generatedPDF) {
+                generatedPDF.save("id_cards.pdf");  // Download the generated PDF
+            }
+        }
+    </script>
+</body>
+</html>

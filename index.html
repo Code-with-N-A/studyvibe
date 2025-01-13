@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!--may websit fevi icob-->
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+
+
+     <!-- Basic Meta Tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="description" content="Learn coding, programming, and online courses. Get tutorials, resources, and professional programming help for web development, Python, Java, and more.">
+     <meta name="keywords" content="coding, programming, online courses, web development, learn Python, learn Java, tutorials, coding classes, programming tutorials, free online courses">
+     <meta name="author" content="Code with N.A.">
+     <meta name="robots" content="index, follow">
+     
+     <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+     <meta property="og:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta property="og:description" content="Get free online courses, coding tutorials, and programming resources. Learn web development, Python, Java, and more with Code with N.A.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://www.yourwebsite.com">
+     <meta property="og:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Twitter Meta Tags (For Twitter Sharing) -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta name="twitter:description" content="Free online coding tutorials, courses, and programming resources. Learn web development, Python, and more with Code with N.A.">
+     <meta name="twitter:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Additional Meta Tags -->
+     <meta name="theme-color" content="#000000">
+     <meta name="language" content="English">
+     <meta name="distribution" content="global">
+     <meta name="revisit-after" content="7 days">
+     <meta name="rating" content="General">
+     
+     <!-- Google Site Verification (If applicable) -->
+     <meta name="google-site-verification" content="your-google-verification-code">
+ 
+
+
+
+    <title>StudyVibe Code Your Future</title>
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          background-color: #17091c;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header with background video */
+        header {
+            position: relative;
+            width: 100%;
+            
+          
+        }
+
+        header .im {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        header .im img{
+          width: 100%;
+          
+        }
+
+        header .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 80px;
+            border-radius: 100%;
+        }
+
+        nav {
+            position: absolute;
+            top: 10px;
+            right: 5px;
+            
+        }
+        @media screen and (max-width: 468px) {
+    nav {
+      top: 30px;
+      font-size: larger;
+     
+    }
+  }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+           
+        }
+
+        nav ul li a {
+            color: rgb(244, 245, 245);
+            text-decoration: none;
+            font-size: larger;
+            text-transform: lowercase;
+            transition: color 0.3s ease;
+           
+        }
+
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+
+        .toggle-btn {
+    display: none;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed; /* Isse button ki position fixed ho jayegi */
+    top: 0px;  /* Aap yeh value adjust kar sakte hain */
+    right: 10px;
+   
+}
+
+
+       /* Content Section */
+.content-section {
+    padding: 120px 0;
+    z-index: 2;
+    color: lavender;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-section p {
+    margin-top: 70px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.button {
+    padding: 10px 30px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .content-section h2 {
+        text-align: left;
+        width: auto;
+        margin-left: 0;
+    }
+
+    .content-section p {
+        text-align: center;
+    }
+
+    .button {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content-section {
+        padding: 60px 0;
+    }
+
+    .content-section h2 {
+        font-size: 24px;
+        width: 50%;
+        padding-top: 49px;
+        margin-left: 10px;
+    }
+
+    .content-section p {
+        font-size: 18px;
+        padding-top: 59px;
+    }
+
+    .button {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+}
+
+
+      
+/* Flowchart Section */
+.map-section {
+    padding: 60px 0;
+    background-color: #17091c;
+    text-align: center;
+}
+
+.map-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #c5e03d; /* Text color for the header */
+}
+
+.flowchart {
+    display: flex;
+    overflow-x: auto;
+    padding-left: 20px;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.step {
+    width: 220px;
+    padding: 20px;
+   
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 18px;
+    color: #ffffff; /* Text color for the step */
+    text-align: center;
+}
+
+.step:hover {
+    background-color: #007BFF;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* Icon Styles */
+.step i {
+    font-size: 40px;
+    color: #333;  /* Use the same color as the text */
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.step:hover i {
+    color: white; /* Change icon color on hover to white */
+}
+
+.step a {
+    text-decoration: none;
+    color: inherit; /* Inherit text color */
+    font-weight: bold;
+}
+
+/* Icon Styles */
+.step i {
+    font-size: 40px;
+    color: rgb(97, 226, 231);
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.step:hover i {
+    color: white; /* Change icon color on hover */
+}
+
+
+        .step a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .content-section, .map-section {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul li {
+                text-align: center;
+            }
+
+            .toggle-btn {
+                display: block;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+        }
+
+        /* General Styles */
+
+
+.language-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    background-color: #2c3e50;
+   
+}
+
+/* Language Card Styles */
+.language-card {
+  background-color: rgb(22, 22, 27);
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.language-card:hover {
+    transform: translateY(-10px);
+}
+
+.language-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.language-heading {
+    font-size: 24px;
+    color: lavender;
+    margin-top: 15px;
+}
+
+.language-text {
+    font-size: 16px;
+    color: lavender;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #2c60db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Popup Modal Styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background-color: #093340;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+   
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: #007BFF;
+}
+
+.popup-content h2 {
+    font-size: 28px;
+    color: rgb(248, 248, 248);
+}
+
+.popup-content p {
+    font-size: 18px;
+    color: lavender;
+    margin-top: 10px;
+}
+
+
+.close-popup-btn {
+    background-color: #FF5733;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.close-popup-btn:hover {
+    background-color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .language-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .language-card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-card {
+        width: 110%;
+    }
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1340px;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  justify-content: center;
+  padding: 10px 20px;
+  z-index: 10; /* Ensures search bar stays on top of other elements */
+}
+
+.search-bar input[type="text"] {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+  margin-right: 10px;
+  color: #333;
+  background-color: #fff;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 15; /* Ensures button is above input */
+}
+
+.search-bar button img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.4s ease;
+}
+
+.search-bar button:hover img {
+  transform: scale(1.1);
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+}
+
+.search-bar.active input[type="text"] {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.search-result {
+  margin-top: 10px;
+  color: #ff9900;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  text-align: center;
+  z-index: 5; /* Ensure that results don't cover the search bar */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .search-bar {
+    padding: 10px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-bar {
+    max-width: 50px;
+    padding: 10px;
+    z-index: 10; /* Keeps search bar on top */
+  }
+
+  .search-bar input[type="text"] {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: all 0.4s ease;
+  }
+
+  .search-bar.active {
+    max-width: 450px;
+    padding: 10px 20px;
+  }
+
+  .search-bar.active input[type="text"] {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .search-bar button img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Hide elements only around the search bar */
+  .search-bar.active ~ * {
+    opacity: 0.3; /* Reduces opacity of elements around the search bar */
+    pointer-events: none; /* Prevents interactions with the surrounding elements */
+  }
+
+  /* Ensure that only the adjacent elements are affected */
+  .search-bar.active ~ .content {
+    opacity: 1; /* Keeps the main content visible */
+    pointer-events: auto; /* Allows interaction with the main content */
+  }
+}
+
+/*footer */
+
+footer {
+            background-color: #000000;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .footer-container > div {
+            width: 22%;
+            margin: 10px 0;
+        }
+        .footer-container a {
+            text-decoration: none;
+            color: white;
+        }
+        .footer-container a:hover {
+            text-decoration: underline;
+        }
+        .programming-icons, .social-icons {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .programming-icons a, .social-icons a {
+            margin: 10px;
+            font-size: 24px;
+        }
+        .programming-icons img {
+            width: 50px;
+            height: 50px;
+        }
+        .footer-container h3 {
+            margin-bottom: 10px;
+        }
+        .quick-links, .contact-info, .about-us, .services {
+            display: flex;
+            flex-direction: column;
+        }
+        .quick-links a, .contact-info a, .about-us a, .services a {
+            margin: 5px 0;
+        }
+        .footer-container p {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        @media (max-width: 1024px) {
+            .footer-container > div {
+                width: 48%;
+            }
+        }
+        @media (max-width: 768px) {
+            .footer-container > div {
+                width: 100%;
+            }
+        }
+
+        /*new updat so*/
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            color: rgb(0, 0, 0);
+        }
+
+        /* Close button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: rgb(0, 0, 0);
+        }
+
+        /* Blinking "NEW" message */
+        .blink {
+            font-weight: bold;
+            color: rgb(255, 4, 4);
+            animation: blink-animation 1s steps(5, start) infinite;
+        }
+
+        @keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
+        }
+
+        /* Modal open button */
+        #openModalBtn {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="search-bar">
+           
+        <input type="text" id="search" placeholder="Type to search...">
+        <button onclick="toggleSearchBar()">
+          <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search Icon">
+        </button>
+        <div id="search-result" class="search-result"></div>
+      </div>
+
+    <!-- Header Section with Background Video -->
+    <header>
+       <div class="im">
+        <img src="img/Blue and Purple Modern Computer Presentation.jpg" alt="img">
+       </div>
+        <img src="img/logo2.png" alt="Logo" class="logo">
+       
+        
+         
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contect.html">Contact</a></li>
+                <li><a href="idCardGenerator.html">Certificates</a></li>
+                
+            </ul>
+            <button class="toggle-btn">☰</button>
+           
+        </nav>
+       
+    </header>
+
+     <!-- Modal structure -->
+     <div id="updateModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Latest Updates</h2>
+            <div id="updatesContainer"></div>
+        </div>
+    </div>
+
+
+    <!-- Full Stack Web Development Section -->
+    <section class="content-section" id="services">
+      <h2>StudyVibe Code Your Future</h2>
+      <p>StudyVibe: Code Your Future is the platform to sharpen your coding skills. With simple tutorials and practical projects, you'll quickly master programming. Start now and shape your tech future!
+        .</p>
+      <a href="lern.html" class="button">Start Now</a>
+        
+    </section>
+    
+
+    <!-- Flowchart Section for Mastery Path -->
+    <section class="map-section">
+        <h2>Your Path to Mastery</h2>
+        <div class="flowchart">
+          <div class="step"><a href="h.html"><i class="fab fa-html5"></i> HTML</a></div>
+          <div class="step"><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></div>
+          <div class="step"><a href="js.html"><i class="fab fa-js"></i> JavaScript</a></div>
+          <div class="step"><a href="react.html"><i class="fab fa-react"></i> React</a></div>
+          <div class="step"><a href="php.html"><i class="fab fa-php"></i> PHP</a></div>
+          <div class="step"><i class="fas fa-mysql"></i><a href="mysqli.html"><img src="https://img.icons8.com/color/48/000000/mysql.png" alt="Swift">Mysql</a></div>
+          <div class="step"><a href="mongodb.html"><i class="fab fa-envira"></i> MongoDB</a></div>
+          <div class="step"><a href="java.html"><i class="fab fa-java"></i> Java</a></div>
+          <div class="step"><a href="commingsun.html"><i class="fas fa-plug"></i> APIS</a></div>
+          <div class="step"><a href="commingsun.html"><i class="fas fa-shield-alt"></i>Security</a></div>
+          <div class="step"><a href="commingsun.html"><i class="fas fa-cogs"></i>Testing</a></div>
+          <div class="step"><a href="commingsun.html"><i class="fas fa-cloud-upload-alt"></i>Deployment</a></div>
+          <div class="step"><a href="commingsun.html"><i class="fas fa-cloud"></i> Cloud</a></div>
+          <div class="step"><i class="fas fa-python"></i><a href="python.html"><img src="https://img.icons8.com/color/48/000000/python.png" alt="Swift">Python</a></div>
+
+        </div>
+    </section>
+
+    <section class="language-section">
+      <div class="language-card">
+          <img src="img/Untitled design(1).png" alt="Language Image" class="language-image">
+          <h3 class="language-heading">Programming</h3>
+          <p class="language-text">Programming is the art of transforming ideas into reality by solving problems through logical and efficient code.</p>
+          <button class="btn" onclick="openPopup('Programming')">Learn More</button>
+      </div>
+  
+      <div class="language-card">
+          <img src="img/Untitled design.png" alt="Language Image" class="language-image">
+          <h3 class="language-heading">Education</h3>
+          <p class="language-text">Education is the key that unlocks the doors of knowledge, empowering individuals to grow, innovate, and shape the future.</p>
+          <button class="btn" onclick="openPopup('Education')">Learn More</button>
+      </div>
+  
+      
+  
+      <!-- Popup Modal -->
+      <div id="popup" class="popup-overlay">
+          <div class="popup-content">
+              <span class="close-btn" onclick="closePopup()">&times;</span>
+              <h2 id="popup-heading"></h2>
+              <p id="popup-text"></p>
+          </div>
+      </div>
+  </section>
+  
+
+    <script>
+        // Toggle Menu for Mobile View
+        document.querySelector('.toggle-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+
+        // Function to open popup with language details
+function openPopup(language) {
+    const popup = document.getElementById("popup");
+    const heading = document.getElementById("popup-heading");
+    const text = document.getElementById("popup-text");
+
+    // Set content for each language
+    if (language === "Programming") {
+        heading.textContent = "Programming";
+        text.textContent = "Programming is the process of creating a set of instructions that a computer can follow to perform specific tasks It is a blend of creativity and logic, where you build solutions to real-world problems. By writing code, you tell the computer exactly what to do, how to do it, and when to do it. It involves breaking down complex problems into simpler, manageable parts and finding the best way to solve them. Programming languages act as the bridge between human thinking and machine execution. Every program is a step towards innovation, making lives easier and more efficient. Ultimately, programming empowers you to shape the future through technology.";
+    } else if (language === "Education") {
+        heading.textContent = "Education";
+        text.textContent = "Education is the foundation upon which knowledge, skills, and values are built. It equips individuals with the tools to think critically, solve problems, and adapt to a constantly changing world. Through education, we learn to understand diverse perspectives, fostering empathy and collaboration. It helps shape character, encouraging curiosity, discipline, and perseverance. Education is not just about academics; it’s about developing the whole person, preparing them to contribute meaningfully to society. It empowers people to break barriers, overcome challenges, and reach their full potential. Ultimately, education is the pathway to a brighter, more informed future for all.";
+      } 
+
+    // Show the popup
+    popup.style.display = "flex";
+}
+
+// Function to close popup
+function closePopup() {
+    const popup = document.getElementById("popup");
+    popup.style.display = "none";
+}
+
+// Adding event listener to close popup when clicking outside of the popup content
+document.getElementById("popup").addEventListener("click", function(event) {
+    if (event.target === this) {
+        closePopup(); // Close if clicked outside the popup content
+    }
+});
+
+
+//sarch bar code//
+function toggleSearchBar() {
+      const searchBar = document.querySelector('.search-bar');
+      searchBar.classList.toggle('active');
+    }
+
+    const searchResults = [
+      { name: "about", url: "about.html" },
+      { name: "contect", url: "contect.html" },
+      { name: "css", url: "css.html" },
+      { name: "freecom", url: "freecon.html" },
+      { name: "fullstack", url: "fullstack.html" },
+      { name: "getstart", url: "getstart.html" },
+      { name: "html", url: "h.html" },
+      { name: "idCardGenerato", url: "idCardGenerato.html" },
+      { name: "index", url: "index.html" },
+      { name: "java", url: "java.html" },
+      { name: "javascript", url: "js.html" },
+      { name: "languge", url: "languge.html" },
+      { name: "lern", url: "lern.html" },
+      { name: "login", url: "login.html" },
+      { name: "mencertifcet_f", url: "mencertificet_f.html" },
+      { name: "mongodb", url: "mongodb.html" },
+      { name: "mysqli", url: "mysqli.html" },
+      { name: "php", url: "php.html" },
+      { name: "python", url: "python.html" },
+      { name: "react", url: "react.html" },
+      { name: " background-color: #4CAF50;", url: "h.html" },
+      { name: " coding: #4CAF50;", url: "h.html" },
+      { name: "services", url: "services.html" }
+    ];
+
+    function searchFunction() {
+      const input = document.getElementById('search').value.toLowerCase();
+      const resultDiv = document.getElementById('search-result');
+      const found = searchResults.find(item => item.name.toLowerCase().includes(input));
+
+      resultDiv.innerHTML = '';
+
+      if (input === '') {
+        resultDiv.innerHTML = '';
+        return;
+      }
+
+      if (found) {
+        window.location.href = found.url;  // Redirect to the matched page
+      } else {
+        resultDiv.innerHTML = 'No records found';
+      }
+    }
+
+    document.querySelector('.search-bar button').addEventListener('click', searchFunction);
+
+
+
+
+      // Updates array containing messages and their corresponding URLs
+      const updates = [
+            { message: "New feature: New coouse JAVA available!", url: "java.html" },
+            { message: "New feature: New coouse javascript available!", url: "js.html" },
+            { message: "New feature: Services page update", url: "services.html" },
+        ];
+
+        // Function to display updates in the modal
+        function showUpdates() {
+            const updatesContainer = document.getElementById('updatesContainer');
+            updates.forEach(update => {
+                const updateElement = document.createElement('p');
+                updateElement.innerHTML = `${update.message} <a href="${update.url}" class="blink" target="_blank">NEW</a>`;
+                updatesContainer.appendChild(updateElement);
+            });
+
+            // Display the modal
+            document.getElementById('updateModal').style.display = 'block';
+        }
+
+        // Close the modal when user clicks the close button
+        document.getElementById('closeModal').onclick = function() {
+            document.getElementById('updateModal').style.display = 'none';
+        };
+
+        // Close the modal if user clicks anywhere outside of the modal content
+        window.onclick = function(event) {
+            const modal = document.getElementById('updateModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+
+        // Call the function when the page loads
+        window.onload = showUpdates;
+
+    </script>
+
+<footer>
+    <div class="footer-container">
+        <!-- Programming Languages Section -->
+        <div>
+            <h3>Programming Languages</h3>
+            <div class="programming-icons">
+                <a href="python.html"><img src="https://img.icons8.com/color/48/000000/python.png" alt="Python"></a>
+                <a href="js.html"><img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript"></a>
+                <a href="java.html"><img src="https://img.icons8.com/color/48/000000/java.png" alt="Java"></a>
+                <a href="commingsun.html"><img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++"></a>
+                <a href="commingsun.html"><img src="https://img.icons8.com/color/48/000000/ruby.png" alt="Ruby"></a>
+                <a href="php.html"><img src="https://img.icons8.com/color/48/000000/php.png" alt="PHP"></a>
+                <a href="mysqli.html"><img src="https://img.icons8.com/color/48/000000/sql.png" alt="SQL"></a>
+                <a href="commingsun.html"><img src="https://img.icons8.com/color/48/000000/c-sharp-logo.png" alt="C#"></a>
+                <a href="commingsun.html"><img src="https://img.icons8.com/color/48/000000/go.png" alt="Go"></a>
+                <a href="commingsun.html"><img src="https://img.icons8.com/color/48/000000/swift.png" alt="Swift"></a>
+            </div>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="about.html">Courses</a>
+            <a href="https://primeprojects.netlify.app ">Blog</a>
+            <a href="lern.html">Tutorials</a>
+            <a href="contect.html">Contact</a>
+            <a href="commingsun.html">FAQs</a>
+            <a href="about.html">Support</a>
+        </div>
+
+        <!-- About Us Section -->
+        <div class="about-us">
+            <h3>About Us</h3>
+            <p>We provide a wide range of online programming courses and tutorials to help you learn and grow in the tech field.</p>
+            <a href="about.html">Learn More</a>
+        </div>
+
+        <!-- Services Section -->
+        <div class="services">
+            <h3>Our Services</h3>
+            <a href="h.html">Web Development</a>
+            <a href="java.html">Mobile App Development</a>
+            <a href="commingsun.html">Machine Learning</a>
+            <a href="python.html">Data Science</a>
+            <a href="commingsun.html">Cloud Computing</a>
+        </div>
+
+        <!-- Social Media Section -->
+        <div>
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://t.me/CodwithNA" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/code_with_n.a?igsh=MTQzMzQ1N3RyejFweg==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@codewith.n.a.73" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/Code-with-N-A" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <p>&copy; 2025 Code with N.A. | All Rights Reserved | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+    <p>Programming and Online Education Hub | Learn, Build, Grow</p>
+</footer>
+
+</body>
+</html>

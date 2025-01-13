@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--may websit fevi icob-->
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+
+
+     <!-- Basic Meta Tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="description" content="Learn coding, programming, and online courses. Get tutorials, resources, and professional programming help for web development, Python, Java, and more.">
+     <meta name="keywords" content="coding, programming, online courses, web development, learn Python, learn Java, tutorials, coding classes, programming tutorials, free online courses">
+     <meta name="author" content="Code with N.A.">
+     <meta name="robots" content="index, follow">
+     
+     <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+     <meta property="og:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta property="og:description" content="Get free online courses, coding tutorials, and programming resources. Learn web development, Python, Java, and more with Code with N.A.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://www.yourwebsite.com">
+     <meta property="og:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Twitter Meta Tags (For Twitter Sharing) -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta name="twitter:description" content="Free online coding tutorials, courses, and programming resources. Learn web development, Python, and more with Code with N.A.">
+     <meta name="twitter:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Additional Meta Tags -->
+     <meta name="theme-color" content="#000000">
+     <meta name="language" content="English">
+     <meta name="distribution" content="global">
+     <meta name="revisit-after" content="7 days">
+     <meta name="rating" content="General">
+     
+     <!-- Google Site Verification (If applicable) -->
+     <meta name="google-site-verification" content="your-google-verification-code">
+ 
+    <title>Coming Soon Alert</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+        }
+        .alert-box {
+            background: #ff6f61;
+            background: linear-gradient(to right, #ff6f61, #ff7c7c);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 600px;
+            width: 80%;
+            text-align: center;
+            color: white;
+            animation: fadeIn 1s ease-out;
+        }
+        .alert-box h2 {
+            font-size: 32px;
+            margin: 0;
+            font-weight: bold;
+        }
+        .alert-box p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .alert-box .page-info {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        .alert-box button {
+            padding: 15px 30px;
+            background-color: #ff5733;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .alert-box button:hover {
+            background-color: #e04e1d;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .back-btn {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ff5733;
+            cursor: pointer;
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
+        .back-btn:hover {
+            color: #e04e1d;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="alert-box" class="alert-box">
+        <h2>Coming Soon!</h2>
+        <p>This feature is under development. Stay tuned for updates.</p>
+        <button onclick="closeAlert()">Close</button>
+        <div class="back-btn" onclick="goBack()">Go Back</div>
+    </div>
+
+    <script>
+        // Function to display a message without showing the URL
+        const referrer = document.referrer ? document.referrer : 'Direct Access';
+        console.log("User came from: ", referrer);  // Optional, for debugging
+
+        // Function to close the alert box and go back to the previous page
+        function closeAlert() {
+            window.history.back();  // Goes back to the previous page
+        }
+
+        // Function to handle "Go Back" button
+        function goBack() {
+            window.history.back();  // Goes back to the previous page
+        }
+    </script>
+
+</body>
+</html>

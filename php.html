@@ -1,0 +1,2661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--may websit fevi icob-->
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+
+     <!-- Basic Meta Tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="description" content="Learn coding, programming, and online courses. Get tutorials, resources, and professional programming help for web development, Python, Java, and more.">
+     <meta name="keywords" content="coding, programming, online courses, web development, learn Python, learn Java, tutorials, coding classes, programming tutorials, free online courses">
+     <meta name="author" content="Code with N.A.">
+     <meta name="robots" content="index, follow">
+     
+     <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+     <meta property="og:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta property="og:description" content="Get free online courses, coding tutorials, and programming resources. Learn web development, Python, Java, and more with Code with N.A.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://www.yourwebsite.com">
+     <meta property="og:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Twitter Meta Tags (For Twitter Sharing) -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta name="twitter:description" content="Free online coding tutorials, courses, and programming resources. Learn web development, Python, and more with Code with N.A.">
+     <meta name="twitter:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Additional Meta Tags -->
+     <meta name="theme-color" content="#000000">
+     <meta name="language" content="English">
+     <meta name="distribution" content="global">
+     <meta name="revisit-after" content="7 days">
+     <meta name="rating" content="General">
+     
+     <!-- Google Site Verification (If applicable) -->
+     <meta name="google-site-verification" content="your-google-verification-code">
+ 
+    <title>PHP Course</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #282c34;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      /* Section Styles */
+      section {
+        padding: 30px;
+        margin: 20px auto;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 1000px;
+      }
+
+      /* Headings */
+      h2 {
+        color: #282c34;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      /* Paragraph Styles */
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      /* Code Block Styles */
+      pre {
+        background-color: #2e3b4e;
+        color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+        font-size: 16px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      /* Code Tag Styles */
+      code {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 16px;
+        color: #f9a826;
+      }
+
+      /* Hover Effect on Code Example */
+      pre:hover {
+        background-color: #333a48;
+      }
+
+      /* Navigation Links */
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      nav ul li {
+        display: inline;
+        margin: 0 10px;
+      }
+
+      nav ul li a {
+        color: #282c34;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #f9a826;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        section {
+          padding: 20px;
+          margin: 10px;
+        }
+
+        h2 {
+          font-size: 22px;
+        }
+
+        pre {
+          padding: 10px;
+        }
+      }
+
+      /* Styling for the side navigation */
+      #side-nav {
+        display: none; /* Initially hide the side-nav */
+        background-color: #333;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding-top: 50px;
+        z-index: 1000;
+        overflow-y: auto; /* Enable vertical scrolling */
+      }
+
+      /* Styling for the links in the side navigation */
+      #side-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 12px 20px;
+        display: block;
+        font-size: 16px;
+        border-bottom: 1px solid #444; /* Add a border to each list item */
+        transition: background-color 0.3s ease; /* Smooth background transition */
+      }
+
+      /* Hover effect for list items */
+      #side-nav a:hover {
+        background-color: #575757;
+      }
+
+      /* Styling for the toggle button */
+      #toggle-btn {
+        font-size: 30px;
+        cursor: pointer;
+        position: fixed;
+        top: 20px; /* Move button slightly lower */
+        left: 20px;
+        background: none;
+        border: none;
+        color: #333;
+        z-index: 1001; /* Ensure button is above the menu */
+      }
+
+      /* Button change when menu is open */
+      #toggle-btn.open {
+        color: red; /* Color change when menu is open */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Toggle Button -->
+    <button id="toggle-btn">☰</button>
+
+    <nav id="side-nav">
+        <a href="#intro">1. Introduction</a><br>
+<a href="#install">2. Install</a><br>
+<a href="#syntax">3. Syntax</a><br>
+<a href="#comments">4. Comments</a><br>
+<a href="#variables">5. Variables</a><br>
+<a href="#echo">6. Echo / Print</a><br>
+<a href="#data-types">7. Data Types</a><br>
+<a href="#strings">8. Strings</a><br>
+<a href="#numbers">9. Numbers</a><br>
+<a href="#casting">10. Casting</a><br>
+<a href="#math">11. Math</a><br>
+<a href="#constants">12. Constants</a><br>
+<a href="#magic-constants">13. Magic Constants</a><br>
+<a href="#operators">14. Operators</a><br>
+<a href="#if-else">15. If...Else...Elseif</a><br>
+<a href="#switch">16. Switch</a><br>
+<a href="#loops">17. Loops</a><br>
+<a href="#functions">18. Functions</a><br>
+<a href="#arrays">19. Arrays</a><br>
+<a href="#superglobals">20. Superglobals</a><br>
+<a href="#globals">21. $GLOBALS</a><br>
+<a href="#server">22. $_SERVER</a><br>
+<a href="#request">23. $_REQUEST</a><br>
+<a href="#post">24. $_POST</a><br>
+<a href="#get">25. $_GET</a><br>
+<a href="#regex">26. RegEx</a><br>
+
+<a href="#forms">27. Forms</a><br>
+<a href="#form-handling">28. Form Handling</a><br>
+<a href="#form-validation">29. Form Validation</a><br>
+<a href="#form-required">30. Form Required</a><br>
+<a href="#form-url-email">31. Form URL/E-mail</a><br>
+<a href="#form-complete">32. Form Complete</a><br>
+
+<a href="#advanced">33. Advanced</a><br>
+<a href="#date-time">34. Date and Time</a><br>
+<a href="#include">35. Include</a><br>
+<a href="#file-handling">36. File Handling</a><br>
+<a href="#file-open-read">37. File Open/Read</a><br>
+<a href="#file-create-write">38. File Create/Write</a><br>
+<a href="#file-upload">39. File Upload</a><br>
+<a href="#cookies">40. Cookies</a><br>
+<a href="#sessions">41. Sessions</a><br>
+<a href="#filters">42. Filters</a><br>
+<a href="#callback-functions">43. Callback Functions</a><br>
+<a href="#json">44. JSON</a><br>
+<a href="#exceptions">45. Exceptions</a><br>
+
+<a href="#oop">46. OOP</a><br>
+<a href="#oop-what">47. What is OOP</a><br>
+<a href="#classes-objects">48. Classes/Objects</a><br>
+<a href="#constructor">49. Constructor</a><br>
+<a href="#destructor">50. Destructor</a><br>
+<a href="#access-modifiers">51. Access Modifiers</a><br>
+<a href="#inheritance">52. Inheritance</a><br>
+<a href="#abstract-classes">53. Abstract Classes</a><br>
+<a href="#interfaces">54. Interfaces</a><br>
+<a href="#traits">55. Traits</a><br>
+<a href="#static-methods">56. Static Methods</a><br>
+<a href="#static-properties">57. Static Properties</a><br>
+<a href="#namespaces">58. Namespaces</a><br>
+<a href="#iterables">59. Iterables</a><br>
+
+<a href="#mysql">60. MySQL Database</a><br>
+<a href="#mysql-connect">61. MySQL Connect</a><br>
+<a href="#mysql-create-db">62. MySQL Create DB</a><br>
+<a href="#mysql-create-table">63. MySQL Create Table</a><br>
+<a href="#mysql-insert-data">64. MySQL Insert Data</a><br>
+<a href="#mysql-get-last-id">65. MySQL Get Last ID</a><br>
+<a href="#mysql-insert-multiple">66. MySQL Insert Multiple</a><br>
+<a href="#mysql-prepared">67. MySQL Prepared</a><br>
+<a href="#mysql-select-data">68. MySQL Select Data</a><br>
+<a href="#mysql-where">69. MySQL Where</a><br>
+<a href="#mysql-order-by">70. MySQL Order By</a><br>
+<a href="#mysql-delete-data">71. MySQL Delete Data</a><br>
+<a href="#mysql-update-data">72. MySQL Update Data</a><br>
+<a href="#mysql-limit-data">73. MySQL Limit Data</a><br>
+
+<a href="#xml">74. PHP XML</a><br>
+<a href="#xml-parsers">75. XML Parsers</a><br>
+<a href="#simplexml-parser">76. SimpleXML Parser</a><br>
+<a href="#simplexml-get">77. SimpleXML - Get</a><br>
+<a href="#xml-expat">78. XML Expat</a><br>
+<a href="#xml-dom">79. XML DOM</a><br>
+
+<a href="#ajax">80. AJAX</a><br>
+<a href="#ajax-php">81. AJAX PHP</a><br>
+<a href="#ajax-database">82. AJAX Database</a><br>
+<a href="#ajax-xml">83. AJAX XML</a><br>
+<a href="#ajax-live-search">84. AJAX Live Search</a><br>
+<a href="#ajax-poll">85. AJAX Poll</a><br>
+
+<a href="#examples">86. Examples</a><br>
+<a href="#examples-compiler">87. Compiler</a><br>
+<a href="#examples-quiz">88. Quiz</a><br>
+<a href="#examples-exercises">89. Exercises</a><br>
+<a href="#examples-server">90. Server</a><br>
+<a href="#examples-certificate">91. Certificate</a><br>
+
+<a href="#reference">92. PHP Reference</a><br>
+<a href="#overview">93. Overview</a><br>
+<a href="#array">94. Array</a><br>
+<a href="#calendar">95. Calendar</a><br>
+<a href="#date">96. Date</a><br>
+<a href="#directory">97. Directory</a><br>
+<a href="#error">98. Error</a><br>
+<a href="#exception">99. Exception</a><br>
+<a href="#filesystem">100. Filesystem</a><br>
+<a href="#filter">101. Filter</a><br>
+<a href="#ftp">102. FTP</a><br>
+<a href="#json-ref">103. JSON</a><br>
+<a href="#keywords">104. Keywords</a><br>
+<a href="#libxml">105. Libxml</a><br>
+<a href="#mail">106. Mail</a><br>
+<a href="#math-ref">107. Math</a><br>
+<a href="#misc">108. Misc</a><br>
+<a href="#mysqli">109. MySQLi</a><br>
+<a href="#network">110. Network</a><br>
+<a href="#output-control">111. Output Control</a><br>
+<a href="#regex-ref">112. RegEx</a><br>
+<a href="#simplexml-ref">113. SimpleXML</a><br>
+<a href="#stream">114. Stream</a><br>
+<a href="#string">115. String</a><br>
+<a href="#variable-handling">116. Variable Handling</a><br>
+<a href="#xml-parser">117. XML Parser</a><br>
+<a href="#zip">118. Zip</a><br>
+<a href="#timezones">119. Timezones</a><br>
+
+        
+    </nav>
+
+    <script>
+      // JavaScript to toggle the side navigation menu
+      document
+        .getElementById("toggle-btn")
+        .addEventListener("click", function () {
+          var nav = document.getElementById("side-nav");
+          var button = document.getElementById("toggle-btn");
+
+          // Toggle the display property of the navigation
+          if (nav.style.display === "block") {
+            nav.style.display = "none";
+            button.classList.remove("open"); // Change button back to normal
+          } else {
+            nav.style.display = "block";
+            button.classList.add("open"); // Change button style when menu is open
+          }
+        });
+    </script>
+    <header>
+      <h1>PHP Course</h1>
+    </header>
+    <section id="php-home">
+      <h2>PHP HOME</h2>
+      <p>
+        PHP is a popular general-purpose scripting language that is especially
+        suited to web development.
+      </p>
+      <pre><code>
+<?php echo htmlspecialchars('<?php'); ?>
+
+echo "Welcome to PHP!";
+
+<?php echo htmlspecialchars('?>'); ?>
+    </code></pre>
+    </section>
+
+    <section id="php-intro">
+      <h2>PHP Intro</h2>
+      <p>
+        PHP stands for Hypertext Preprocessor. It is widely used to create
+        dynamic and interactive web pages.
+      </p>
+      <pre><code>
+<?php
+echo "This is an introduction to PHP.";
+?>
+    </code></pre>
+    </section>
+
+    <section id="php-install">
+      <h2>PHP Install</h2>
+      <p>
+        To install PHP, download the latest version from the official PHP
+        website or use a package manager on your operating system.
+      </p>
+      <pre><code>
+# On Windows, you can download XAMPP or WAMP.
+# On Linux, you can use the following command:
+sudo apt-get install php
+    </code></pre>
+    </section>
+
+    <section id="php-variables">
+      <h2>PHP Variables</h2>
+      <p>
+        In PHP, a variable is a container used to store data, such as numbers,
+        strings, or arrays. All variables in PHP start with the dollar sign ($)
+        symbol.
+      </p>
+      <pre><code>
+&lt;?php
+$greeting = "Hello, PHP!"; // String variable
+$number = 25; // Integer variable
+$pi = 3.14; // Float variable
+
+echo $greeting; // Output: Hello, PHP!
+echo $number;   // Output: 25
+echo $pi;       // Output: 3.14
+?&gt;
+    </code></pre>
+    </section>
+    <section id="php-echo-print">
+      <h2>PHP Echo / Print</h2>
+      <p>
+        The <strong>echo</strong> and <strong>print</strong> statements are used
+        to output data to the screen. <strong>echo</strong> can output multiple
+        strings, while <strong>print</strong> can only output one string.
+      </p>
+      <pre><code>
+&lt;?php
+echo "Hello, World!"; // Outputs: Hello, World!
+print "Hello, PHP!";   // Outputs: Hello, PHP!
+?&gt;
+    </code></pre>
+    </section>
+
+    <!-- PHP Data Types Section -->
+    <section id="php-data-types">
+      <h2>PHP Data Types</h2>
+      <p>
+        PHP supports several data types, including strings, integers, floats,
+        booleans, arrays, and objects.
+      </p>
+      <pre><code>
+&lt;?php
+$integer = 42;         // Integer
+$float = 3.14;         // Float
+$boolean = true;       // Boolean
+$string = "Hello";     // String
+$array = array(1, 2, 3); // Array
+?&gt;
+    </code></pre>
+    </section>
+
+    <!-- PHP Strings Section -->
+    <section id="php-strings">
+      <h2>PHP Strings</h2>
+      <p>
+        Strings in PHP can be enclosed in either single quotes (' ') or double
+        quotes (" "). Double quotes allow for variable interpolation.
+      </p>
+      <pre><code>
+&lt;?php
+$string1 = 'Hello, World!';
+$string2 = "Hello, PHP!";
+?&gt;
+    </code></pre>
+    </section>
+
+    <!-- Modify Strings Section -->
+    <section id="php-modify-strings">
+      <h2>Modify Strings</h2>
+      <p>
+        PHP provides various functions to modify strings, such as
+        <strong>strtoupper()</strong>, <strong>strtolower()</strong>, and
+        <strong>ucwords()</strong>.
+      </p>
+      <pre><code>
+&lt;?php
+$string = "hello world";
+echo strtoupper($string); // Outputs: HELLO WORLD
+echo strtolower($string); // Outputs: hello world
+echo ucwords($string);    // Outputs: Hello World
+?&gt;
+    </code></pre>
+    </section>
+
+    <!-- Concatenate Strings Section -->
+    <section id="php-concatenate-strings">
+      <h2>Concatenate Strings</h2>
+      <p>
+        You can concatenate strings in PHP using the
+        <strong>dot (.)</strong> operator.
+      </p>
+      <pre><code>
+&lt;?php
+$string1 = "Hello, ";
+$string2 = "World!";
+echo $string1 . $string2; // Outputs: Hello, World!
+?&gt;
+    </code></pre>
+    </section>
+
+    <!-- Slicing Strings Section -->
+    <section id="php-slicing-strings">
+      <h2>Slicing Strings</h2>
+      <p>
+        PHP provides <strong>substr()</strong> to extract a portion of a string.
+      </p>
+      <pre><code>
+&lt;?php
+$string = "Hello, World!";
+echo substr($string, 7, 5); // Outputs: World
+?&gt;
+    </code></pre>
+    </section>
+
+    <!-- Escape Characters Section -->
+    <section id="php-escape-characters">
+      <h2>Escape Characters</h2>
+      <p>
+        In PHP, special characters can be escaped using a backslash
+        (<strong>\</strong>).
+      </p>
+      <pre><code>
+&lt;?php
+$string = "Hello \"World\"";
+echo $string; // Outputs: Hello "World"
+?&gt;
+    </code></pre>
+    </section>
+
+    <!-- PHP Numbers Section -->
+    <section id="php-numbers">
+      <h2>PHP Numbers</h2>
+      <p>PHP supports both integer and floating-point numbers.</p>
+      <pre><code>
+&lt;?php
+$integer = 42;
+$float = 3.14;
+echo $integer; // Outputs: 42
+echo $float;   // Outputs: 3.14
+?&gt;
+    </code></pre>
+    </section>
+
+    <!-- PHP Casting Section -->
+    <section id="php-casting">
+      <h2>PHP Casting</h2>
+      <p>
+        PHP allows type casting between different data types, such as converting
+        a string to an integer.
+      </p>
+      <pre><code>
+&lt;?php
+$string = "42";
+$integer = (int)$string;
+echo $integer; // Outputs: 42
+?&gt;
+    </code></pre>
+    </section>
+
+    <!-- PHP Math Section -->
+    <section id="php-math">
+      <h2>PHP Math</h2>
+      <p>
+        PHP provides various mathematical functions, such as
+        <strong>abs()</strong>, <strong>round()</strong>, and
+        <strong>pow()</strong>.
+      </p>
+      <pre><code>
+&lt;?php
+echo abs(-5);   // Outputs: 5
+echo round(3.14); // Outputs: 3
+echo pow(2, 3);   // Outputs: 8
+?&gt;
+    </code></pre>
+    </section>
+
+    <!-- PHP Constants Section -->
+    <section id="php-constants">
+      <h2>PHP Constants</h2>
+      <p>
+        Constants in PHP are defined using the
+        <strong>define()</strong> function and cannot be changed once set.
+      </p>
+      <pre><code>
+&lt;?php
+define("SITE_NAME", "My Website");
+echo SITE_NAME; // Outputs: My Website
+?&gt;
+    </code></pre>
+    </section>
+
+    <!-- PHP Magic Constants Section -->
+    <section id="php-magic-constants">
+      <h2>PHP Magic Constants</h2>
+      <p>
+        PHP has some predefined constants that provide information about the
+        current file, line, function, etc.
+      </p>
+      <pre><code>
+&lt;?php
+echo __FILE__;   // Outputs the full path of the file
+echo __LINE__;   // Outputs the current line number
+?&gt;
+    </code></pre>
+    </section>
+
+    <!-- PHP Operators Section -->
+    <section id="php-operators">
+      <h2>PHP Operators</h2>
+      <p>
+        PHP supports a wide range of operators, such as arithmetic, comparison,
+        and logical operators.
+      </p>
+      <pre><code>
+&lt;?php
+$a = 5;
+$b = 3;
+echo $a + $b;   // Outputs: 8 (Arithmetic Operator)
+echo $a == $b;  // Outputs: false (Comparison Operator)
+echo ($a > $b) && ($b > 1); // Outputs: true (Logical Operator)
+?&gt;
+    </code></pre>
+    </section>
+    <!-- PHP If Section -->
+    <section id="php-if">
+      <h2>PHP If</h2>
+      <p>
+        The <strong>if</strong> statement is used to execute code if a condition
+        is true.
+      </p>
+      <pre><code>
+&lt;?php
+$age = 20;
+if ($age >= 18) {
+    echo "You are an adult."; // Output: You are an adult.
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP If Operators Section -->
+    <section id="php-if-operators">
+      <h2>PHP If Operators</h2>
+      <p>
+        Conditional operators used in PHP are comparison operators such as
+        <strong>==</strong>, <strong>!=</strong>, <strong>></strong>, and
+        <strong><</strong>.
+      </p>
+      <pre><code>
+&lt;?php
+$a = 5;
+$b = 10;
+if ($a == $b) {
+    echo "Both are equal.";
+} else {
+    echo "They are not equal."; // Output: They are not equal.
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP If...Else Section -->
+    <section id="php-if-else">
+      <h2>PHP If...Else</h2>
+      <p>
+        The <strong>if...else</strong> statement executes one block of code if
+        the condition is true, and another block of code if the condition is
+        false.
+      </p>
+      <pre><code>
+&lt;?php
+$hour = 15;
+if ($hour < 12) {
+    echo "Good morning!";
+} else {
+    echo "Good afternoon!"; // Output: Good afternoon!
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Shorthand If Section -->
+    <section id="php-shorthand-if">
+      <h2>PHP Shorthand If</h2>
+      <p>
+        PHP allows shorthand notation for <strong>if</strong> using the ternary
+        operator <strong>?:</strong>.
+      </p>
+      <pre><code>
+&lt;?php
+$age = 20;
+echo ($age >= 18) ? "You are an adult." : "You are a minor."; // Output: You are an adult.
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Nested if Section -->
+    <section id="php-nested-if">
+      <h2>PHP Nested if</h2>
+      <p>
+        A <strong>nested if</strong> is an <strong>if</strong> statement inside
+        another <strong>if</strong> statement.
+      </p>
+      <pre><code>
+&lt;?php
+$age = 25;
+$country = "USA";
+if ($age >= 18) {
+    if ($country == "USA") {
+        echo "You are an adult from the USA."; // Output: You are an adult from the USA.
+    }
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Switch Section -->
+    <section id="php-switch">
+      <h2>PHP Switch</h2>
+      <p>
+        The <strong>switch</strong> statement is used to execute one out of
+        multiple blocks of code based on the value of a variable.
+      </p>
+      <pre><code>
+&lt;?php
+$day = 3;
+switch ($day) {
+    case 1:
+        echo "Monday";
+        break;
+    case 2:
+        echo "Tuesday";
+        break;
+    case 3:
+        echo "Wednesday"; // Output: Wednesday
+        break;
+    default:
+        echo "Invalid day";
+}
+?&gt;
+        </code></pre>
+    </section>
+    <!-- PHP While Loop Section -->
+    <section id="php-while-loop">
+      <h2>PHP While Loop</h2>
+      <p>
+        The <strong>while</strong> loop executes a block of code as long as the
+        condition is true.
+      </p>
+      <pre><code>
+&lt;?php
+$i = 0;
+while ($i < 5) {
+    echo "Number: $i<br>";
+    $i++;
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Do While Loop Section -->
+    <section id="php-do-while-loop">
+      <h2>PHP Do While Loop</h2>
+      <p>
+        The <strong>do...while</strong> loop is similar to the
+        <strong>while</strong> loop, but it always runs at least once, even if
+        the condition is false.
+      </p>
+      <pre><code>
+&lt;?php
+$i = 0;
+do {
+    echo "Number: $i<br>";
+    $i++;
+} while ($i < 5);
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP For Loop Section -->
+    <section id="php-for-loop">
+      <h2>PHP For Loop</h2>
+      <p>
+        The <strong>for</strong> loop is used to execute a block of code a
+        certain number of times.
+      </p>
+      <pre><code>
+&lt;?php
+for ($i = 0; $i < 5; $i++) {
+    echo "Number: $i<br>";
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Foreach Loop Section -->
+    <section id="php-foreach-loop">
+      <h2>PHP Foreach Loop</h2>
+      <p>The <strong>foreach</strong> loop is used to iterate over arrays.</p>
+      <pre><code>
+&lt;?php
+$colors = array("Red", "Green", "Blue");
+foreach ($colors as $color) {
+    echo $color . "<br>";
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Break Section -->
+    <section id="php-break">
+      <h2>PHP Break</h2>
+      <p>
+        The <strong>break</strong> statement is used to exit from a loop or
+        switch statement.
+      </p>
+      <pre><code>
+&lt;?php
+for ($i = 0; $i < 10; $i++) {
+    if ($i == 5) {
+        break; // Exits the loop when $i equals 5
+    }
+    echo "Number: $i<br>";
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Continue Section -->
+    <section id="php-continue">
+      <h2>PHP Continue</h2>
+      <p>
+        The <strong>continue</strong> statement is used to skip the current
+        iteration of a loop and proceed to the next iteration.
+      </p>
+      <pre><code>
+&lt;?php
+for ($i = 0; $i < 5; $i++) {
+    if ($i == 2) {
+        continue; // Skips the iteration when $i equals 2
+    }
+    echo "Number: $i<br>";
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Functions Section -->
+    <section id="php-functions">
+      <h2>PHP Functions</h2>
+      <p>
+        In PHP, functions allow you to reuse code. A function is defined using
+        the <strong>function</strong> keyword.
+      </p>
+      <pre><code>
+&lt;?php
+function greet($name) {
+    echo "Hello, $name!<br>";
+}
+
+greet("John"); // Output: Hello, John!
+greet("Alice"); // Output: Hello, Alice!
+?&gt;
+        </code></pre>
+    </section>
+    -- PHP Indexed Arrays Section -->
+    <section id="php-indexed-arrays">
+      <h2>PHP Indexed Arrays</h2>
+      <p>Indexed arrays use numeric indexes to store elements.</p>
+      <pre><code>
+&lt;?php
+$fruits = array("Apple", "Banana", "Orange");
+echo $fruits[0]; // Outputs: Apple
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Associative Arrays Section -->
+    <section id="php-associative-arrays">
+      <h2>PHP Associative Arrays</h2>
+      <p>Associative arrays store elements with named keys.</p>
+      <pre><code>
+&lt;?php
+$ages = array("John" => 25, "Alice" => 30, "Bob" => 35);
+echo $ages["John"]; // Outputs: 25
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Create Arrays Section -->
+    <section id="php-create-arrays">
+      <h2>PHP Create Arrays</h2>
+      <p>
+        Arrays in PHP can be created using the <strong>array()</strong> function
+        or short array syntax <strong>[]</strong>.
+      </p>
+      <pre><code>
+&lt;?php
+$colors = ["Red", "Green", "Blue"];
+$numbers = array(1, 2, 3, 4);
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Access Array Items Section -->
+    <section id="php-access-array-items">
+      <h2>PHP Access Array Items</h2>
+      <p>
+        You can access array elements by specifying the index or key in square
+        brackets.
+      </p>
+      <pre><code>
+&lt;?php
+$fruits = ["Apple", "Banana", "Orange"];
+echo $fruits[1]; // Outputs: Banana
+
+$person = array("name" => "John", "age" => 25);
+echo $person["name"]; // Outputs: John
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Update Array Items Section -->
+    <section id="php-update-array-items">
+      <h2>PHP Update Array Items</h2>
+      <p>
+        To update an array item, assign a new value to the specified index or
+        key.
+      </p>
+      <pre><code>
+&lt;?php
+$fruits = ["Apple", "Banana", "Orange"];
+$fruits[1] = "Grape"; // Updates Banana to Grape
+echo $fruits[1]; // Outputs: Grape
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Add Array Items Section -->
+    <section id="php-add-array-items">
+      <h2>PHP Add Array Items</h2>
+      <p>
+        Items can be added to the end of an array using
+        <strong>array_push()</strong> or directly by specifying an index.
+      </p>
+      <pre><code>
+&lt;?php
+$fruits = ["Apple", "Banana"];
+array_push($fruits, "Orange"); // Adds Orange to the array
+$fruits[] = "Grape"; // Adds Grape to the array
+print_r($fruits);
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Remove Array Items Section -->
+    <section id="php-remove-array-items">
+      <h2>PHP Remove Array Items</h2>
+      <p>
+        To remove items from an array, you can use functions like
+        <strong>unset()</strong> or <strong>array_pop()</strong>.
+      </p>
+      <pre><code>
+&lt;?php
+$fruits = ["Apple", "Banana", "Orange"];
+unset($fruits[1]); // Removes Banana
+array_pop($fruits); // Removes the last item (Orange)
+print_r($fruits);
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Sorting Arrays Section -->
+    <section id="php-sorting-arrays">
+      <h2>PHP Sorting Arrays</h2>
+      <p>
+        PHP provides several functions to sort arrays such as
+        <strong>sort()</strong> for indexed arrays and
+        <strong>asort()</strong> for associative arrays.
+      </p>
+      <pre><code>
+&lt;?php
+$fruits = array("Orange", "Banana", "Apple");
+sort($fruits); // Sorts in ascending order
+print_r($fruits);
+
+$ages = array("John" => 25, "Alice" => 30, "Bob" => 35);
+asort($ages); // Sorts associative array by value
+print_r($ages);
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Multidimensional Arrays Section -->
+    <section id="php-multidimensional-arrays">
+      <h2>PHP Multidimensional Arrays</h2>
+      <p>Multidimensional arrays are arrays containing other arrays.</p>
+      <pre><code>
+&lt;?php
+$matrix = array(
+    array(1, 2, 3),
+    array(4, 5, 6),
+    array(7, 8, 9)
+);
+echo $matrix[1][2]; // Outputs: 6
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Array Functions Section -->
+    <section id="php-array-functions">
+      <h2>PHP Array Functions</h2>
+      <p>
+        PHP has many built-in functions for manipulating arrays like
+        <strong>count()</strong>, <strong>in_array()</strong>, and
+        <strong>array_merge()</strong>.
+      </p>
+      <pre><code>
+&lt;?php
+$fruits = ["Apple", "Banana", "Orange"];
+echo count($fruits); // Outputs: 3
+
+if (in_array("Banana", $fruits)) {
+    echo "Banana is in the array!";
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Superglobals Section -->
+    <section id="php-superglobals">
+      <h2>PHP Superglobals</h2>
+      <p>
+        Superglobals are built-in variables that are always accessible,
+        regardless of scope. Some common superglobals include
+        <strong>$_GET</strong>, <strong>$_POST</strong>,
+        <strong>$_SESSION</strong>, and <strong>$_COOKIE</strong>.
+      </p>
+      <pre><code>
+&lt;?php
+// Example with $_GET
+echo "Hello " . $_GET["name"]; // If name=John is passed via URL
+
+// Example with $_POST
+echo "Received data: " . $_POST["message"];
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP RegEx Section -->
+    <section id="php-regex">
+      <h2>PHP Regular Expressions (RegEx)</h2>
+      <p>
+        PHP supports regular expressions for pattern matching and replacement
+        using functions like <strong>preg_match()</strong>,
+        <strong>preg_replace()</strong>, and <strong>preg_split()</strong>.
+      </p>
+      <pre><code>
+&lt;?php
+$pattern = "/\d+/"; // Regular expression to match numbers
+$string = "There are 100 apples";
+if (preg_match($pattern, $string)) {
+    echo "A number is found!";
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Form Section -->
+    <section id="php-form">
+      <h2>PHP Form</h2>
+      <p>
+        HTML forms are used to collect user inputs. PHP can be used to process
+        this data on the server side.
+      </p>
+      <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <!-- PHP Form Handling Section -->
+    <section id="php-form-handling">
+      <h2>PHP Form Handling</h2>
+      <p>
+        PHP handles form data when the form is submitted. The form data is
+        usually sent using the <strong>$_POST</strong> or
+        <strong>$_GET</strong> superglobals.
+      </p>
+      <pre><code>
+&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    echo "Name: $name <br>Email: $email";
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Form Validation Section -->
+    <section id="php-form-validation">
+      <h2>PHP Form Validation</h2>
+      <p>
+        Form validation ensures that the submitted form data is valid. PHP can
+        validate various types of data.
+      </p>
+      <pre><code>
+&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $errors = [];
+
+    if (empty($name)) {
+        $errors[] = "Name is required";
+    }
+
+    if (empty($email)) {
+        $errors[] = "Email is required";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Invalid email format";
+    }
+
+    if (empty($errors)) {
+        echo "Form submitted successfully!";
+    } else {
+        foreach ($errors as $error) {
+            echo "$error <br>";
+        }
+    }
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Form Required Section -->
+    <section id="php-form-required">
+      <h2>PHP Form Required</h2>
+      <p>
+        By setting the <strong>required</strong> attribute in HTML, we can make
+        certain fields mandatory. However, PHP validation is still needed on the
+        server side.
+      </p>
+      <pre><code>
+&lt;?php
+// The form requires the name and email to be filled out
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST['name']) || empty($_POST['email'])) {
+        echo "Name and Email are required.";
+    } else {
+        echo "Form submitted successfully!";
+    }
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Form URL/E-mail Section -->
+    <section id="php-form-url-email">
+      <h2>PHP Form URL/E-mail</h2>
+      <p>
+        PHP can be used to validate if the input is a valid URL or email using
+        filter functions.
+      </p>
+      <pre><code>
+&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $url = $_POST['url'];
+
+    // Validate email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format";
+    } else {
+        echo "Email is valid!";
+    }
+
+    // Validate URL
+    if (!filter_var($url, FILTER_VALIDATE_URL)) {
+        echo "Invalid URL format";
+    } else {
+        echo "URL is valid!";
+    }
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Form Complete Section -->
+    <section id="php-form-complete">
+      <h2>PHP Form Complete</h2>
+      <p>
+        This is a complete example of a form with validation for name, email,
+        and URL fields.
+      </p>
+      <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="url">URL:</label>
+        <input type="text" id="url" name="url" /><br /><br />
+
+        <input type="submit" value="Submit" />
+      </form>
+
+      <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $url = $_POST['url'];
+
+            $errors = [];
+
+            if (empty($name)) {
+                $errors[] = "Name is required";
+            }
+
+            if (empty($email)) {
+                $errors[] = "Email is required";
+            } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $errors[] = "Invalid email format";
+            }
+
+            if (!empty($url) && !filter_var($url, FILTER_VALIDATE_URL)) {
+                $errors[] = "Invalid URL format";
+            }
+
+            if (empty($errors)) {
+                echo "Form submitted successfully!<br>Name: $name<br />Email:
+      $email<br />URL: $url"; } else { foreach ($errors as $error) { echo
+      "$error <br />"; } } } ?>
+    </section>
+
+    <!-- PHP Date and Time -->
+    <section id="php-date-time">
+      <h2>PHP Date and Time</h2>
+      <p>
+        PHP provides built-in functions to handle date and time easily. You can
+        use functions like <strong>date()</strong>, <strong>time()</strong>, and
+        <strong>strtotime()</strong> to work with dates and times.
+      </p>
+      <pre><code>
+&lt;?php
+echo date("Y-m-d H:i:s"); // Outputs current date and time in the format: YYYY-MM-DD HH:MM:SS
+echo time(); // Outputs current timestamp
+echo strtotime("next Monday"); // Converts a string to a timestamp
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Include -->
+    <section id="php-include">
+      <h2>PHP Include</h2>
+      <p>
+        PHP <strong>include</strong> and <strong>require</strong> are used to
+        include files in PHP scripts. The difference is that
+        <strong>include</strong> will emit a warning, but the script will
+        continue, whereas <strong>require</strong> will stop execution if the
+        file cannot be included.
+      </p>
+      <pre><code>
+&lt;?php
+include 'header.php'; // Includes the 'header.php' file
+require 'footer.php'; // Includes the 'footer.php' file
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP File Handling -->
+    <section id="php-file-handling">
+      <h2>PHP File Handling</h2>
+      <p>
+        PHP provides various functions for file handling, such as opening,
+        reading, writing, and closing files.
+      </p>
+      <pre><code>
+&lt;?php
+$filename = "example.txt";
+$file = fopen($filename, "r"); // Open the file in read mode
+$content = fread($file, filesize($filename)); // Read the file content
+fclose($file); // Close the file
+echo $content;
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP File Open/Read -->
+    <section id="php-file-open-read">
+      <h2>PHP File Open/Read</h2>
+      <p>
+        To read from a file in PHP, you can use <strong>fopen()</strong> to open
+        the file and <strong>fread()</strong> to read its contents.
+      </p>
+      <pre><code>
+&lt;?php
+$file = fopen("data.txt", "r");
+while(!feof($file)) {
+    echo fgets($file) . "<br>"; // Read and output each line
+}
+fclose($file);
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP File Create/Write -->
+    <section id="php-file-create-write">
+      <h2>PHP File Create/Write</h2>
+      <p>
+        PHP allows you to create and write to files using the
+        <strong>fopen()</strong> function in write mode (<strong>w</strong>) or
+        append mode (<strong>a</strong>).
+      </p>
+      <pre><code>
+&lt;?php
+$file = fopen("newfile.txt", "w");
+$text = "Hello, this is a test file!";
+fwrite($file, $text); // Write text to the file
+fclose($file);
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP File Upload -->
+    <section id="php-file-upload">
+      <h2>PHP File Upload</h2>
+      <p>
+        PHP makes file uploads easy. The uploaded file can be accessed using the
+        <strong>$_FILES</strong> superglobal.
+      </p>
+      <pre><code>
+&lt;form action="upload.php" method="post" enctype="multipart/form-data"&gt;
+    Select image to upload:
+    &lt;input type="file" name="fileToUpload" id="fileToUpload"&gt;
+    &lt;input type="submit" value="Upload Image" name="submit"&gt;
+&lt;/form&gt;
+
+&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $target_dir = "uploads/";
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        echo "The file ". basename($_FILES["fileToUpload"]["name"]). " has been uploaded.";
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Cookies -->
+    <section id="php-cookies">
+      <h2>PHP Cookies</h2>
+      <p>
+        Cookies are small pieces of data stored on the client-side. PHP can set,
+        retrieve, and delete cookies using the
+        <strong>setcookie()</strong> function.
+      </p>
+      <pre><code>
+&lt;?php
+// Set a cookie
+setcookie("user", "John", time() + 3600, "/"); // 1 hour expiration
+// Retrieve a cookie
+if(isset($_COOKIE["user"])) {
+    echo "User: " . $_COOKIE["user"];
+} else {
+    echo "Cookie is not set!";
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Sessions -->
+    <section id="php-sessions">
+      <h2>PHP Sessions</h2>
+      <p>
+        Sessions allow you to store data across multiple pages. PHP uses the
+        <strong>session_start()</strong> function to initiate a session.
+      </p>
+      <pre><code>
+&lt;?php
+session_start(); // Start the session
+$_SESSION["username"] = "John"; // Set session variable
+echo $_SESSION["username"]; // Output session variable
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Filters -->
+    <section id="php-filters">
+      <h2>PHP Filters</h2>
+      <p>
+        PHP provides a set of filters to sanitize and validate data, including
+        <strong>FILTER_SANITIZE_STRING</strong> and
+        <strong>FILTER_VALIDATE_EMAIL</strong>.
+      </p>
+      <pre><code>
+&lt;?php
+$email = "test@example.com";
+if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "Valid email!";
+} else {
+    echo "Invalid email!";
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Filters Advanced -->
+    <section id="php-filters-advanced">
+      <h2>PHP Filters Advanced</h2>
+      <p>
+        PHP advanced filters allow you to apply more specific validation and
+        sanitization.
+      </p>
+      <pre><code>
+&lt;?php
+$string = "Hello World!";
+$sanitized_string = filter_var($string, FILTER_SANITIZE_STRING);
+echo $sanitized_string; // Output: Hello World!
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Callback Functions -->
+    <section id="php-callback-functions">
+      <h2>PHP Callback Functions</h2>
+      <p>
+        PHP supports callback functions, allowing you to pass a function as an
+        argument to another function.
+      </p>
+      <pre><code>
+&lt;?php
+function myCallbackFunction($message) {
+    echo "Callback message: $message";
+}
+
+function processMessage($callback) {
+    $callback("Hello, this is a callback!");
+}
+
+processMessage('myCallbackFunction');
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP JSON -->
+    <section id="php-json">
+      <h2>PHP JSON</h2>
+      <p>
+        PHP provides functions to encode and decode JSON data, such as
+        <strong>json_encode()</strong> and <strong>json_decode()</strong>.
+      </p>
+      <pre><code>
+&lt;?php
+$data = ["name" => "John", "age" => 30];
+$json_data = json_encode($data);
+echo $json_data; // {"name":"John","age":30}
+
+$decoded_data = json_decode($json_data, true);
+echo $decoded_data["name"]; // John
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Exceptions -->
+    <section id="php-exceptions">
+      <h2>PHP Exceptions</h2>
+      <p>
+        PHP exceptions provide a way to handle errors. You can throw exceptions
+        and catch them using try-catch blocks.
+      </p>
+      <pre><code>
+&lt;?php
+try {
+    $num = 1;
+    if ($num < 2) {
+        throw new Exception("Number must be greater than or equal to 2.");
+    }
+} catch (Exception $e) {
+    echo "Caught exception: " . $e->getMessage();
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP What is OOP -->
+    <section id="php-what-is-oop">
+      <h2>PHP What is OOP</h2>
+      <p>
+        Object-Oriented Programming (OOP) is a programming paradigm that uses
+        objects and classes. PHP supports OOP and allows you to structure code
+        in a more organized way by encapsulating data and functions into
+        objects.
+      </p>
+    </section>
+
+    <!-- PHP Classes/Objects -->
+    <section id="php-classes-objects">
+      <h2>PHP Classes/Objects</h2>
+      <p>
+        In PHP, a class is a blueprint for creating objects. An object is an
+        instance of a class. You can define properties (variables) and methods
+        (functions) inside a class.
+      </p>
+      <pre><code>
+&lt;?php
+class Car {
+    public $color;
+    public $model;
+    
+    public function __construct($color, $model) {
+        $this->color = $color;
+        $this->model = $model;
+    }
+    
+    public function displayDetails() {
+        echo "Car Model: " . $this->model . ", Color: " . $this->color;
+    }
+}
+
+$car = new Car("Red", "Toyota");
+$car->displayDetails(); // Outputs: Car Model: Toyota, Color: Red
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Constructor -->
+    <section id="php-constructor">
+      <h2>PHP Constructor</h2>
+      <p>
+        The constructor method is automatically called when an object of a class
+        is created. It is used to initialize the object’s properties.
+      </p>
+      <pre><code>
+&lt;?php
+class Car {
+    public $color;
+    public $model;
+
+    public function __construct($color, $model) {
+        $this->color = $color;
+        $this->model = $model;
+    }
+}
+
+$car = new Car("Blue", "Honda");
+echo $car->color;  // Outputs: Blue
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Destructor -->
+    <section id="php-destructor">
+      <h2>PHP Destructor</h2>
+      <p>
+        The destructor method is called when an object is destroyed or when the
+        script finishes executing. It is used for cleanup tasks.
+      </p>
+      <pre><code>
+&lt;?php
+class Car {
+    public $model;
+
+    public function __construct($model) {
+        $this->model = $model;
+    }
+
+    public function __destruct() {
+        echo "The object for " . $this->model . " is destroyed.";
+    }
+}
+
+$car = new Car("BMW"); // When the script ends, the destructor is called.
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Access Modifiers -->
+    <section id="php-access-modifiers">
+      <h2>PHP Access Modifiers</h2>
+      <p>
+        Access modifiers control the visibility of properties and methods within
+        a class. The three types of access modifiers are
+        <strong>public</strong>, <strong>protected</strong>, and
+        <strong>private</strong>.
+      </p>
+      <pre><code>
+&lt;?php
+class Car {
+    public $model;
+    protected $color;
+    private $engineNumber;
+
+    public function __construct($model, $color, $engineNumber) {
+        $this->model = $model;
+        $this->color = $color;
+        $this->engineNumber = $engineNumber;
+    }
+
+    public function displayDetails() {
+        echo "Model: " . $this->model . ", Color: " . $this->color;
+    }
+}
+
+$car = new Car("Tesla", "Black", "123456");
+echo $car->model;  // Accessible
+// echo $car->color; // Error: Cannot access protected property
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Inheritance -->
+    <section id="php-inheritance">
+      <h2>PHP Inheritance</h2>
+      <p>
+        Inheritance allows a class to inherit the properties and methods of
+        another class. This helps in reusing code and establishing a
+        relationship between classes.
+      </p>
+      <pre><code>
+&lt;?php
+class Vehicle {
+    public $brand;
+
+    public function __construct($brand) {
+        $this->brand = $brand;
+    }
+
+    public function startEngine() {
+        echo "Engine started";
+    }
+}
+
+class Car extends Vehicle {
+    public function displayBrand() {
+        echo "This car is a " . $this->brand;
+    }
+}
+
+$car = new Car("Ford");
+$car->startEngine();  // Inherited method
+$car->displayBrand(); // Outputs: This car is a Ford
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Constants -->
+    <section id="php-constants">
+      <h2>PHP Constants</h2>
+      <p>
+        Constants are identifiers that hold values that cannot be changed once
+        defined. You can define constants using the
+        <strong>define()</strong> function or the
+        <strong>const</strong> keyword.
+      </p>
+      <pre><code>
+&lt;?php
+define("SITE_NAME", "My Website");
+echo SITE_NAME;  // Outputs: My Website
+
+class Car {
+    const MODEL = "Tesla";
+}
+
+echo Car::MODEL; // Outputs: Tesla
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Abstract Classes -->
+    <section id="php-abstract-classes">
+      <h2>PHP Abstract Classes</h2>
+      <p>
+        An abstract class cannot be instantiated and may contain abstract
+        methods that must be implemented by derived classes.
+      </p>
+      <pre><code>
+&lt;?php
+abstract class Vehicle {
+    abstract public function startEngine();
+}
+
+class Car extends Vehicle {
+    public function startEngine() {
+        echo "Car engine started!";
+    }
+}
+
+$car = new Car();
+$car->startEngine();  // Outputs: Car engine started!
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Interfaces -->
+    <section id="php-interfaces">
+      <h2>PHP Interfaces</h2>
+      <p>
+        Interfaces allow you to define methods that a class must implement. A
+        class can implement multiple interfaces.
+      </p>
+      <pre><code>
+&lt;?php
+interface Drivable {
+    public function drive();
+}
+
+class Car implements Drivable {
+    public function drive() {
+        echo "Car is driving";
+    }
+}
+
+$car = new Car();
+$car->drive(); // Outputs: Car is driving
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Traits -->
+    <section id="php-traits">
+      <h2>PHP Traits</h2>
+      <p>
+        PHP traits are used to enable code reuse in classes. A trait is similar
+        to a class, but it is intended to group functionality in a fine-grained
+        and consistent way.
+      </p>
+      <pre><code>
+&lt;?php
+trait CarFunctions {
+    public function start() {
+        echo "Car is starting";
+    }
+}
+
+class Car {
+    use CarFunctions;
+}
+
+$car = new Car();
+$car->start(); // Outputs: Car is starting
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Static Methods -->
+    <section id="php-static-methods">
+      <h2>PHP Static Methods</h2>
+      <p>
+        Static methods are called directly on the class, rather than on
+        instances of the class. They are defined with the
+        <strong>static</strong> keyword.
+      </p>
+      <pre><code>
+&lt;?php
+class Car {
+    public static function displayMessage() {
+        echo "This is a static method.";
+    }
+}
+
+Car::displayMessage();  // Outputs: This is a static method.
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Static Properties -->
+    <section id="php-static-properties">
+      <h2>PHP Static Properties</h2>
+      <p>
+        Static properties belong to the class, rather than any particular object
+        instance. You can access static properties using the class name.
+      </p>
+      <pre><code>
+&lt;?php
+class Car {
+    public static $model = "Tesla";
+}
+
+echo Car::$model;  // Outputs: Tesla
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Namespaces -->
+    <section id="php-namespaces">
+      <h2>PHP Namespaces</h2>
+      <p>
+        Namespaces allow you to group logically related classes, interfaces,
+        functions, and constants. They help avoid name conflicts.
+      </p>
+      <pre><code>
+&lt;?php
+namespace Vehicles;
+
+class Car {
+    public function drive() {
+        echo "Driving car!";
+    }
+}
+
+$car = new Car();
+$car->drive(); // Outputs: Driving car!
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP Iterables -->
+    <section id="php-iterables">
+      <h2>PHP Iterables</h2>
+      <p>
+        The <strong>iterable</strong> keyword allows you to specify that a
+        function or method can return an object that can be iterated over using
+        <strong>foreach</strong>.
+      </p>
+      <pre><code>
+&lt;?php
+class MyCollection implements IteratorAggregate {
+    private $items = ["apple", "banana", "cherry"];
+
+    public function getIterator() {
+        return new ArrayIterator($this->items);
+    }
+}
+
+$collection = new MyCollection();
+foreach ($collection as $item) {
+    echo $item . "<br>";  // Outputs: apple, banana, cherry
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- MySQL Database -->
+    <section id="mysql-database">
+      <h2>MySQL Database</h2>
+      <p>
+        MySQL is an open-source relational database management system. It is
+        used to store and manage data in tables. It uses SQL (Structured Query
+        Language) for database interactions.
+      </p>
+    </section>
+
+    <!-- MySQL Connect -->
+    <section id="mysql-connect">
+      <h2>MySQL Connect</h2>
+      <p>
+        To connect to a MySQL database, we use the
+        <code>mysqli_connect()</code> function in PHP. You need the hostname,
+        username, password, and database name.
+      </p>
+      <pre><code>
+&lt;?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "my_database";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- MySQL Create DB -->
+    <section id="mysql-create-db">
+      <h2>MySQL Create DB</h2>
+      <p>
+        To create a new database, you can use the
+        <code>CREATE DATABASE</code> SQL statement.
+      </p>
+      <pre><code>
+&lt;?php
+$sql = "CREATE DATABASE my_new_database";
+if (mysqli_query($conn, $sql)) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . mysqli_error($conn);
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- MySQL Create Table -->
+    <section id="mysql-create-table">
+      <h2>MySQL Create Table</h2>
+      <p>
+        To create a new table in the database, use the
+        <code>CREATE TABLE</code> SQL statement. Each column is defined with its
+        name and data type.
+      </p>
+      <pre><code>
+&lt;?php
+$sql = "CREATE TABLE Users (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    email VARCHAR(50),
+    reg_date TIMESTAMP
+)";
+if (mysqli_query($conn, $sql)) {
+    echo "Table Users created successfully";
+} else {
+    echo "Error creating table: " . mysqli_error($conn);
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- MySQL Insert Data -->
+    <section id="mysql-insert-data">
+      <h2>MySQL Insert Data</h2>
+      <p>
+        To insert data into a table, use the <code>INSERT INTO</code> statement.
+      </p>
+      <pre><code>
+&lt;?php
+$sql = "INSERT INTO Users (name, email)
+VALUES ('John Doe', 'john.doe@example.com')";
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- MySQL Get Last ID -->
+    <section id="mysql-get-last-id">
+      <h2>MySQL Get Last ID</h2>
+      <p>
+        After inserting data, you can get the last inserted ID using
+        <code>mysqli_insert_id()</code>.
+      </p>
+      <pre><code>
+&lt;?php
+$last_id = mysqli_insert_id($conn);
+echo "Last inserted ID is: " . $last_id;
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- MySQL Insert Multiple -->
+    <section id="mysql-insert-multiple">
+      <h2>MySQL Insert Multiple</h2>
+      <p>
+        To insert multiple rows at once, use the
+        <code>INSERT INTO</code> statement with multiple sets of values.
+      </p>
+      <pre><code>
+&lt;?php
+$sql = "INSERT INTO Users (name, email) VALUES
+('Alice', 'alice@example.com'),
+('Bob', 'bob@example.com')";
+if (mysqli_query($conn, $sql)) {
+    echo "New records created successfully";
+} else {
+    echo "Error: " . mysqli_error($conn);
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- MySQL Prepared Statements -->
+    <section id="mysql-prepared">
+      <h2>MySQL Prepared Statements</h2>
+      <p>
+        Prepared statements are used to execute the same SQL statements
+        repeatedly with high efficiency and security. They help protect against
+        SQL injection.
+      </p>
+      <pre><code>
+&lt;?php
+$stmt = $conn->prepare("INSERT INTO Users (name, email) VALUES (?, ?)");
+$stmt->bind_param("ss", $name, $email);
+
+$name = "Charlie";
+$email = "charlie@example.com";
+$stmt->execute();
+
+echo "New record created successfully";
+
+$stmt->close();
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- MySQL Select Data -->
+    <section id="mysql-select-data">
+      <h2>MySQL Select Data</h2>
+      <p>To select data from a table, use the <code>SELECT</code> statement.</p>
+      <pre><code>
+&lt;?php
+$sql = "SELECT id, name, email FROM Users";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "id: " . $row["id"]. " - Name: " . $row["name"]. " - Email: " . $row["email"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- MySQL Where -->
+    <section id="mysql-where">
+      <h2>MySQL Where</h2>
+      <p>
+        The <code>WHERE</code> clause is used to filter records. It allows you
+        to specify conditions for selecting data.
+      </p>
+      <pre><code>
+&lt;?php
+$sql = "SELECT id, name, email FROM Users WHERE name = 'Alice'";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "id: " . $row["id"]. " - Name: " . $row["name"]. " - Email: " . $row["email"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- MySQL Order By -->
+    <section id="mysql-order-by">
+      <h2>MySQL Order By</h2>
+      <p>
+        The <code>ORDER BY</code> clause is used to sort the result set in
+        either ascending or descending order.
+      </p>
+      <pre><code>
+&lt;?php
+$sql = "SELECT id, name, email FROM Users ORDER BY name ASC";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "id: " . $row["id"]. " - Name: " . $row["name"]. " - Email: " . $row["email"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- MySQL Delete Data -->
+    <section id="mysql-delete-data">
+      <h2>MySQL Delete Data</h2>
+      <p>To delete data from a table, use the <code>DELETE</code> statement.</p>
+      <pre><code>
+&lt;?php
+$sql = "DELETE FROM Users WHERE id = 1";
+if (mysqli_query($conn, $sql)) {
+    echo "Record deleted successfully";
+} else {
+    echo "Error deleting record: " . mysqli_error($conn);
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- MySQL Update Data -->
+    <section id="mysql-update-data">
+      <h2>MySQL Update Data</h2>
+      <p>
+        The <code>UPDATE</code> statement is used to modify existing records in
+        a table.
+      </p>
+      <pre><code>
+&lt;?php
+$sql = "UPDATE Users SET email='new.email@example.com' WHERE id=2";
+if (mysqli_query($conn, $sql)) {
+    echo "Record updated successfully";
+} else {
+    echo "Error updating record: " . mysqli_error($conn);
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- MySQL Limit Data -->
+    <section id="mysql-limit-data">
+      <h2>MySQL Limit Data</h2>
+      <p>
+        The <code>LIMIT</code> clause is used to specify the number of records
+        to return.
+      </p>
+      <pre><code>
+&lt;?php
+$sql = "SELECT id, name, email FROM Users LIMIT 5";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "id: " . $row["id"]. " - Name: " . $row["name"]. " - Email: " . $row["email"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+?&gt;
+        </code></pre>
+    </section>
+
+    <!-- PHP XML -->
+    <section id="php-xml">
+      <h2>PHP XML</h2>
+      <p>
+        PHP provides several ways to interact with XML data, allowing you to
+        read, write, and manipulate XML documents. In PHP, XML can be processed
+        using different parsers such as SimpleXML, Expat, and DOM.
+      </p>
+    </section>
+
+    <!-- PHP XML Parsers -->
+    <section id="php-xml-parsers">
+      <h2>PHP XML Parsers</h2>
+      <p>PHP has different XML parsers, each serving a specific purpose:</p>
+      <ul>
+        <li>
+          <strong>SimpleXML Parser</strong>: Provides a simple interface for
+          reading and writing XML data.
+        </li>
+        <li>
+          <strong>XML Expat</strong>: A stream-based XML parser, useful for
+          large XML documents.
+        </li>
+        <li>
+          <strong>XML DOM</strong>: A full-featured, tree-based XML parser that
+          allows manipulation of the document's structure.
+        </li>
+      </ul>
+    </section>
+
+    <!-- PHP SimpleXML Parser -->
+    <section id="php-simplexml-parser">
+      <h2>PHP SimpleXML Parser</h2>
+      <p>
+        SimpleXML provides a simple way to access XML data as an object. You can
+        read, write, and manipulate XML data easily.
+      </p>
+      <pre><code>
+&lt;?php
+$xml = simplexml_load_file("example.xml");
+
+foreach ($xml->item as $item) {
+    echo "Name: " . $item->name . "<br>";
+    echo "Price: " . $item->price . "<br>";
+}
+?&gt;
+        </code></pre>
+      <p>
+        This code loads the XML file and prints the name and price of each item.
+      </p>
+    </section>
+
+    <!-- PHP SimpleXML - Get -->
+    <section id="php-simplexml-get">
+      <h2>PHP SimpleXML - Get</h2>
+      <p>
+        Using SimpleXML, you can easily retrieve specific data from an XML
+        document using methods like <code>simplexml_load_file()</code> to load
+        XML and accessing elements via object properties.
+      </p>
+      <pre><code>
+&lt;?php
+$xml = simplexml_load_string('<items><item><name>Item1</name><price>10.00</price></item><item><name>Item2</name><price>15.00</price></item></items>');
+
+foreach ($xml->item as $item) {
+    echo "Item Name: " . $item->name . " - Price: " . $item->price . "<br>";
+}
+?&gt;
+        </code></pre>
+      <p>
+        This code loads an XML string and retrieves the names and prices of
+        items.
+      </p>
+    </section>
+
+    <!-- PHP XML Expat -->
+    <section id="php-xml-expat">
+      <h2>PHP XML Expat</h2>
+      <p>
+        Expat is a stream-based XML parser. It's useful when dealing with large
+        XML files as it doesn't load the entire file into memory. You define
+        callback functions that handle different elements of the XML document.
+      </p>
+      <pre><code>
+&lt;?php
+function startElement($parser, $name, $attrs) {
+    echo "Start element: $name<br>";
+}
+
+function endElement($parser, $name) {
+    echo "End element: $name<br>";
+}
+
+$xml_parser = xml_parser_create();
+xml_set_element_handler($xml_parser, "startElement", "endElement");
+$xml_data = "<items><item><name>Item1</name><price>10.00</price></item><item><name>Item2</name><price>15.00</price></item></items>";
+xml_parse($xml_parser, $xml_data);
+xml_parser_free($xml_parser);
+?&gt;
+        </code></pre>
+      <p>
+        This code sets up an Expat XML parser and prints the start and end
+        elements of the XML data.
+      </p>
+    </section>
+
+    <!-- PHP XML DOM -->
+    <section id="php-xml-dom">
+      <h2>PHP XML DOM</h2>
+      <p>
+        DOM (Document Object Model) is a full-featured, tree-based XML parser
+        that provides the ability to modify, delete, or add nodes to an XML
+        document. The DOM model loads the entire XML document into memory and
+        provides functions for manipulating its structure.
+      </p>
+      <pre><code>
+&lt;?php
+$xml = new DOMDocument();
+$xml->load("example.xml");
+
+$items = $xml->getElementsByTagName("item");
+
+foreach ($items as $item) {
+    $name = $item->getElementsByTagName("name")->item(0)->nodeValue;
+    $price = $item->getElementsByTagName("price")->item(0)->nodeValue;
+    echo "Name: $name - Price: $price<br>";
+}
+?&gt;
+        </code></pre>
+      <p>
+        This code loads an XML file using the DOM parser and retrieves the name
+        and price of each item.
+      </p>
+    </section>
+
+    <!-- AJAX Intro -->
+    <section id="ajax-intro">
+      <h2>AJAX Intro</h2>
+      <p>
+        AJAX (Asynchronous JavaScript and XML) is a technique used in web
+        development to update parts of a web page without reloading the entire
+        page. It allows for a more dynamic and interactive user experience by
+        making asynchronous requests to the server.
+      </p>
+    </section>
+
+    <!-- AJAX PHP -->
+    <section id="ajax-php">
+      <h2>AJAX PHP</h2>
+      <p>
+        AJAX is often used with PHP to send and retrieve data from the server
+        asynchronously. Here’s an example that sends data to a PHP file and
+        retrieves the response without refreshing the page:
+      </p>
+      <pre><code>
+&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    function sendData() {
+        var name = document.getElementById("name").value;
+        $.ajax({
+            url: "process.php",
+            type: "POST",
+            data: {name: name},
+            success: function(response) {
+                document.getElementById("result").innerHTML = response;
+            }
+        });
+    }
+&lt;/script&gt;
+
+&lt;input type="text" id="name" /&gt;
+&lt;button onclick="sendData()"&gt;Send Data&lt;/button&gt;
+&lt;div id="result"&gt;&lt;/div&gt;
+    </code></pre>
+      <p>
+        This example sends the "name" input field data to a PHP file called
+        "process.php" and displays the response in the "result" div.
+      </p>
+    </section>
+
+    <!-- AJAX Database -->
+    <section id="ajax-database">
+      <h2>AJAX Database</h2>
+      <p>
+        AJAX can be used to fetch data from a database without reloading the
+        page. The following example retrieves data from a MySQL database:
+      </p>
+      <pre><code>
+&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    function loadData() {
+        $.ajax({
+            url: "fetchData.php",
+            type: "GET",
+            success: function(response) {
+                document.getElementById("data").innerHTML = response;
+            }
+        });
+    }
+&lt;/script&gt;
+
+&lt;button onclick="loadData()"&gt;Load Data&lt;/button&gt;
+&lt;div id="data"&gt;&lt;/div&gt;
+    </code></pre>
+      <p>
+        In this example, clicking the "Load Data" button triggers an AJAX
+        request to the "fetchData.php" script to retrieve data from a MySQL
+        database and display it on the page without a reload.
+      </p>
+    </section>
+
+    <!-- AJAX XML -->
+    <section id="ajax-xml">
+      <h2>AJAX XML</h2>
+      <p>
+        AJAX can be used to send and receive XML data from the server. Here’s an
+        example of using AJAX to fetch XML data from the server:
+      </p>
+      <pre><code>
+&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    function loadXML() {
+        $.ajax({
+            url: "data.xml",
+            type: "GET",
+            dataType: "xml",
+            success: function(response) {
+                var items = $(response).find("item");
+                items.each(function() {
+                    var name = $(this).find("name").text();
+                    var price = $(this).find("price").text();
+                    $("#result").append("Name: " + name + " - Price: " + price + "&lt;br&gt;");
+                });
+            }
+        });
+    }
+&lt;/script&gt;
+
+&lt;button onclick="loadXML()"&gt;Load XML Data&lt;/button&gt;
+&lt;div id="result"&gt;&lt;/div&gt;
+    </code></pre>
+      <p>
+        This example loads XML data from a file called "data.xml" using AJAX and
+        displays the name and price from each "item" element in the "result"
+        div.
+      </p>
+    </section>
+
+    <!-- AJAX Live Search -->
+    <section id="ajax-live-search">
+      <h2>AJAX Live Search</h2>
+      <p>
+        AJAX can be used to implement live search functionality where the search
+        results are updated in real-time as the user types:
+      </p>
+      <pre><code>
+&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    function liveSearch() {
+        var searchQuery = document.getElementById("search").value;
+        $.ajax({
+            url: "search.php",
+            type: "GET",
+            data: {query: searchQuery},
+            success: function(response) {
+                document.getElementById("searchResults").innerHTML = response;
+            }
+        });
+    }
+&lt;/script&gt;
+
+&lt;input type="text" id="search" onkeyup="liveSearch()" placeholder="Search..."/&gt;
+&lt;div id="searchResults"&gt;&lt;/div&gt;
+    </code></pre>
+      <p>
+        This example performs a live search by sending the search query to
+        "search.php" and displaying the results in real-time as the user types
+        in the search box.
+      </p>
+    </section>
+
+    <!-- AJAX Poll -->
+    <section id="ajax-poll">
+      <h2>AJAX Poll</h2>
+      <p>
+        AJAX can also be used for creating poll systems where the votes are sent
+        to the server asynchronously:
+      </p>
+      <pre><code>
+&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    function submitVote(option) {
+        $.ajax({
+            url: "vote.php",
+            type: "POST",
+            data: {vote: option},
+            success: function(response) {
+                document.getElementById("pollResults").innerHTML = response;
+            }
+        });
+    }
+&lt;/script&gt;
+
+&lt;button onclick="submitVote('option1')"&gt;Vote Option 1&lt;/button&gt;
+&lt;button onclick="submitVote('option2')"&gt;Vote Option 2&lt;/button&gt;
+&lt;div id="pollResults"&gt;&lt;/div&gt;
+    </code></pre>
+      <p>
+        This example submits the user's vote for a poll and displays the results
+        on the page asynchronously without reloading.
+      </p>
+    </section>
+    <!-- PHP Examples -->
+    <section id="php-examples">
+      <h2>PHP Examples</h2>
+      <p>
+        Here are some basic PHP examples to help you understand how PHP works:
+      </p>
+      <pre><code>
+&lt;?php
+// Simple PHP Example
+echo "Hello, World!";  // This will print "Hello, World!"
+?&gt;
+    </code></pre>
+      <p>
+        The above example demonstrates the use of the <code>echo</code> function
+        to output a message.
+      </p>
+    </section>
+
+    <!-- PHP Compiler -->
+    <section id="php-compiler">
+      <h2>PHP Compiler</h2>
+      <p>
+        A PHP compiler allows you to test your PHP code online without needing
+        to install PHP on your local system. Here are some online platforms
+        where you can run PHP code:
+      </p>
+      <ul>
+        <li>
+          <a href="https://www.jdoodle.com/php-online-compiler" target="_blank"
+            >JDoodle PHP Compiler</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.tutorialspoint.com/execute_php_online.php"
+            target="_blank"
+            >TutorialsPoint PHP Compiler</a
+          >
+        </li>
+      </ul>
+      <p>
+        Simply paste your PHP code in the editor and click "Run" to see the
+        output.
+      </p>
+    </section>
+
+    <!-- PHP Quiz -->
+    <section id="php-quiz">
+      <h2>PHP Quiz</h2>
+      <p>Test your PHP knowledge by taking these online quizzes:</p>
+      <ul>
+        <li>
+          <a href="https://www.geeksforgeeks.org/php-quiz/" target="_blank"
+            >GeeksforGeeks PHP Quiz</a
+          >
+        </li>
+        <li>
+          <a href="https://www.w3schools.com/php/php_quiz.asp" target="_blank"
+            >W3Schools PHP Quiz</a
+          >
+        </li>
+      </ul>
+      <p>
+        These quizzes contain questions on PHP syntax, functions, and advanced
+        concepts to help you sharpen your skills.
+      </p>
+    </section>
+
+    <!-- PHP Server -->
+    <section id="php-server">
+      <h2>PHP Server</h2>
+      <p>
+        To run PHP scripts locally, you need a local server environment. Here
+        are some popular tools:
+      </p>
+      <ul>
+        <li>
+          <a href="https://www.apachefriends.org/index.html" target="_blank"
+            >XAMPP (Cross-platform)</a
+          >
+        </li>
+        <li>
+          <a href="https://www.mamp.info/en/" target="_blank"
+            >MAMP (MacOS and Windows)</a
+          >
+        </li>
+        <li>
+          <a href="https://www.wampserver.com/en/" target="_blank"
+            >WampServer (Windows)</a
+          >
+        </li>
+      </ul>
+      <p>
+        These servers allow you to run PHP scripts on your computer along with
+        databases like MySQL.
+      </p>
+    </section>
+
+    <footer>
+      <div
+        style="
+          background-color: black;
+          color: white;
+          padding: 30px 0;
+          text-align: center;
+        "
+      >
+        <div
+          style="display: flex; justify-content: space-around; flex-wrap: wrap"
+        >
+          <!-- About Section -->
+          <div style="flex: 1; min-width: 200px; padding: 10px">
+            <h3>About Us</h3>
+            <p>
+              We provide high-quality programming tutorials, exercises, and
+              quizzes to help learners master programming concepts and build
+              real-world applications.
+            </p>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div style="flex: 1; min-width: 200px; padding: 10px">
+            <h3>Quick Links</h3>
+            <ul style="list-style: none; padding: 0; line-height: 1.8">
+              <li>
+                <a href="h.html" style="color: white; text-decoration: none"
+                  >HTML</a
+                >
+              </li>
+              <li>
+                <a href="css.html" style="color: white; text-decoration: none"
+                  >CSS</a
+                >
+              </li>
+              <li>
+                <a href="sk.html" style="color: white; text-decoration: none"
+                  >JavaScript</a
+                >
+              </li>
+              <li>
+                <a href="react.html" style="color: white; text-decoration: none"
+                  >React</a
+                >
+              </li>
+              <li>
+                <a href="php.html" style="color: white; text-decoration: none"
+                  >PHP</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mysqli.html"
+                  style="color: white; text-decoration: none"
+                  >mysql</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mongodb.html"
+                  style="color: white; text-decoration: none"
+                  >mongodb</a
+                >
+              </li>
+              <li>
+                <a
+                  href="python.html"
+                  style="color: white; text-decoration: none"
+                  >Python</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Section -->
+          <div style="flex: 1; min-width: 200px; padding: 10px">
+            <h3>Contact Us</h3>
+            <p>
+              Phone: <a href="tel:+9303546247" class="clickable">9303546247</a>
+            </p>
+            <p>
+              Email:
+              <a href="mailto:niteshamule74@gmail.com" class="clickable"
+                >niteshamule74@gmail.com</a
+              >
+            </p>
+          </div>
+
+          <!-- Social Media Links Section -->
+          <div style="flex: 1; min-width: 200px; padding: 10px">
+            <h3>Follow Us</h3>
+            <a
+              href="https://youtube.com/@codewith.n.a.74?si=I_4_BBk6uMl1bER3"
+              style="color: white; text-decoration: none; margin-right: 10px"
+              >YouTube</a
+            >
+            <a
+              href="https://www.instagram.com/code_with_n.a/profilecard/?igsh=MTQzMzQ1N3RyejFweg=="
+              style="color: white; text-decoration: none; margin-right: 10px"
+              >Instagram</a
+            >
+            <a
+              href="https://t.me/CodwithNA"
+              style="color: white; text-decoration: none; margin-right: 10px"
+              >Telegram</a
+            >
+            <a
+              href="https://github.com/Code-with-N-A"
+              style="color: white; text-decoration: none"
+              >Github</a
+            >
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div
+          style="
+            margin-top: 20px;
+            border-top: 1px solid #555;
+            padding-top: 10px;
+          "
+        >
+          <p>&copy; 2024 Code with N.A. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

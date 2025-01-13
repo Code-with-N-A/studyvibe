@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--may websit fevi icob-->
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+
+     <!-- Basic Meta Tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="description" content="Learn coding, programming, and online courses. Get tutorials, resources, and professional programming help for web development, Python, Java, and more.">
+     <meta name="keywords" content="coding, programming, online courses, web development, learn Python, learn Java, tutorials, coding classes, programming tutorials, free online courses">
+     <meta name="author" content="Code with N.A.">
+     <meta name="robots" content="index, follow">
+     
+     <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+     <meta property="og:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta property="og:description" content="Get free online courses, coding tutorials, and programming resources. Learn web development, Python, Java, and more with Code with N.A.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://www.yourwebsite.com">
+     <meta property="og:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Twitter Meta Tags (For Twitter Sharing) -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta name="twitter:description" content="Free online coding tutorials, courses, and programming resources. Learn web development, Python, and more with Code with N.A.">
+     <meta name="twitter:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Additional Meta Tags -->
+     <meta name="theme-color" content="#000000">
+     <meta name="language" content="English">
+     <meta name="distribution" content="global">
+     <meta name="revisit-after" content="7 days">
+     <meta name="rating" content="General">
+     
+     <!-- Google Site Verification (If applicable) -->
+     <meta name="google-site-verification" content="your-google-verification-code">
+ 
+    <title>Login - ID Card Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+        }
+
+        .login-container {
+            background-color: rgb(94, 94, 169);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container input {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-container button {
+            padding: 10px;
+            width: 100%;
+            background-color: #ff0000;
+           
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #16fc1d;
+        }
+
+        .message {
+            margin-top: 10px;
+            color: rgb(242, 255, 0);
+        }
+        .tex{
+            display: flex;
+           height: 40vh;
+            color: #000000;
+            text-align: center;
+            justify-content: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+           
+           
+           
+        }
+        .t{
+            width: 50%;
+            overflow-y: scroll;
+            background-color: #ccc;
+           
+        }
+    </style>
+</head>
+<body>
+
+   <div class="tex">
+    <div class="t">
+        <h3>What to do if you forget your ID and Name</h3>
+        <p>If you forget your ID or Name, don't worry! You can easily clear your stored data from the browser. To do this, go to your browser's settings, find the option to clear browsing data or history, and select it. This will remove all saved data, including your ID and name, from the local storage. Once you’ve cleared the data, you can create a new ID and log in with the new credentials. This way, your previous login information will no longer be available, and you can start fresh with a new ID.</p>
+    </div>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="loginUsername" placeholder="Enter your username" required>
+        <input type="password" id="loginID" placeholder="Enter your ID" required>
+        <button onclick="login()">Login</button>
+        <div class="message" id="loginMessage"></div>
+    </div>
+</div>
+
+    <script>
+        // Check if the user is already logged in using the stored credentials
+        window.onload = function() {
+            const storedUsername = localStorage.getItem("username");
+            const storedID = localStorage.getItem("userID");
+
+          
+        };
+
+        // Function to handle login
+        function login() {
+            const loginUsername = document.getElementById("loginUsername").value;
+            const loginID = document.getElementById("loginID").value;
+            const storedUsername = localStorage.getItem("username");
+            const storedID = localStorage.getItem("userID");
+
+            const messageElement = document.getElementById("loginMessage");
+
+            if (loginUsername === storedUsername && loginID === storedID) {
+                // Successful login, redirect to ID Card Generator page
+                window.location.href = "mencertificet_f.html";
+            } else {
+                // Display error message
+                messageElement.innerText = "Invalid username or ID. Please try again.";
+            }
+        }
+    </script>
+
+</body>
+</html>

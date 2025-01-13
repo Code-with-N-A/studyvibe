@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--may websit fevi icob-->
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+
+
+     <!-- Basic Meta Tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="description" content="Learn coding, programming, and online courses. Get tutorials, resources, and professional programming help for web development, Python, Java, and more.">
+     <meta name="keywords" content="coding, programming, online courses, web development, learn Python, learn Java, tutorials, coding classes, programming tutorials, free online courses">
+     <meta name="author" content="Code with N.A.">
+     <meta name="robots" content="index, follow">
+     
+     <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+     <meta property="og:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta property="og:description" content="Get free online courses, coding tutorials, and programming resources. Learn web development, Python, Java, and more with Code with N.A.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://www.yourwebsite.com">
+     <meta property="og:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Twitter Meta Tags (For Twitter Sharing) -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta name="twitter:description" content="Free online coding tutorials, courses, and programming resources. Learn web development, Python, and more with Code with N.A.">
+     <meta name="twitter:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Additional Meta Tags -->
+     <meta name="theme-color" content="#000000">
+     <meta name="language" content="English">
+     <meta name="distribution" content="global">
+     <meta name="revisit-after" content="7 days">
+     <meta name="rating" content="General">
+     
+     <!-- Google Site Verification (If applicable) -->
+     <meta name="google-site-verification" content="your-google-verification-code">
+ 
+    <title>CSS Course</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #121212;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #1f1f1f, #3e3e3e);
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 2.9em;
+            color: black;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 500;
+            text-shadow: 0px 0px 10px rgba(0, 255, 157, 0.8);
+            font-size: 70px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+            color: #b3b3b3;
+        }
+
+        /* Glowing Edge Effect */
+        .glow {
+            position: relative;
+            background: linear-gradient(45deg, #00ff9d, #00d4ff);
+            border-radius: 10px;
+            padding: 20px 40px;
+            box-shadow: 0 0 15px #00ff9d, 0 0 25px #00d4ff;
+        }
+
+        .glow::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #00ff9d, #00d4ff);
+            z-index: -1;
+            filter: blur(20px);
+            opacity: 0.7;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #1b1b1b;
+        }
+
+        .languages-section h2 {
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            font-weight: 500;
+            color: #00d4ff;
+            text-shadow: 0px 0px 20px rgba(0, 212, 255, 0.6);
+        }
+
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .language-card {
+            background-color: #2a2a2a;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .language-card h3 {
+            font-size: 1.6em;
+            color: #00ff9d;
+            margin-bottom: 20px;
+        }
+
+        .language-card p {
+            font-size: 1.1em;
+            color: #a3a3a3;
+        }
+
+        .language-card::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 255, 157, 0.1), transparent);
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        .language-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 255, 157, 0.3);
+        }
+
+        .language-card:hover::after {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.3);
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #161616;
+            color: #b3b3b3;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .languages-section h2 {
+                font-size: 2em;
+            }
+
+            .language-card {
+                padding: 20px;
+            }
+
+            .language-card h3 {
+                font-size: 1.4em;
+            }
+
+            .language-card p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            header p {
+                font-size: 0.9em;
+            }
+
+            .languages-section h2 {
+                font-size: 1.5em;
+            }
+
+            .language-card {
+                padding: 15px;
+            }
+
+            .language-card h3 {
+                font-size: 1.3em;
+            }
+
+            .language-card p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="glow">
+            <h1>Full Stack Web Development</h1>
+        </div>
+        <p>Explore the essential programming languages and tools you need to become a full stack web developer.</p>
+    </header>
+
+    <!-- Languages Section -->
+    <section class="languages-section">
+        <h2>Core Technologies</h2>
+        <div class="language-grid">
+            <!-- HTML & CSS -->
+            <div class="language-card">
+                <h3>HTML & CSS</h3>
+                <p>The foundation for building and styling websites.</p>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="language-card">
+                <h3>JavaScript</h3>
+                <p>Add interactivity and dynamic features to your web pages.</p>
+            </div>
+
+            <!-- React.js -->
+            <div class="language-card">
+                <h3>React.js</h3>
+                <p>A popular library for building fast, interactive UIs.</p>
+            </div>
+
+            <!-- Node.js -->
+            <div class="language-card">
+                <h3>Node.js</h3>
+                <p>JavaScript runtime for building scalable backend services.</p>
+            </div>
+
+            <!-- Express.js -->
+            <div class="language-card">
+                <h3>Express.js</h3>
+                <p>A backend framework to simplify server-side coding.</p>
+            </div>
+
+            <!-- MongoDB -->
+            <div class="language-card">
+                <h3>MongoDB</h3>
+                <p>A NoSQL database designed for scalability and flexibility.</p>
+            </div>
+
+            <!-- Git & GitHub -->
+            <div class="language-card">
+                <h3>Git & GitHub</h3>
+                <p>Version control and collaboration tools for developers.</p>
+            </div>
+
+            <!-- DevOps & Deployment -->
+            <div class="language-card">
+                <h3>DevOps & Deployment</h3>
+                <p>Deploy apps and manage infrastructure with AWS, Docker, and more.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+   
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Nitesh Web Developer</title>
+
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons for Social Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1f1f1f; /* Dark background for a modern look */
+            color: #fff; /* White text color for contrast */
+        }
+
+        /* Header Section */
+        header {
+            background-color: #282828; /* Darker background for header */
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        /* Main Content Section */
+        main {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #f4f4f4;
+        }
+
+        .details {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            color: #f4f4f4;
+            font-size: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #18bc9c;
+        }
+
+        /* Contact Button */
+        .button {
+            padding: 12px 30px;
+            background-color: #18bc9c;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #16a085;
+            transform: scale(1.05);
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 30px;
+            text-align: center;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            margin-top: 50px;
+            position: relative;
+            opacity: 0;
+            animation: fadeIn 2s forwards, slideUp 1s ease-out 1s;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        /* Animation for footer */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-links a {
+                margin: 10px 0;
+            }
+
+            .button {
+                width: 100%;
+            }
+        }
+    </style>
+
+
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons for Social Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1f1f1f; /* Dark background for a modern look */
+            color: #fff; /* White text color for contrast */
+        }
+
+        /* Header Section */
+        header {
+            background-color: #282828; /* Darker background for header */
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        /* Main Content Section */
+        main {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #f4f4f4;
+        }
+
+        .details {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            color: #f4f4f4;
+            font-size: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #18bc9c;
+        }
+
+        /* Contact Button */
+        .button {
+            padding: 12px 30px;
+            background-color: #18bc9c;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #16a085;
+            transform: scale(1.05);
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 30px;
+            text-align: center;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            margin-top: 50px;
+            position: relative;
+            opacity: 0;
+            animation: fadeIn 2s forwards, slideUp 1s ease-out 1s;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        /* Animation for footer */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-links a {
+                margin: 10px 0;
+            }
+
+            .button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Contact Code with N.A</h1>
+        <p>Feel free to reach out for any inquiries or collaborations!</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="intro">
+            <p>Welcome to my personal website! I'm Nitesh, a passionate Web Developer from MP, India.</p>
+        </div>
+
+        <div class="details">
+            <p><strong>About Me:</strong> I specialize in developing dynamic, responsive websites. I offer programming language courses to help you master web development and programming concepts.</p>
+            <p><strong>Location:</strong> MP, Blaghat, Katangi - 481449</p>
+            <p><strong>Email:</strong> <a href="mailto:niteshamule74@gmail.com" style="color: #18bc9c;">niteshamule74@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+919303546247" style="color: #18bc9c;">+91 9303546247</a></p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://youtube.com/@codewith.n.a.74?si=I_4_BBk6uMl1bER3" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/code_with_n.a/profilecard/?igsh=MTQzMzQ1N3RyejFweg==" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/Code-with-N-A" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://t.me/CodwithNA" target="_blank">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </div>
+
+        <div class="contact-details">
+            <h3>Contact Me</h3>
+            <p>For any inquiries or to join my programming courses, feel free to contact me via email or phone.</p>
+            <button class="button" onclick="window.location.href='mailto:niteshamule74@gmail.com'">Get in Touch</button>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Nitesh. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript Animations -->
+    <script>
+        // JavaScript for Animations
+        document.addEventListener("DOMContentLoaded", function() {
+            const footer = document.querySelector('footer');
+            footer.classList.add('fade-in');
+        });
+    </script>
+
+</body>
+</html>
+
+

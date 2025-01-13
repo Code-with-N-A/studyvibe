@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--may websit fevi icob-->
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+
+ <!-- Basic Meta Tags -->
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="description" content="Learn coding, programming, and online courses. Get tutorials, resources, and professional programming help for web development, Python, Java, and more.">
+ <meta name="keywords" content="coding, programming, online courses, web development, learn Python, learn Java, tutorials, coding classes, programming tutorials, free online courses">
+ <meta name="author" content="Code with N.A.">
+ <meta name="robots" content="index, follow">
+ 
+ <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+ <meta property="og:title" content="Learn Coding and Programming | Code with N.A.">
+ <meta property="og:description" content="Get free online courses, coding tutorials, and programming resources. Learn web development, Python, Java, and more with Code with N.A.">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://www.yourwebsite.com">
+ <meta property="og:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+
+ <!-- Twitter Meta Tags (For Twitter Sharing) -->
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Learn Coding and Programming | Code with N.A.">
+ <meta name="twitter:description" content="Free online coding tutorials, courses, and programming resources. Learn web development, Python, and more with Code with N.A.">
+ <meta name="twitter:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+
+ <!-- Additional Meta Tags -->
+ <meta name="theme-color" content="#000000">
+ <meta name="language" content="English">
+ <meta name="distribution" content="global">
+ <meta name="revisit-after" content="7 days">
+ <meta name="rating" content="General">
+ 
+ <!-- Google Site Verification (If applicable) -->
+ <meta name="google-site-verification" content="your-google-verification-code">
+
+
+    <title>About Us - Full Stack Development Course</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #282828;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease;
+        }
+        header h1 {
+            font-size: 50px;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            transition: transform 0.4s ease;
+        }
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        header:hover {
+            transform: translateY(-10px);
+        }
+
+        /* About Section */
+        #about {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+        #about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        #about p {
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+        #about button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        #about button:hover {
+            background-color: #e84e41;
+            transform: translateY(-5px);
+        }
+
+        /* Course Details Section */
+        #course-details {
+            padding: 60px 20px;
+            background-color: #fafafa;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        #course-details h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .course-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 30px;
+            display: inline-block;
+            width: 270px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .course-card h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .course-card p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #1a1a1d;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        #contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        #contact p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        #contact button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        #contact button:hover {
+            background-color: #e84e41;
+            transform: translateY(-5px);
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .course-card {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Full Stack Development Course</h1>
+        <p>Master the skills to become a full stack developer. Learn both front-end & back-end development.</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About This Course</h2>
+        <p>Welcome to the Full Stack Development Course! This course is designed for individuals who want to become proficient in both frontend and backend development. You'll learn key technologies like HTML, CSS, JavaScript, Node.js, React, and MongoDB, with hands-on projects to build your portfolio.</p>
+        <button onclick="showAlert()">Learn More</button>
+    </section>
+
+    <!-- Course Details Section -->
+    <section id="course-details">
+        <h2>What You'll Learn</h2>
+        <div class="course-card">
+            <h3>Frontend Development</h3>
+            <p>Build dynamic, responsive websites with HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="course-card">
+            <h3>Backend Development</h3>
+            <p>Learn Node.js and Express for backend programming.</p>
+        </div>
+        <div class="course-card">
+            <h3>Databases</h3>
+            <p>Work with databases like MongoDB and MySQL to store data.</p>
+        </div>
+        <div class="course-card">
+            <h3>Deployment</h3>
+            <p>Learn how to deploy your applications to the web using platforms like Heroku and GitHub Pages.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>If you have any questions about the course, feel free to contact me!</p>
+        <button onclick="window.location.href='freecon.html'">Contact Me</button>
+    </section>
+
+    
+    <script>
+        function showAlert() {
+            alert("Welcome to my page learn mor feet.🎓🎓👨‍💻👨‍💻");
+            window.location.href="lern.html"
+        }
+    </script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitesh | Web Developer</title>
+
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons for Social Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Dark background */
+            color: #f4f4f4; /* Light text color */
+        }
+
+        /* Main Content Section */
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .details {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .social-links i {
+            font-size: 1.8rem;
+            margin: 10px;
+            color: #f4f4f4;
+            transition: color 0.3s ease;
+        }
+
+        .social-links i:hover {
+            color: #18bc9c;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333; /* Dark footer background */
+            color: #f4f4f4;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+            opacity: 0;
+            animation: fadeIn 2s forwards, slideUp 1s ease-out 1s; /* Adding fade and slide animation */
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        /* Animation for footer */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            main {
+                padding: 20px;
+            }
+
+            footer {
+                font-size: 1.2rem;
+            }
+
+            .social-links i {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Button Style */
+        .button {
+            padding: 10px 20px;
+            background-color: #18bc9c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #16a085;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="intro">
+            <p>Welcome to my personal website! I'm Nitesh, a passionate Web Developer from MP, India.</p>
+        </div>
+
+        <div class="details">
+            <p><strong>About Me:</strong> I specialize in developing dynamic, responsive websites. I offer various programming language courses to help you master web development and programming concepts.</p>
+            <p><strong>Location:</strong> MP, Blaghat, Katangi - 481449</p>
+            <p><strong>Email:</strong> <a href="mailto:niteshamule74@gmail.com" style="color: #f4f4f4;">niteshamule74@gmail.com</a></p>
+            <p><strong>Phone:</strong> +91 9303546247</p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://youtube.com/@codewith.n.a.74?si=I_4_BBk6uMl1bER3" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/code_with_n.a/profilecard/?igsh=MTQzMzQ1N3RyejFweg==" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/Code-with-N-A" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://t.me/CodwithNA" target="_blank">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </div>
+
+        <div class="contact-details">
+            <h3>Contact Me</h3>
+            <p>For any inquiries or to join my programming courses, feel free to contact me via email or phone.</p>
+            <button class="button">Get in Touch</button>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Nitesh. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript Animations -->
+    <script>
+        // JavaScript for Animations
+        document.addEventListener("DOMContentLoaded", function() {
+            const footer = document.querySelector('footer');
+            footer.classList.add('fade-in');
+        });
+    </script>
+
+</body>
+</html>
+

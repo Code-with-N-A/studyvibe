@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--may websit fevi icob-->
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
+
+     <!-- Basic Meta Tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="description" content="Learn coding, programming, and online courses. Get tutorials, resources, and professional programming help for web development, Python, Java, and more.">
+     <meta name="keywords" content="coding, programming, online courses, web development, learn Python, learn Java, tutorials, coding classes, programming tutorials, free online courses">
+     <meta name="author" content="Code with N.A.">
+     <meta name="robots" content="index, follow">
+     
+     <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+     <meta property="og:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta property="og:description" content="Get free online courses, coding tutorials, and programming resources. Learn web development, Python, Java, and more with Code with N.A.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://www.yourwebsite.com">
+     <meta property="og:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Twitter Meta Tags (For Twitter Sharing) -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Learn Coding and Programming | Code with N.A.">
+     <meta name="twitter:description" content="Free online coding tutorials, courses, and programming resources. Learn web development, Python, and more with Code with N.A.">
+     <meta name="twitter:image" content="https://www.yourwebsite.com/images/thumbnail.jpg">
+ 
+     <!-- Additional Meta Tags -->
+     <meta name="theme-color" content="#000000">
+     <meta name="language" content="English">
+     <meta name="distribution" content="global">
+     <meta name="revisit-after" content="7 days">
+     <meta name="rating" content="General">
+     
+     <!-- Google Site Verification (If applicable) -->
+     <meta name="google-site-verification" content="your-google-verification-code">
+ 
+    <title>MongoDB Course </title>
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Section Styles */
+section {
+    padding: 30px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+}
+
+/* Headings */
+h2 {
+    color: #282c34;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Code Block Styles */
+pre {
+    background-color: #2e3b4e;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 16px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Code Tag Styles */
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: #f9a826;
+}
+
+/* Hover Effect on Code Example */
+pre:hover {
+    background-color: #333a48;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #282c34;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f9a826;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    pre {
+        padding: 10px;
+    }
+}
+
+        /* Styling for the side navigation */
+        #side-nav {
+            display: none; /* Initially hide the side-nav */
+            background-color: #333;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            padding-top: 50px;
+            z-index: 1000;
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+
+        /* Styling for the links in the side navigation */
+        #side-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            display: block;
+            font-size: 16px;
+            border-bottom: 1px solid #444; /* Add a border to each list item */
+            transition: background-color 0.3s ease; /* Smooth background transition */
+        }
+
+        /* Hover effect for list items */
+        #side-nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Styling for the toggle button */
+        #toggle-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px; /* Move button slightly lower */
+            left: 20px;
+            background: none;
+            border: none;
+            color: #333;
+            z-index: 1001; /* Ensure button is above the menu */
+        }
+
+        /* Button change when menu is open */
+        #toggle-btn.open {
+            color: red; /* Color change when menu is open */
+        }
+    </style>
+</head>
+<body>
+     <!-- Toggle Button -->
+     <button id="toggle-btn">☰</button>
+
+     <nav id="side-nav">
+        <a href="#mongodb-home">1. MongoDB HOME</a>
+        <a href="#mongodb-get-started">2. MongoDB Get Started</a>
+        <a href="#mongodb-query-api">3. MongoDB Query API</a>
+        <a href="#mongodb-create-db">4. MongoDB Create DB</a>
+        <a href="#mongodb-collection">5. MongoDB Collection</a>
+        <a href="#mongodb-insert">6. MongoDB Insert</a>
+        <a href="#mongodb-find">7. MongoDB Find</a>
+        <a href="#mongodb-update">8. MongoDB Update</a>
+        <a href="#mongodb-delete">9. MongoDB Delete</a>
+        <a href="#mongodb-query-operators">10. MongoDB Query Operators</a>
+        <a href="#mongodb-update-section">11. MongoDB Update Section</a>
+        <a href="#mongodb-operators">12. MongoDB Operators</a>
+        <a href="#mongodb-aggregations">13. MongoDB Aggregations</a>
+        <a href="#mongodb-group">14. MongoDB $group</a>
+        <a href="#mongodb-limit">15. MongoDB $limit</a>
+        <a href="#mongodb-project">16. MongoDB $project</a>
+        <a href="#mongodb-sort">17. MongoDB $sort</a>
+        <a href="#mongodb-match">18. MongoDB $match</a>
+        <a href="#mongodb-addfields">19. MongoDB $addFields</a>
+        <a href="#mongodb-count">20. MongoDB $count</a>
+        <a href="#mongodb-lookup">21. MongoDB $lookup</a>
+        <a href="#mongodb-out">22. MongoDB $out</a>
+        <a href="#mongodb-indexing">23. MongoDB Indexing/Search</a>
+        <a href="#mongodb-validation">24. MongoDB Validation</a>
+        <a href="#mongodb-data-api">25. MongoDB Data API</a>
+        <a href="#mongodb-drivers">26. MongoDB Drivers</a>
+        <a href="#mongodb-nodejs-driver">27. MongoDB Node.js Driver</a>
+        <a href="#mongodb-charts">28. MongoDB Charts</a>
+    </nav>
+    
+
+
+
+
+     <script>
+        // JavaScript to toggle the side navigation menu
+        document.getElementById("toggle-btn").addEventListener("click", function() {
+            var nav = document.getElementById("side-nav");
+            var button = document.getElementById("toggle-btn");
+
+            // Toggle the display property of the navigation
+            if (nav.style.display === "block") {
+                nav.style.display = "none";
+                button.classList.remove("open"); // Change button back to normal
+            } else {
+                nav.style.display = "block";
+                button.classList.add("open"); // Change button style when menu is open
+            }
+        });
+    </script>
+<header>
+   
+        
+      <h1> mongodb full Course</h1>
+</header>
+
+
+<section id="mongodb-home">
+    <h2>MongoDB HOME</h2>
+    <p>Welcome to the MongoDB tutorial! This tutorial will guide you through MongoDB's basic operations and concepts.</p>
+</section>
+
+<section id="mongodb-get-started">
+    <h2>MongoDB Get Started</h2>
+    <p>MongoDB is a NoSQL database that stores data in flexible, JSON-like documents. In this section, we will cover the installation process.</p>
+</section>
+
+<section id="mongodb-query-api">
+    <h2>MongoDB Query API</h2>
+    <p>The MongoDB Query API provides methods to query the database, find documents, and update or delete them based on criteria.</p>
+</section>
+
+<section id="mongodb-create-db">
+    <h2>MongoDB Create DB</h2>
+    <p>Learn how to create a database in MongoDB using the `use` command or by inserting data into a collection.</p>
+    <pre><code>
+db = connect("mongodb://localhost:27017/mydatabase");
+    </code></pre>
+</section>
+
+<section id="mongodb-collection">
+    <h2>MongoDB Collection</h2>
+    <p>MongoDB stores data in collections, which are analogous to tables in relational databases. Here's how to create a collection:</p>
+    <pre><code>
+db.createCollection("users");
+    </code></pre>
+</section>
+
+<section id="mongodb-insert">
+    <h2>MongoDB Insert</h2>
+    <p>Learn how to insert data into a collection using the `insertOne()` or `insertMany()` methods.</p>
+    <pre><code>
+db.users.insertOne({ name: "John Doe", age: 30 });
+    </code></pre>
+</section>
+
+<section id="mongodb-find">
+    <h2>MongoDB Find</h2>
+    <p>Use the `find()` method to query a collection and retrieve documents based on specific conditions.</p>
+    <pre><code>
+db.users.find({ age: { $gt: 25 } });
+    </code></pre>
+</section>
+
+<section id="mongodb-update">
+    <h2>MongoDB Update</h2>
+    <p>Update documents in a collection with the `updateOne()`, `updateMany()`, or `replaceOne()` methods.</p>
+    <pre><code>
+db.users.updateOne({ name: "John Doe" }, { $set: { age: 31 } });
+    </code></pre>
+</section>
+
+<section id="mongodb-delete">
+    <h2>MongoDB Delete</h2>
+    <p>Learn how to delete documents using the `deleteOne()` and `deleteMany()` methods.</p>
+    <pre><code>
+db.users.deleteOne({ name: "John Doe" });
+    </code></pre>
+</section>
+
+<section id="mongodb-query-operators">
+    <h2>MongoDB Query Operators</h2>
+    <p>MongoDB provides several query operators to filter documents. These include `$gt`, `$lt`, `$eq`, `$in`, and more.</p>
+    <pre><code>
+db.users.find({ age: { $gt: 20, $lt: 30 } });
+    </code></pre>
+</section>
+
+<section id="mongodb-update-section">
+    <h2>MongoDB Update Section</h2>
+    <p>Learn how to perform advanced updates in MongoDB, including using the `$set`, `$unset`, `$inc` operators, and more.</p>
+    <pre><code>
+db.users.updateOne({ name: "John Doe" }, { $inc: { age: 1 } });
+    </code></pre>
+</section>
+
+
+<section id="mongodb-operators">
+    <h2>MongoDB Operators</h2>
+    <p>MongoDB provides various operators like comparison operators ($gt, $lt, etc.), logical operators ($and, $or), and array operators to filter data.</p>
+</section>
+
+<section id="mongodb-aggregations">
+    <h2>MongoDB Aggregations</h2>
+    <p>MongoDB aggregation framework is used to process data and return computed results. It is commonly used for data analysis and transformation.</p>
+</section>
+
+<section id="mongodb-group">
+    <h2>MongoDB $group</h2>
+    <p>The `$group` operator is used to group documents by a specified expression and perform aggregation operations on each group.</p>
+    <pre><code>
+db.orders.aggregate([
+    { $group: { _id: "$customer_id", totalAmount: { $sum: "$amount" } } }
+]);
+    </code></pre>
+</section>
+
+<section id="mongodb-limit">
+    <h2>MongoDB $limit</h2>
+    <p>The `$limit` operator is used to restrict the number of documents returned in the aggregation pipeline.</p>
+    <pre><code>
+db.orders.aggregate([
+    { $limit: 5 }
+]);
+    </code></pre>
+</section>
+
+<section id="mongodb-project">
+    <h2>MongoDB $project</h2>
+    <p>The `$project` operator is used to include, exclude, or add new fields to the documents in the aggregation pipeline.</p>
+    <pre><code>
+db.orders.aggregate([
+    { $project: { _id: 0, customer_id: 1, amount: 1 } }
+]);
+    </code></pre>
+</section>
+
+<section id="mongodb-sort">
+    <h2>MongoDB $sort</h2>
+    <p>The `$sort` operator is used to sort documents in the aggregation pipeline based on one or more fields.</p>
+    <pre><code>
+db.orders.aggregate([
+    { $sort: { amount: -1 } }
+]);
+    </code></pre>
+</section>
+
+<section id="mongodb-match">
+    <h2>MongoDB $match</h2>
+    <p>The `$match` operator is used to filter documents that meet a specific condition.</p>
+    <pre><code>
+db.orders.aggregate([
+    { $match: { status: "completed" } }
+]);
+    </code></pre>
+</section>
+
+<section id="mongodb-addfields">
+    <h2>MongoDB $addFields</h2>
+    <p>The `$addFields` operator is used to add new fields to documents in the aggregation pipeline.</p>
+    <pre><code>
+db.orders.aggregate([
+    { $addFields: { discount: { $multiply: ["$amount", 0.1] } } }
+]);
+    </code></pre>
+</section>
+
+<section id="mongodb-count">
+    <h2>MongoDB $count</h2>
+    <p>The `$count` operator is used to count the number of documents that match the specified condition.</p>
+    <pre><code>
+db.orders.aggregate([
+    { $count: "totalOrders" }
+]);
+    </code></pre>
+</section>
+
+<section id="mongodb-lookup">
+    <h2>MongoDB $lookup</h2>
+    <p>The `$lookup` operator allows you to join documents from another collection.</p>
+    <pre><code>
+db.orders.aggregate([
+    { $lookup: { from: "customers", localField: "customer_id", foreignField: "_id", as: "customer_info" } }
+]);
+    </code></pre>
+</section>
+
+<section id="mongodb-out">
+    <h2>MongoDB $out</h2>
+    <p>The `$out` operator is used to write the results of an aggregation pipeline to a new collection.</p>
+    <pre><code>
+db.orders.aggregate([
+    { $match: { status: "completed" } },
+    { $out: "completed_orders" }
+]);
+    </code></pre>
+</section>
+
+<section id="mongodb-indexing">
+    <h2>MongoDB Indexing/Search</h2>
+    <p>Indexes improve the efficiency of searches in MongoDB. You can create indexes on fields that are frequently used in queries.</p>
+    <pre><code>
+db.orders.createIndex({ customer_id: 1 });
+    </code></pre>
+</section>
+
+<section id="mongodb-validation">
+    <h2>MongoDB Validation</h2>
+    <p>MongoDB supports schema validation, allowing you to enforce rules on your documents when inserting or updating data.</p>
+    <pre><code>
+db.createCollection("orders", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["customer_id", "amount"],
+            properties: {
+                customer_id: { bsonType: "int" },
+                amount: { bsonType: "double" }
+            }
+        }
+    }
+});
+    </code></pre>
+</section>
+
+<section id="mongodb-data-api">
+    <h2>MongoDB Data API</h2>
+    <p>The MongoDB Data API allows you to interact with MongoDB through HTTP endpoints for ease of integration with web apps and services.</p>
+</section>
+
+<section id="mongodb-drivers">
+    <h2>MongoDB Drivers</h2>
+    <p>MongoDB provides official drivers for various programming languages, enabling easy integration into your application.</p>
+</section>
+
+<section id="mongodb-nodejs-driver">
+    <h2>MongoDB Node.js Driver</h2>
+    <p>The MongoDB Node.js driver is a native JavaScript driver that provides a simple API for interacting with MongoDB from Node.js applications.</p>
+    <pre><code>
+const { MongoClient } = require('mongodb');
+MongoClient.connect('mongodb://localhost:27017')
+    .then(client => {
+        const db = client.db('mydatabase');
+        // Further operations
+    });
+    </code></pre>
+</section>
+<section id="mongodb-charts">
+    <h2>MongoDB Charts</h2>
+    <p>MongoDB Charts is a fully managed data visualization tool that allows you to create visualizations and dashboards based on your MongoDB data. You can create charts to explore and analyze your data in a graphical way without the need for complex queries or external tools.</p>
+    <p>With MongoDB Charts, you can visualize your MongoDB data in various chart types, including bar charts, line graphs, scatter plots, pie charts, and more. It is integrated directly with MongoDB Atlas, which allows for seamless data access and integration.</p>
+
+    <h3>Features of MongoDB Charts</h3>
+    <ul>
+        <li>Supports different chart types (bar, line, pie, scatter, etc.)</li>
+        <li>Real-time data updates</li>
+        <li>Allows aggregation of data for advanced visualizations</li>
+        <li>Drag-and-drop interface for creating dashboards</li>
+        <li>Interactive filtering of data within charts</li>
+        <li>Sharing and embedding charts in websites and applications</li>
+    </ul>
+
+    <h3>Basic Example: Creating a Chart</h3>
+    <p>To create a chart in MongoDB Charts, follow these basic steps:</p>
+    <ol>
+        <li>Log in to MongoDB Atlas and go to the Charts section.</li>
+        <li>Create a new chart by selecting a collection from your database.</li>
+        <li>Choose the chart type (e.g., bar, line, pie).</li>
+        <li>Drag the fields you want to analyze into the appropriate axes or labels.</li>
+        <li>Adjust the settings to customize the chart (e.g., axis titles, legend, etc.).</li>
+        <li>Click "Save" to store your chart and add it to a dashboard.</li>
+    </ol>
+
+    <h3>Example Chart Types</h3>
+    <p>Here are some common chart types in MongoDB Charts:</p>
+    <ul>
+        <li><strong>Bar Chart:</strong> Use this to compare quantities of different categories.</li>
+        <li><strong>Line Graph:</strong> Display trends or changes over time.</li>
+        <li><strong>Pie Chart:</strong> Show proportions of a whole.</li>
+        <li><strong>Scatter Plot:</strong> Visualize the relationship between two variables.</li>
+    </ul>
+</section>
+
+<section id="mongodb-exercises">
+    <h2>MongoDB Exercises</h2>
+    <p>MongoDB Exercises offer hands-on practice for learners to apply their knowledge of MongoDB in real-world scenarios. By completing exercises, you can strengthen your understanding of MongoDB concepts such as CRUD operations, aggregation, indexing, and more.</p>
+    <p>These exercises are designed to test your ability to work with MongoDB databases, collections, and documents, while also challenging you to solve problems using MongoDB’s powerful features.</p>
+    
+    <h3>Example Exercises</h3>
+    <ul>
+        <li><strong>Exercise 1:</strong> Create a MongoDB database and collection for a library. Insert some sample books and authors.</li>
+        <li><strong>Exercise 2:</strong> Perform a query to find all books by a specific author.</li>
+        <li><strong>Exercise 3:</strong> Use aggregation to group books by their genre and count the number of books in each genre.</li>
+        <li><strong>Exercise 4:</strong> Create an index on the 'author' field and test the performance improvement of queries.</li>
+        <li><strong>Exercise 5:</strong> Update a document in the collection to reflect a change in the author's name.</li>
+    </ul>
+    
+    <h3>How to Solve MongoDB Exercises</h3>
+    <p>To solve MongoDB exercises:</p>
+    <ol>
+        <li>Set up a MongoDB database, either locally or using MongoDB Atlas.</li>
+        <li>Work with the MongoDB shell or MongoDB Compass to interact with the database.</li>
+        <li>Write queries using MongoDB's syntax to manipulate and retrieve data.</li>
+        <li>Test your queries and check whether they return the expected results.</li>
+        <li>Complete all exercises and ensure you have a strong grasp of the core MongoDB operations.</li>
+    </ol>
+
+</section>
+
+<section id="mongodb-certificate">
+    <h2>MongoDB Certificate</h2>
+    <p>Upon completing MongoDB-related courses and exercises, you can earn a MongoDB certificate. The certificate validates your knowledge and skills in working with MongoDB and is a valuable addition to your resume.</p>
+    
+    <h3>How to Obtain MongoDB Certification</h3>
+    <p>To earn your MongoDB certification:</p>
+    <ol>
+        <li>Sign up for MongoDB University and enroll in a course.</li>
+        <li>Complete the course, including quizzes, assignments, and exercises.</li>
+        <li>Take the final exam, which tests your knowledge of MongoDB concepts and practical skills.</li>
+        <li>Upon passing the exam, you will receive a digital certificate of completion.</li>
+    </ol>
+    
+    <h3>Benefits of MongoDB Certification</h3>
+    <ul>
+        <li>Demonstrates your expertise in MongoDB and database management.</li>
+        <li>Enhances your career prospects in roles like database administrator, backend developer, and data analyst.</li>
+        <li>Gives you a competitive edge in the job market.</li>
+    </ul>
+
+</section>
+
+
+
+<footer>
+    <div style="background-color:black; color:white; padding:30px 0; text-align:center;">
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <!-- About Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>About Us</h3>
+                <p>We provide high-quality programming tutorials, exercises, and quizzes to help learners master programming concepts and build real-world applications.</p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>Quick Links</h3>
+                <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                    <li><a href="h.html" style="color:white; text-decoration:none;">HTML</a></li>
+                    <li><a href="css.html" style="color:white; text-decoration:none;">CSS</a></li>
+                    <li><a href="sk.html" style="color:white; text-decoration:none;">JavaScript</a></li>
+                    <li><a href="react.html" style="color:white; text-decoration:none;">React</a></li>
+                    <li><a href="php.html" style="color:white; text-decoration:none;">PHP</a></li>
+                    <li><a href="mysqli.html" style="color:white; text-decoration:none;">mysql</a></li>
+                    <li><a href="mongodb.html" style="color:white; text-decoration:none;">mongodb</a></li>
+                    <li><a href="python.html" style="color:white; text-decoration:none;">Python</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>Contact Us</h3>
+                <p>Phone: <a href="tel:+9303546247" class="clickable">9303546247</a></p>
+                <p>Email: <a href="mailto:niteshamule74@gmail.com" class="clickable">niteshamule74@gmail.com</a></p>
+            </div>
+
+            <!-- Social Media Links Section -->
+            <div style="flex: 1; min-width: 200px; padding: 10px;">
+                <h3>Follow Us</h3>
+                <a href="https://youtube.com/@codewith.n.a.74?si=I_4_BBk6uMl1bER3" style="color:white; text-decoration:none; margin-right:10px;">YouTube</a>
+                <a href="https://www.instagram.com/code_with_n.a/profilecard/?igsh=MTQzMzQ1N3RyejFweg==" style="color:white; text-decoration:none; margin-right:10px;">Instagram</a>
+                <a href="https://t.me/CodwithNA" style="color:white; text-decoration:none; margin-right:10px;">Telegram</a>
+                <a href="https://github.com/Code-with-N-A" style="color:white; text-decoration:none;">Github</a>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div style="margin-top: 20px; border-top: 1px solid #555; padding-top: 10px;">
+            <p>&copy; 2024 Code with N.A. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+ 
+</body>
+</html>
